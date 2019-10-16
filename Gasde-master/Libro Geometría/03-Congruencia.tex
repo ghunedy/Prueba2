@@ -1,16 +1,283 @@
-\chapter{Congruencia de triángulos}
+\chapter{Congruencia de tri�ngulos}
 
-\section{Criterios de congruencia de triángulos}
+\section{Criterios de congruencia de tri�ngulos}
 
 
-\subsection*{Ejercicios}
-\begin{enumerate}
-\item Demostrar que si $\square ABCD$ es un paralelogramo (ver Definición~\ref{paralelogramo}), entonces
-\begin{enumerate}
-\item $\triangle ABD\equiv\triangle CDB$
-\item $\triangle ACD\equiv\triangle CAB$. \label{EPLI}
-\end{enumerate}
-\item Demostrar que si $\square ABCD$ es un paralelogramo y $\overline{AC}\cap\overline{BD}=\{P\}$, entonces $|AP|=|PC|$ y $|BP|=|PD|$. \label{IDDP}
-\end{enumerate}
+%\subsection*{Ejercicios}
+%\begin{enumerate}
+%\item Demostrar que si $\square ABCD$ es un paralelogramo (ver Definici�n~\ref{paralelogramo}), entonces
+%\begin{enumerate}
+%\item $\triangle ABD\equiv\triangle CDB$
+%\item $\triangle ACD\equiv\triangle CAB$. \label{EPLI}
+%\end{enumerate}
+%\item Demostrar que si $\square ABCD$ es un paralelogramo y $\overline{AC}\cap\overline{BD}=\{P\}$, entonces $|AP|=|PC|$ y $|BP|=|PD|$. \label{IDDP}
+%\end{enumerate}
 
+
+Decimos que dos tri\'angulos son congruentes si existe una correspondencia uno-a-uno entre sus v\'ertices
+%tales que los tres pares de \'angulos correspondientes y los tres pares de lados correspondientes son congruentes.
+%La notaci\'on $\triangle ABC \cong \triangle DEF$ nos dice que estos dos tri\'angulos son congruentes bajo la 
+%correspondencia $A \leftrightarrow D$, $B \leftrightarrow E$ y $C \leftrightarrow F$;
+%esto significa que
+%$$\begin{array}{cccccc}
+%\overline{AB} \cong \overline{DE},& \overline{BC} \cong \overline{EF},& \overline{CA} \cong \overline{FD},& 
+%\angle A \cong \angle D,& \angle B \cong \angle E,& \angle C \cong \angle F.
+%\end{array}$$
+%(Ver Fig. \ref{cong1} ) En diagramas como este, frecuentemente seguiremos la convenci\'on de usar marcas 
+%iguales para indicar cu\'ales lados y cu\'ales \'angulos se asumen congruentes a alg\'un otro. Note que el orden en el cual 
+%los v\'ertices son nombrados en la notaci\'on $\triangle ABC \cong \triangle DEF$ es importante.
+%
+%%\begin{figure}[ht]
+%% \input{CongruenciasIm1}
+%% \centering
+%% \caption{Congruencia de tri\'angulos: $\triangle ABC \cong \triangle DEF$ }
+%% \label{cong1}
+%%\end{figure}
+%
+%\begin{teorema}[Propiedad Transitiva de Congruencia de Tri\'angulos]
+% Si dos tri\'angulos son congruentes a un tercero, entonces son congruentes entre ellos.
+%\end{teorema}
+%
+%\begin{proof}
+%Es consecuencia inmediata de las propiedades de congruencia de segmentos y \'angulos. 
+%\end{proof}
+%
+%Para poder demostrar que dos tri\'angulos son congruentes, en principio debemos probar que las seis ``partes'' de un tri\'angulo 
+%(tres lados y tres \'angulos) son congruentes a las seis partes correspondientes de el otro. Inversamente, si conocemos que dos 
+%tri\'angulos son congruentes, entonces podemos concluir de la definici\'on que los seis pares de partes correspondientes son 
+%congruentes. 
+%
+%Conocemos de nuestra experiencia con objetos f\'isicos que usualmente no es necesario revisar las seis congruencias para poder 
+%concluir que dos tri\'angulos son congruentes. Si deseamos hacer un tri\'angulo con tres barras, existe un \'unico tri\'angulo que se
+%puede formar---cualquiera dos personas que usen tres barras de la misma longitud har\'an dos tri\'angulos congruentes. Est\'a 
+%observaci\'on es expresada matem\'aticamente en la Proposici\'on $I.8$ de Euclides, a partir de ahora lo llamaremos \textit{teorema de 
+%congruencia $LLL$ (\'o lado-lado-lado)}. Otra consecuencia similar es un resultado anterior de Euclides, Proposici\'on $I.4$. Llamado
+%el \textit{teorema de congruencia $LAL$ (lado-\'angulo-lado}, est\'e afirma que dos tri\'angulos son congruentes si existe una 
+%correspondencia entre sus v\'ertices tal que dos pares de lados correspondientes y el \'angulo entre ellos sean congruentes.
+%
+%Las demostraciones de Euclides de las Proposiciones $I.4$ y $I.8$ usan una muy inusual t\'ecnica, llamado el \textit{m\'etodo de 
+%superposici\'on}, el cual describimos en el Cap\'tulo $1$. Como notamos ah\'i, este argumento no se encuentra justificado por los
+%postulados de Euclides, as\'i que tendremos que buscar otra forma para demostrar las congruencias $LAL$ y $LLL$. En efecto, no es 
+%posible demostrar cada congruencia $LAL$ o $LLL$ de los postulados de geometr\'ia neutrales, hasta ahora hemos introducido este hecho:
+%en el siguiente cap\'itulo, describiremos una interpretaci\'on de nuestro sistema axiom\'atico (llamado \textit{geometr\'ia del taxista})
+%en la cual los Postulados $1-8$ son verdaderos, como lo son los cinco postulados de Euclides, pero los teoremas de congruencia 
+%$LAL$ y $LLL$ son actualmente falsos. Esto muestra que dichos teoremas no son consecuencia de los otros postulados.
+%
+%Existen dos caminos para remediar esta situaci\'on. Un camino es tratar de imitar el m\'etodo de superposici\'on de Euclides---esto 
+%requerir\'ia introducir uno o m\'as nuevos postulados que confirmen la existencia de ciertos tipos de ``nociones'' de el plano, o
+%m\'as precisamente funciones biyectivas de el plano en s\'i mismo (llamadas \textit{transformaciones del plano}) que preserven todas 
+%las propiedades geom\'etricas tales como medidas de distancias y de \'angulos. En a\~nos recientes, este enfoque transformacional ha sido 
+%adoptada por unos cuantos libros de geometr\'ia de la alta escuela. Esto tiene una naturalidad atractiva y conduce a un interesante 
+%estudio de las transformaciones en su beneficio, para poder justificar los argumentos originales de Euclides para $LAL$ y $LLL$. Su
+%principal desventaja es que si uno esta luchando por el rigor, uno debe de trabajar m\'as duro al inicio para probar una lista de 
+%propiedades de transformaciones antes de poder usarlas para demostrar cualquier cosa interesante. Para referencia, las 
+%caracter\'isticas b\'asicas de este enfoque son descritos en el Ap\'endice $I$. 
+%
+%Por otro lado, un enfoque simple es adoptar el criterio de congruencia $LAL$ como un postulado. De una forma u otra, este es el enfoque
+%adoptado por Hilbert, Birkhoff, SMSG, y m\'as textos de la alta escuela, y esta es la propuesta que adoptaremos. Habiendo estudiado los 
+%dos cap\'itulos anteriores de este libro, los cuales consisten mayormente de demostraciones de hechos sobre l\'ineas, segmentos, rayos, 
+%y \'angulos que muchas personas pueden considerar como evidentes, probablemente sentir\'as un alivio al conocer que adoptamos $LAL$ 
+%como un postulado que permitir\'a comenzar muy r\'apidamente a demostrar teoremas interesantes de geometr\'ia.
+%
+%\begin{postulado}[El Postulado $LAL$]
+% Si existe una correspondencia entre los v\'ertices de dos tri\'angulos tales que dos lados y el \'angulo entre ellos de un tri\'angulo
+% son congruentes a los correspondientes lados y \'angulo de el otro tri\'angulo, entonces los tri\'angulos son congruentes bajo esta 
+% relaci\'on. 
+%\end{postulado}
+%
+%Todos los otros criterios de congruencia para tri\'angulos pueden ser deducidos de el postulado $LAL$ combinado con nuestros otros 
+%postulados. Aqu\'i esta el primer ejemplo. Esta es la primera parte de la Proposici\'on $I.26$ de Euclides, con la misma demostraci\'on.
+%(La otra parte es congruencia $AAL$, la cual es el teorema $\maltese$ debajo:)
+%
+%\begin{teorema}[Congruencia $ALA$]
+% Si existe una correspondencia entre los v\'ertices de dos tri\'angulo de modo que dos \'angulos y el lado comprendido entre ellos de
+% un tri\'angulo son congruentes a los \'angulos y lado correspondientes de el otro tri''angulo, entonces los tri\'angulos son congruentes 
+% bajo esta relaci\'on.
+%\end{teorema}
+%
+%\begin{proof}
+% Supongamos que $\triangle ABC$ y $\triangle DEF$ son tri\'angulos tales que $\angle A \cong \angle D$, $\angle B \cong \angle E$, y 
+% $\overline{AB} \cong \overline{DE}$. Si $\overline{AC}\cong\overline{DF}$, entonces $\triangle ABC \cong \triangle DEF$ por $LAL$, y
+% terminamos. Asumimos, por el principio de contradicci\'on, que $\overline{AC} \ncong \overline{DF}$. Por la ley de tricotom\'ia, uno
+% de estos tres lados es m\'as largo que los otros; sin p\'erdida de generalidad, digamos que $AC > DF$. Por el teorema del corte de 
+% segmento de Euclides (Corolario $3.37$), existe un punto $C'\in \overline{AC}$ tal que $\overline{AC'} \cong \overline{DF}$ 
+% (Fig. \ref{trcorte}).
+% \begin{figure}[ht]
+%  \input{CongruenciasIm2}
+%  \centering
+%  \caption{El teorema de congruencia $ALA$}
+%  \label{trcorte}
+% \end{figure}
+% Los tri\'angulos $\triangle ABC'$ y $\triangle DEF$ satisfacen la hip\'otesis del postulado $LAL$, entonces
+% son congruentes. Sesigue de la definici\'on de congruencia que $\angle ABC' \cong \angle E$. Dado que $A*C'*C$ por construcci\'on, el 
+% teorema intermedio vs. intermedio implica que $\overrightarrow{BA}* \overrightarrow{BC'}* \overrightarrow{BC}$, y adem\'as
+% $m\angle ABC > m\angle ABC'$ por el Teorema $4.11 (e)$ (el \'angulo completo es mayor que una de sus partes). Entonces sustituyendo,
+% $m\angle ABC > \angle E$. Esto contradice nuestra hip\'otesis de que estos dos \'angulos son congruentes y anula la posibilidad de que
+% $\overline{AC}$ y $\overline{DF}$ no sean congruentes.
+%\end{proof}
+%
+%El siguiente teorema corresponde a la proposici\'on $I.5$ de Euclides.
+%
+%\begin{teorema}[Teorema del Tri\'angulo Is\'osceles]
+% Si dos lados de un tri\'angulo son congruentes uno a el otro, entonces los \'angulos opuestos a estos lados son congruentes.
+%\end{teorema}
+%
+%%\begin{figure}[ht]
+%% \input{CongruenciasIm3}
+%% \centering
+%% \caption{El teorema del tri\'angulo is\'osceles}
+%% \label{trisos}
+%%\end{figure}
+%
+%\begin{proof}
+% Sea $\triangle ABC$ un tri\'angulo en el cual $\overline{AB} \cong \overline{AC}$ (Fig. \ref{trisos}). Necesitamos demostrar que
+% $\angle B \cong \angle C$. Sea $\overrightarrow{AD}$ la bisectriz de $\angle BAC$. Como $\overrightarrow{AD}$ se encuentra entre 
+% $\overrightarrow{AB}$ y $\overrightarrow{AC}$ por la defici\'on de la bisectriz de un \'angulo, el teorema de la barra transversal 
+% implica que existe un punto $G$ donde $\overrightarrow{AD}$ intersecta el interior de $\overline{BC}$. Observemos que  
+% $\angle BAG \cong \angle CAG$ por definci\'on de la bisectriz de un \'angulo, $\overline{AB} \cong \overline{AC}$ por hip\'otesis,
+% y $\overline{AG}$ es congruente a s\'i mismo; entonces $\triangle BAG \cong \triangle CAG$ por $LAL$. Se sigue de la definici\'on 
+% de congruencia que $\angle B \cong \angle C$.
+%\end{proof}
+%
+%Esta demostraci\'on es simple, corta, y f\'acil de seguir por m\'as persona. Este es un fuerte contraste a la prueba elaborada de Euclides, 
+%la cual requiere extender dos l\'ineas, dibujar dos segmentos adicionales, y aplicar $LAL$ dos veces. Por eso esa demostraci\'on ha sido 
+%un impedimento para estudiantes de geometr\'ia desde la Edad Media, se le dio el ep\'iteto \textit{pons asinorum}, Lat\'in para 
+%``puente de tontos''  (literalmente ``puente de burros''), reflejando los hechos que s\'olo los estudiantes serios y trabajadores 
+%lograron cruzarlo (y quiz\'a tambi\'en refleja el hecho de que el diagrama incluido en la prueba de Euclides se asemeja a un puente).
+%
+%Existe otra, simple, prueba de el teorema de el tri\'angulo is\'oceles, aparentemente descubierta por Pappus de Alejandr\'ia cerca de 
+%$600$ a\~nos despu\'es de Euclides. Es tan simple que algunas veces requiere comprobar para ver que esta bien.
+%
+%\begin{proof}[Demostraci\'on de Pappus de el Teorema del Tri\'angulo Is\'osceles]
+% As\'i como antes, supongamos que $\triangle ABC$ es un tri\'angulo en el cual $\overline{AB} \cong \overline{AC}$. Bajo la correspondencia
+% $A \leftrightarrow A$, $B \leftrightarrow C$, y $C \leftrightarrow B$, los tri\'angulos $\triangle ABC$ y $\triangle ACB$ satisfacen
+% las hip\'otesis de el postulado $LAL$ (porque $\overline{AB} \cong \overline{AC}$, $\overline{AC} \cong \overline{AB}$, y 
+% $\angle BAC \cong \angle CAB$), y luego $\triangle ABC \cong \triangle ACB$. Entonces los \'angulos correspondientes $\angle B$ y
+% $\angle C$ son congruentes.
+%\end{proof}
+%
+%%\begin{figure}[ht]
+%% \input{CongruenciasIm4}
+%% \centering
+%% \caption{Demostraci\'on de Pappus de el teorema del tri\'angulo is\'osceles}
+%% \label{IsoPappus}
+%%\end{figure}
+%
+%Esta demostraci\'on podr\'ia ser una pequeña sorpresa si no la hubieras visto antes. Para entender como funciona, ayuda visualizar 
+%dos copias de $\triangle ABC$, una como reflejo de la otra. (V\'ease Fig. \ref{IsoPappus}; le debo esto a el hermoso libro de 
+%geometr\'ia de Harold Jacobs por la idea de ilustrar esta demostraci\'on de tal forma.) Intuitivamente, la esencia de la idea es que 
+%el tri\'angulo $\triangle ABC$ es congruente a su reflejo. Durante los siglos despu\'es de que la demostraci\'on de Pappus fue 
+%escrita, algunos matem\'aticos custionaron si es posible aplicar $LAL$ a dos tri\'angulos que son el mismo tri\'angulo. Pero ahora que
+%tenemos una mejor apreciaci\'on de el significado de losenunciados matem\'aticos, es claro que el postulado $LAL$ de verdad aplica aqu\'i,
+%porque este enunciado no estipula que los dos tri\'angulos deban ser distintos.
+%
+%El siguiente teorema es la Proposici\'on $I.6$ de Euclides.
+%
+%\begin{teorema}[Inverso a el Teorema del Tri\'angulo Is\'osceles]
+% Si dos \'angulos de un tri\'angulo son congruentes entre s\'i, entonces los lados opuestos a estos \'angulos son congruentes.
+%\end{teorema}
+%
+%\begin{proof}
+% Se deja para el lector.
+%\end{proof}
+%
+%\begin{corolario}
+% Un tri\'angulo es equil\'atero si y s\'olo si es equiangular. 
+%\end{corolario}
+%
+%\begin{proof}
+% Si $\triangle ABC$ es equil\'atero, entonces el teorema del tri\'angulo is\'osceles muestra que cualquiera par de \'angulos son 
+% congruentes entre s\'i. Inversamente, si $\triangle ABC$ es equiangular, entonces el inverso del teorema de el tri\'angulo is\'osceles
+% nos dice que cualquier par de lados son congruentes entre s\'i.
+%\end{proof}
+%
+%\begin{teorema}[Teorema de Copiar Tri\'angulo] \label{tmaTCT}
+% Supongamos que $\triangle ABC$ es un tri\'angulo y $\overline{DE}$ es un segmento congruente a $\overline{AB}$. En cada lado de 
+% $\\overleftrightarrow{DE}$, existe un punto $F$ tal que $\triangle DEF \cong \triangle ABC$. 
+%\end{teorema}
+%
+%\begin{proof}
+% Se deja para el lector.
+%\end{proof}
+%
+%El punto $F$ cuya existencia es asegurada en el teorema anterior es actualmente \'unico, una vez que decidamos un lado espec\'ifico de 
+%$\overleftrightarrow{DE}$. Como los teoremas de el \'unico punto y el \'unico rayo, este encunciado de unicidad es frecuentemente muy 
+%importante, as\'i que vale la pena verlo como un teorema aparte. Esta es la Proposici\'on $I.7$ de Euclides, pero nuestra demostraci\'on
+%es diferente.
+%
+%\begin{teorema}[Teorema del Tri\'angulo \'Unico]
+% Supongamos que $\overline{DE}$ es un segemento y $F$ y $F'$ son puntos en un mismo lado de $\overleftrightarrow{DE}$ tales que 
+% $\triangle DEF \cong \triangle DEF'$ (Fig. \ref{triunico}). Entonces $F=F'$.
+%\end{teorema}
+%
+%%\begin{figure}[ht]
+%% \input{CongruenciasIm5}
+%% \centering
+%% \caption{El teorema del tri\'angulo \'unico}
+%% \label{triunico}
+%%\end{figure}
+%
+%\begin{proof}
+% Como $\angle FDE \cong F'DE$ y ambos est\'an en un mismo lado de $\overleftrightarrow{DE}$, el teorema del rayo \'unico implica que 
+% $\overrightarrow{DF}=\overrightarrow{DF'}$. Entonces $\overline{DF} \cong \overline{DF'}$ y ambos se posicional en el mismo rayo que 
+% empiza en $D$, el teorema del punto \'unico implica que $F=F'$. 
+%\end{proof}
+%
+%En seguida viene el teorema de congruencia aparentementa m\'as natural de todos, el teorema de congruencia $LLL$. Aunque sorpresivamente,
+%demostrarlo necesita mucho m\'as trabajo que demostrar $ALA$. Esta es la Proposici\'on $I.8$ de Euclides, pero daremos una demostraci\'on 
+%diferente que evita el uso injustificado de la superposici\'on.
+%
+%\begin{teorema}[Congruencia $LLL$]
+% Si existe una correspondencia entre los v\'ertices los v\'ertices de dos tri\'angulos tal que los tres lados de un tr\'iangulo sean 
+% congruentes a los lados correspondientes de el otro tri\'angulo, entonces los tri\'angulos son congruentes bajo esta relaci\'on.
+%\end{teorema}
+%
+%%\begin{figure}[ht]
+%% \input{CongruenciasIm6}
+%% \centering
+%% \caption{El teorema de congruencia $LLL$}
+%% \label{tmalll}
+%%\end{figure}
+%
+%\begin{proof}
+% Supongamos que $\triangle ABC$ y $\triangle DEF$ son tri\'angulos tales que $\overline{AB} \cong \overline{DE}$, 
+% $\overline{AC} \cong \overline{DF}$, y $\overline{BC} \cong \overline{EF}$ (Fig. \ref{tmalll}). Por el teorema \ref{tmaTCT}, podemos
+% tomar un punto $C'$ en el lado opuesto de $C$ respecto a $\overleftrightarrow{AB}$ tal que $\triangle ABC' \cong \triangle DEF$. 
+% Si $A$, $C$, y $C'$ no son colineales, entonces como $\overline{AC} \cong \overline{AC'}$, se sigue del teorema del tri\'angulo is\'osceles
+% aplicado a $\triangle ACC'$ que $\angle ACC' \cong \angle AC'C$. Similarmente, si $B$, $C$, y $C'$ no son colineales, como 
+% $\overline{BC} \cong \overline{BC'}$ se sigue que $\angle BCC' \cong \angle BC'C$. Deseamos usar estas congruencias de \'angulos para
+% demostrar que $\angle ACB \cong \angle AC'B$.
+% 
+% Dado que $C$ y $C'$ est\'an en lados opuestos de $\overleftrightarrow{AB}$, el segmento $\overline{CC'}$ intersecta a 
+% $\overleftrightarrow{AB}$ en un punto $Q$. Dado que $Q$ se puede localizar en cualquier lugar sobre $\overleftrightarrow{AB}$, vamos a
+% considerar tres posibilidades, dependiendo de c\'omo se encuentre situado $Q$ respecto a $A$ y $B$ (Fig. \ref{trestri}).
+% 
+%% \begin{figure}[ht]
+%%  \input{CongruenciasIm7}
+%%  \centering 
+%%  \caption{Algunas posibles posiciones para $Q$.}
+%%  \label{trestri}
+%% \end{figure}
+%
+% \begin{caso}
+% $Q$ est\'a entre $A$ y $B$. En este caso el teorema intermedio vs. intermedio implica que $\overrightarrow{CC'}$ (el cual es el mismo que
+% el rayo $\overrightarrow{CQ}$ est\'a entre $\overrightarrow{C'A}$ y $\overrightarrow{C'B}$. Luego por el teorema de la suma de \'angulos
+% (Teorema $4.11 (b)$) se sigue que $m\angle ACB = m\angle AC'B$.
+% \end{caso}
+% \begin{caso}
+%  $Q$ es igual a $A$ o a $B$. Si $Q=A$, entonces $C*A*C'$, mientras que $B$ no est\'a sobre $\overleftrightarrow{CC'}$ (de otro modo $A$,
+%  $B$ y $C$ ser\'ian colineales). Se sigue que $\angle ACB = \angle BCC' \cong \angle BC'C = \angle AC'B$. De forma an\'aloga, si $Q=B$, 
+%  entonces $\angle ACB = \angle ACC' \cong \angle AC'C = \angle AC'B$. 
+% \end{caso}
+% \begin{caso}
+%  $Q$ no esta en $\overline{AB}$. En este caso existen dos posibilidades: $Q*A*B$ \'o $A*B*Q$. El argumento es el mismo en ambos casos 
+%  excepto que con $A$ y $B$ invertidos, as\'i que podemos considerar s\'olo el caso $Q*A*B$. Nuevamente por el teorema intermedio vs. 
+%  intermedio decimos que $\overrightarrow{CC'}*\overrightarrow{CA}*\overrightarrow{CB}$ y 
+%  $\overrightarrow{C'C}*\overrightarrow{C'A}*\overrightarrow{C'B}$, y el teorema de sustracci\'on de \'angulos nos dice que 
+%  $m\angle ACB = m\angle AC'B$.
+% \end{caso}
+% 
+% En estos tres casos, demostramos que $\angle ACB \cong \angle AC'B$, y luego $\triangle ABC \cong \triangle ABC'$ por $LAL$. Dado que 
+% $\triangle ABC' \cong \triangle DEF$ por construcci\'on, se sigue por transitividad de congruencias que $\triangle ABC \cong \triangle DEF$.
+%\end{proof}
 
