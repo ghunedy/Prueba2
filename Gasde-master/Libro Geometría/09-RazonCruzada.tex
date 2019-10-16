@@ -1,0 +1,157 @@
+
+\chapter{Razón cruzada}
+
+\section{Definición}
+\begin{df}\label{DRC}
+Sea $l$ una recta en el plano y $\{A,B,C,D\}\subset l$, definimos la \textcolor{red}{\bf razòn cruzada de $A,B,C,D$}\index{razón cruzada de $A,B,C,D$} como $$\frac{AC}{CB}\Big/\frac{AD}{DB}$$ Y la denotamos como $l\{A,B;C,D\}$.
+\end{df}
+\begin{df}
+Sean $a,b,c,d$ rectas en el plano tales que $a\cap b\cap c\cap d=\{L\}$ ($L\in\mathbb{E}^{2}$) y sean $A\in a, B\in b, C\in c, D\in d$ ($O\notin\{A,B,C,D\}$). Definimos la \textcolor{red}{\bf razón cruzada de $a,b,c,d$}\index{razón cruzada de $a,b,c,d$} como $$\frac{\sen\angle AOC}{\sen\angle COB}\Big/\frac{\sen\angle AOD}{\sen\angle DOB}$$ Y la denotamos por $L\{a,b,c,d\}$.
+\end{df}
+\section{Relaciones de razón cruzada de hileras y haces}
+\begin{teo}\label{T1RRC}
+Sean $l$ una recta en el plano y $O$ un punto cualquiera tal que $O\notin l$ y $\{A,B,C,D\}\subset l$. Entonces $l\{A,B,C,D\}=O\{\overline{OA},\overline{OB};\overline{OC},\overline{OD}\}$.
+\end{teo}
+\begin{dem}
+Primero consideremos $\triangle OAB$ y que $C\in\overline{AB}$. Entonces por el Teorema~\ref{TGB} tenemos que:
+$$\frac{AC}{CB}=\frac{OA\;\sen(\angle AOC)}{BO\;\sen(\angle COB)}$$
+
+Ahora consideremos $\triangle OAB$ y que $D\in\overline{AB}$, entonces por el Teorema~\ref{TGB},
+$$\frac{AD}{DB}=\frac{OA\;\sen(\angle AOD)}{BO\;\sen(\angle DOB)}$$
+De esto se concluye que 
+$$\frac{AC}{CB}\Big/\frac{AD}{DB}=\frac{OA\;\sen(\angle AOC)}{BO\;\sen(\angle COB)}\Big/\frac{OA\;\sen(\angle AOD)}{BO\;\sen(\angle DOB)}=\frac{\sen(\angle AOC)}{\sen(\angle COB)}\Big/\frac{\sen(\angle AOD)}{\sen(\angle DOB)}$$.
+
+Por lo tanto, $l\{A,B,C,D\}=O\{\overline{OA},\overline{OB};\overline{OC},\overline{OD}\}$.
+
+\end{dem}
+
+\begin{cor}\label{C1RC}
+Sea $\{A,B,C,D\}\subset l$ y sean $P,Q$ dos puntos tales que $\{P,Q\}\nsubseteq l$, entonces $$P\{\overline{PA},\overline{PB};\overline{PC},\overline{PD}\}=Q\{\overline{QA},\overline{QB};\overline{QC},\overline{QD}\}$$.
+\end{cor}
+\begin{pba}
+Ver secciòn de ejercicios, Ejercicio~\ref{E1RC}.
+\end{pba}
+
+\begin{cor}\label{C2RC}
+Sean $a,b,c,d$ rectas concurrentes $a\cap b\cap c\cap d=\{L\}$ y sean $p,q$ rectas tales que $L\notin p$ y $L\notin q$. Consideremos $\{A\}=p\cap a, \{B\}=p\cap b, \{C\}=p\cap c, \{D\}=p\cap d, \{E\}=q\cap a, \{F\}=q\cap b, \{G\}=q\cap c, \{H\}=q\cap d$.  Entonces
+$$p\{A,B;,C,D\}=q\{E,F;G,H\}$$.
+\end{cor}
+\begin{pba}
+Ver sección de ejercicios, Ejercicio~\ref{E2RC}.
+\end{pba}
+
+\section{Los seis valores de la razón cruzada}
+Dados cuatro puntos en una recta, el càlculo de la cantidad de razones cruzadas que podemos encontrar está asociado al número de permutaciones de los cuatro puntos, lo cual nos diría que son veinticuatro razones cruzadas. Sin embargo, vamos a argumentar que en realidad son sólo seis ya que se repiten formando seis grupos de cuatro  en los que las razones cruzadas en cada grupo son las mismas.
+
+Sean $l$ una recta en el plano, $\{A,B,C,D\}\subset l$ y $\lambda\in\mathbb{R}$.
+Supongamos que $l\{A,B;C,D\}=\lambda$, aplicando la Definición~\ref{DRC} tenemos que $l\{B,A;D,C\}=l\{C,D;A,B\}=l\{D,C;B,A\}=\lambda$. 
+
+Del mismo modo, haciendo uso de la Definición~\ref{DRC} se tiene que $l\{A,B;D,C\}=l\{B,A;C,D\}=l\{D,C;A,B\}=l\{C,D;B,A\}=\frac{1}{\lambda}$.
+
+Ahora, como tenemos cuatro puntos colineales, haremos uso del Teorema de Euler el cual nos daba una identidad que nos será de ayuda. 
+$$AB\cdot CD+AC\cdot DB+AD\cdot BC=0$$
+
+$l\{A,C;B,D\}=\frac{AB}{BC}\Big/\frac{AD}{DC}=\left(\frac{AB}{BC}\right)\left(\frac{DC}{AD}\right)=-\frac{AB\cdot CD}{AD\cdot BC}=\frac{AC\cdot DB+AD\cdot BC}{AD\cdot BC}=\frac{AC\cdot DB}{AD\cdot BC}+1=-\left(\frac{AC}{CB}\cdot\frac{DB}{AD}\right)+1=-\left(\frac{AC}{CB}\Big/\frac{AD}{DB}\right)+1=-(l\{A,B;C,D\})+1=-(\lambda)+1=1-\lambda$ y aplicando de nuevo la Definición~\ref{DRC} tenemos que $l\{B,D;A,C\}=l\{C,A;D,B\}=l\{D,B;C,A\}=1-\lambda$.
+
+Análogo a lo que se hizo con las dos primeras razones, tenemos que $l\{A,C;D,B\}=l\{B,D;C,A\}=l\{C,A;B,D\}=l\{D,B;A,C\}=\frac{1}{(1-\lambda)}$.
+
+Ahora consideremos $l\{A,D;B,C\}$, aplicando la Definición~\ref{DRC} tenemos que $l\{A,D;B,C\}=\frac{AB}{BD}\Big/\frac{AC}{CD}=\frac{AB}{BD}\cdot\frac{CD}{AC}$, entonces por el Teorema de Euler $l\{A,D;B,C\}=\frac{-(AC\cdot DB+AD\cdot BC)}{AC\cdot BD}=\frac{AC\cdot DB+AD\cdot BC}{AC\cdot DB}=\frac{AC\cdot DB}{AC\cdot DB}+\frac{AD\cdot BC}{AC\cdot DB}=1+\left(\frac{AD}{DB}\cdot\frac{BC}{AC}\right)=1-\left(\frac{AD}{DB}\cdot\frac{BC}{CA}\right)=1-l\{A,B;D,C\}=1-\frac{1}{\lambda}=\frac{\lambda -1}{\lambda}$. Aplicando de nuevo la definición de razón cruzada tenemos que también $l\{B,C;D,A\}=l\{C,B;D,A\}=l\{D,A;C,B\}=\frac{\lambda -1}{\lambda}$.
+
+Como se hizo anteriormente, tenemos que $l\{A,D;C,B\}=l\{B,C;A,D\}=l\{C,B;A,D\}=l\{D,A;B,C\}=\frac{\lambda}{\lambda - 1}$.
+
+Así tenemos el siguiente teorema.
+\begin{teo}
+Sean $\{A,B,C,D\}\subset l$ tales que $\{A,B;C,D\}=\lambda$, entonces para cualquier permutación de estos puntos, las razones cruzadas son 
+$$\lambda,\;\frac{1}{\lambda},\; 1-\lambda,\;\frac{1}{(1-\lambda)},\;\frac{\lambda -1}{\lambda},\;\text{ó}\;\frac{\lambda}{\lambda - 1}.$$
+\end{teo}
+
+
+\section{Construcción del cuarto elemento dados tres}
+
+Sea $l$ una recta tal que $\{A,B,C\}\subset l$ y $\lambda\in\mathbb{R}$, debemos construir $D\in l$ tal que $l\{A,B;C,D\}=\lambda$. 
+
+Construcción: Sea $l$ una recta tal que $\{A,B,C\}\subset l$, $m\neq l$ una recta por $C$. Construir $\{E,F\}\subset m$ tales que $\frac{CE}{CF}=\lambda$. 
+
+Sean $n$ la recta determinada por $A,E$, $o$ la recta determinada por $B,F$, $n\cap o=\{P\}$ y $p$ la recta paralela a $m$ por $P$, $p\cap l=\{D\}$, el punto que buscamos pues tenemos que $\triangle ACE\cong\triangle ADP$ \textbf{cs(AA)} ya que $|\angle CAE|=|\angle DAP|$ y $|\angle APD|=|\angle AEC|$. También tenemos que $\triangle BDP\cong\triangle BCF$ \textbf{cs(AA)} pues $|\angle CBF|=|\angle DBP|$ y $|\angle BPD|=|\angle BFC|$. Así, de las semejanzas anteriores tenemos que $\frac{AC}{AD}=\frac{CE}{DP}$ y $\frac{BD}{BC}=\frac{DP}{CF}$, entonces $\frac{AC}{AD}\cdot\frac{BD}{BC}=\frac{CE}{CF}$, con lo que tenemos que $\frac{AC}{BC}\cdot\frac{BD}{AD}=\lambda$, por lo tanto $\frac{AC}{CB}\cdot\frac{DB}{AD}=\lambda$.
+
+Con esto concluimos que la $D$ encontrada es tal que $l\{A,B;,C,D\}=\lambda$.
+
+Además notemos que la construcción realizada asegura la existencia y unicidad del cuarto elemento.
+\section{Propiedades de la razón cruzada en una circunferencia}
+\begin{obs}\label{ORCC}
+Sea $\mathcal{C}(O,r)$ y $\{P,Q,R,X,Y\}\subset \mathcal{C}$. Notemos los siguiente:
+\begin{enumerate}
+\item Si $P\in\widehat{YX}$ y $Q\in\widehat{YX}$, entonces $\angle XPY=\angle XQY$.
+\item Si $P\in\widehat{YX}$ y $R\in\widehat{XY}$, entonces $\angle XPY+\angle YRX=2\perp$, así $\angle XPY=2\perp -\angle YRX$, entonces 
+\begin{eqnarray*}
+\sen(\angle XPY)
+&=& (2\perp -\sen\angle YRX)\\
+&=& \sen(2\perp)\cos(-\angle YRX)+\sen(-\angle YRX)\cos(2\perp)\\
+&=& -\sen(-\angle YRX)\\
+&=& \sen(\angle YRX)\\
+\end{eqnarray*}
+\end{enumerate}
+\end{obs}
+
+\begin{prop}\label{PPRCC}
+Sea $\mathcal{C}(O,r)$ una circunferencia en el plano y $\{A,B,P,Q,R,S\}\subset\mathcal{C}$ (puntos distintos), entonces $A\{P,Q;R,S\}=B\{P,Q;R,S\}$.
+\end{prop}
+\begin{pba}
+Tenemos que 
+\begin{eqnarray*}
+A\{P,Q;R,S\}
+&=& \frac{\sen(\angle PAR)}{\sen(\angle RAQ)}\Big/\frac{\sen(\angle PAS)}{\sen(\angle SAQ)}\\
+&=& \frac{\sen(\angle PAR)}{\sen(\angle RAQ)}\Big/\frac{\sen(\angle PAS)}{\sen(\angle SAQ)}\\
+&=& \left(\frac{\sen(\angle PAR)}{\sen(\angle RAQ)}\right)\left(\frac{\sen(\angle SAQ)}{\sen(\angle PAS)}\right)\\
+&=& \left(\frac{\sen(\angle PBR)}{\sen(\angle RBQ)}\right)\left(\frac{\sen(\angle SBQ)}{\sen(\angle PBS)}\right)\;\;\;(\text{Observaciòn}~\ref{ORCC})\\ 
+&=& \frac{\sen(\angle PBR)}{\sen(\angle RBQ)}\Big/\frac{\sen(\angle PBS)}{\sen(\angle SBQ)}\\
+&=& B\{P,Q;R,S\}\\
+\end{eqnarray*}
+\end{pba}
+\section{Teorema de Pascal}
+\begin{teo}[Teorema de Pascal]\index{Teorema ! de Pascal}
+Sean $\{A,B,C,D,E,F\}\subset\mathcal{C}$. Consideremos el hexágono $ABCDEF$. Sean $AB\cap DE=\{P\}$, $BC\cap EF=\{Q\}$, $CD\cap FA=\{R\}$, entonces $P,Q,\;\text{y}\;R$ son colineales.
+\end{teo}
+\begin{dem}
+Sean $DE\cap FA=\{V\}$ y $AB\cap EF=\{W\}$.
+Por la Proposición~\ref{PPRCC} tenemos que 
+$D\{A,F;E,C\}=B\{A,F;E,C\}$. Ahora notemos que $A,F,W,R$ son colineales, sea $l=\overline{FA}$ y además $l$ es transversal al haz en $D$, entonces por el Teorema~\ref{T1RRC} tenemos que $D\{A,F;E,C\}=l\{A,F;V,R\}$.
+
+También notemos que $Z,F,E,Q$ son colineales, sea $m=\overline{EF}$, tenemos que $m$ es transversal al haz en $B$, entonces por el Teorema~\ref{T1RRC},  $B\{A,F;E,C\}=m\{Z,F;E,Q\}$.
+
+Por tanto, $l\{A,F;V,R\}=m\{Z,F;E,Q\}$. Ahora, aplicando nuevamente el Teorema~\ref{T1RRC} se tiene que $l\{A,F;V,R\}=P\{A,F;V,R\}$ y $m\{Z,F;E,Q\}=P\{Z,F;E,Q\}$. Con lo que concluimos que $P\{A,F;V,R\}=P\{Z,F;E,Q\}$.
+
+Para finalizar, observemos que $\overline{PA}=\overline{PZ}, \overline{PF}=\overline{PF}, \overline{PE}=\overline{PV}$  y dado que el cuarto elemento es único, concluimos que $\overline{PR}=\overline{PQ}$, por lo tanto $P$, $Q$ y $R$ son colineales. 
+\end{dem}
+
+\section{Teorema de Brianchon}
+\begin{teo}[Teorema de Brianchon]\index{Teorema ! de Brianchon}
+Sea $\mathcal{C}(O,r)$ una circunferencia en el plano y $ABCDEF$ un hexágono circunscrito a $\mathcal{C}$, entonces $AD\cap BE\cap CF\neq\emptyset$.
+\end{teo}
+%%%%%%%%%%%%%%%%%%%%% 
+%Este tema no se vió, no se me ocurrió como probar el teorema usando herramientas de Moderna 1
+%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%
+\section{Teorema de Pappus}
+\begin{teo}[Teorema de Pappus]\index{Teorema ! de Pappus}
+Sean $l$ y $m$ dos rectas en el plano tales que $\{A,C,E\}\subset l$ y $\{B,D,F\}\subset m$. Consideremos el hexágono $ABCDEF$ y sean $AB\cap DE=\{P\}, BC\cap EF=\{Q\}, CD\cap FA=\{R\}$, entonces $P$, $Q$ y $R$ son colineales. 
+\end{teo}
+\begin{dem}
+Sean $DE\cap FA=\{G\}$ y $CD\cap EF=\{H\}$. Por el Teorema~\ref{T1RRC} tenemos que $A\{E,B;D,F\}=C\{E,B;D,F\}$. Notemos que $E,P,D,G$ son colineales y sea $\overline{DE}=l$, entonces por el Teorema~\ref{T1RRC} tenemos que $l\{E,P;D,G\}=A\{E,B;D,F\}$. También notemos que $E,Q,H,F$ son colineales y sea $\overline{EF}=m$, entonces por el Teorema~\ref{T1RRC} se tiene que $m\{E,Q;H,F\}=C\{E,B;D,F\}$. Por último aplicando de nuevo el Teorema~\ref{T1RRC} tenemos que $R\{E,P;D,G\}=R\{E,Q;H,F\}$ y como $\overline{RE}=\overline{RE}, \overline{RD}=\overline{RH}, \overline{RG}=\overline{RF}$ y dado que el cuarto elemento es único, entonces $\overline{RQ}=\overline{RP}$ por tanto $P$, $Q$ y $R$ son colineales. 
+
+\end{dem}
+\section{Puntos autocorrespondientes}
+
+\section{Regla geométrica de la falsa posición}
+
+\section{Problema de Apolonio}
+
+
+\subsection*{Ejercicios}
+\begin{enumerate}
+\item Probar el Corolario~\ref{C1RC}, pàgina \pageref{C1RC}. \label{E1RC}
+\item Probar el Corolario~\ref{C2RC}, pàgina \pageref{C2RC}. \label{E2RC}
+
+\end{enumerate}
+
+

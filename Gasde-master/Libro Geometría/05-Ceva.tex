@@ -1,0 +1,55 @@
+\chapter{Teorema de Ceva}
+\begin{teo}[Teorema de Ceva]\index{Teorema ! de Ceva}\label{Teo de Ceva}
+Sea $\triangle ABC$, $L\in\overline{BC}\backslash \{B,C\}$, $M\in\overline{CA}\backslash \{C,A\}$ y $N\in\overline{AB}\backslash \{A,B\}$, entonces $\overline{AL}\cap\overline{BM}\cap\overline{CN}\neq\emptyset$ si y solamente si 
+$$\frac{AN}{NB}\cdot\frac{BL}{LC}\cdot\frac{CM}{MA}=1$$.
+\end{teo}
+
+\begin{dem}
+Sea $\triangle ABC$, $L\in\overline{BC}\backslash \{B,C\}$, $M\in\overline{CA}\backslash \{C,A\}$ y $N\in\overline{AB}\backslash \{A,B\}$.
+\begin{enumerate}
+\item[($\Rightarrow$)] Supongamos que $\overline{AL}\cap\overline{BM}\cap\overline{CN}\neq\emptyset$, sea $\overline{AL}\cap\overline{BM}\cap\overline{CN}=\{O\}$. 
+
+Construir $a$ la recta paralela a $\overline{BC}$ por $A$. Consideremos $a\cap\overline{CN}=\{C'\}$ y $a\cap\overline{BM}=\{B'\}$. Entonces:
+
+\begin{itemize}
+\item $\triangle C'AN\cong\triangle CBN$ \textbf{cs(AA)} ya que $|\angle ANC'|=|\angle BNC|$ y $|\angle CC'A|=|\angle C'CB|$, entonces $\frac{|AN|}{|BN|}=\frac{|C'A|}{|CB|}=\frac{|C'N|}{|CN|}$.
+\item $\triangle B'AM\cong\triangle BCM$ \textbf{cs(AA)} pues $|\angle B'MA|=|\angle BMC|$ y $|\angle AB'M|=|\angle CBM|$, entonces $\frac{|CM|}{|AM|}=\frac{|BC|}{|B'A|}=\frac{|BM|}{|B'M|}$.
+\item $\triangle BOL\cong\triangle B'OA$ \textbf{cs(AA)} pues $|\angle B'OA|=|\angle BOL|$ y $|\angle AB'O|=|\angle LBO|$. Entonces $\frac{|BL|}{|B'A|}=\frac{|OL|}{|OA|}=\frac{|BO|}{|B'O|}$. 
+\item $\triangle COL\cong\triangle C'OA$ \textbf{cs(AA)} ya que $|\angle AOC'|=|\angle LOC|$ y $|\angle OC'A|=|\angle OCL|$, entonces $\frac{|C'A|}{|CL|}=\frac{|OA|}{|OL|}=\frac{|C'O|}{|CO|}$.
+\end{itemize}
+Por lo tanto, 
+$\frac{|BL|}{|B'A|}=\frac{|CL|}{|C'A|}$, entonces $\frac{|BL|}{|CL|}=\frac{|B'A|}{|C'A|}$.
+
+Ahora, consideremos $\triangle ABC$ dirigido levógiramente y tal que $0<\frac{AN}{NB}$, $0<\frac{BL}{LC}$ y $0<\frac{CM}{MA}$. Así tenemos que:
+
+$$\frac{AN}{NB}=\frac{C'A}{BC}\;\;\;\;\;\;\;\;\;\;\;\;\frac{CM}{MA}=\frac{BC}{AB'}\;\;\;\;\;\;\;\;\;\;\;\;\frac{BL}{LC}=\frac{AB'}{C'A}$$
+
+Por lo tanto, $$\frac{AN}{NB}\cdot\frac{BL}{LC}\cdot\frac{CM}{MA}=\frac{C'A}{BC}\cdot\frac{AB'}{C'A}\cdot\frac{BC}{AB'}=1$$.
+
+Observemos que los puntos $L$, $M$ y $N$ no necesariamente se encuentran en los segmentos $BC$, $CA$ y $AB$ respectivamente (como se consideró en la prueba). Veamos un par de ejemplos:
+
+\begin{itemize}
+\item Consideremos $\triangle ABC$ dirigido levógiramente y tal que $0<\frac{NA}{AB}$, $0<\frac{BL}{LC}$ y $0<\frac{CA}{AM}$. Entonces:
+$$\frac{NA}{NB}=\frac{AC'}{BC}\;\;\;\;\;\;\;\;\;\;\;\;\frac{CM}{AM}=\frac{BC}{B'A}\;\;\;\;\;\;\;\;\;\;\;\;\frac{BL}{LC}=\frac{B'A}{AC'}$$
+
+Por lo tanto, $\frac{NA}{NB}\cdot\frac{BL}{LC}\cdot\frac{CM}{AM}=\frac{AC'}{BC}\cdot\frac{B'A}{AC'}\cdot\frac{BC}{B'A}=1$, entonces
+
+$$\frac{AN}{NB}\cdot\frac{BL}{LC}\cdot\frac{CM}{MA}=\left(-\frac{AC'}{BC}\right)\cdot\left(\frac{B'A}{AC'}\right)\cdot\left(-\frac{BC}{B'A}\right)=(-1)(1)(-1)=1$$.
+
+\item Sea $\triangle ABC$ dirigido levógiramente y tal que $0<\frac{AB}{BN}$, $0<\frac{BL}{LC}$ y $0<\frac{MC}{CA}$. Entonces:
+$$\frac{AN}{BN}=\frac{AC'}{BC}\;\;\;\;\;\;\;\;\;\;\;\;\frac{MC}{MA}=\frac{BC}{B'A}\;\;\;\;\;\;\;\;\;\;\;\;\frac{BL}{LC}=\frac{B'A}{AC'}$$
+
+Por lo tanto, $\frac{AN}{BN}\cdot\frac{BL}{LC}\cdot\frac{MC}{MA}=\frac{AC'}{BC}\cdot\frac{B'A}{AC'}\cdot\frac{BC}{B'A}=1$, entonces
+
+$$\frac{AN}{NB}\cdot\frac{BL}{LC}\cdot\frac{CM}{MA}=\left(-\frac{AC'}{BC}\right)\cdot\left(\frac{B'A}{AC'}\right)\cdot\left(-\frac{BC}{B'A}\right)=(-1)(1)(-1)=1$$.
+
+\end{itemize}
+\item [($\Leftarrow$)] Supongamos que $\frac{AN}{NB}\cdot\frac{BL}{LC}\cdot\frac{CM}{MA}=1$ y que  $\overline{AL}\cap\overline{BM}\cap\overline{CN}=\emptyset$. 
+
+Sea $\overline{AL}\cap\overline{BM}=\{O\}$ y $\overline{CO}\cap\overline{AB}=\{N'\}$, entonces $\overline{AL}\cap\overline{BM}\cap\overline{CN'}=\{O\}$. Por la primera implicación de la demostración, sabemos que $\frac{AN'}{N'B}\cdot\frac{BL}{LC}\cdot\frac{CM}{MA}=1$ y por hipótesis $\frac{AN}{NB}\cdot\frac{BL}{LC}\cdot\frac{CM}{MA}=1$ por lo que $\frac{AN'}{N'B}\cdot\frac{BL}{LC}\cdot\frac{CM}{MA}=\frac{AN}{NB}\cdot\frac{BL}{LC}\cdot\frac{CM}{MA}$ así que $\frac{AN}{NB}=\frac{AN'}{N'B}$. Por tanto, $N=N'$ y $\overline{AL}\cap\overline{BM}\cap\overline{CN}=\{O\}$ lo cual es un contradicción pues supusimos que $\overline{AL}\cap\overline{BM}\cap\overline{CN}=\emptyset$. 
+
+Por lo tanto, $\overline{AL}\cap\overline{BM}\cap\overline{CN}\neq\emptyset$. 
+\end{enumerate}
+\end{dem}
+
+

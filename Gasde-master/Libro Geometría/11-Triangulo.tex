@@ -1,0 +1,224 @@
+\chapter{Triángulo}
+
+\section{Triángulo pedal}
+\begin{df}
+Sean $\triangle ABC$, $h_{A}\cap BC=\{D\}$, $h_{B}\cap CA=\{E\}$, $h_{C}\cap AB=\{F\}$, entonces consideremos $\triangle DEF$, a este triángulo se le conoce como el \textcolor{red}{\bf triángulo pedal}\index{triángulo ! pedal} del $\triangle ABC$.
+\end{df}
+\section{Propiedades que se refieren al incírculo y excírculos}
+Primero haremos una construcción que nos servirá de apoyo para observar algunas propiedades sobre el incírculo y los excírculos de un triángulo. 
+
+Sea $\triangle ABC$, construir las 6 bisectrices. Por $A$, sean $a_{I}$ la bisectriz interna y $a_{E}$ la bisectriz externa. 
+Por $B$, sean $b_{I}$ la bisectriz interna y $b_{E}$ la bisectriz externa. 
+Por $C$, sean $c_{I}$ la bisectriz interna y $c_{E}$ la bisectriz externa. 
+
+Sabemos que $a_{I}\cap b_{I}\cap c_{I}=\{I\}$, donde $I$ es el incentro del $\triangle ABC$. 
+
+También se tiene lo siguiente:
+\begin{itemize}
+\item $a_{I}\cap b_{E}\cap c_{E}=\{I_{A}\}$, excentro opuesto a $A$.
+\item $a_{E}\cap b_{I}\cap c_{E}=\{I_{B}\}$, excentro opuesto a $B$.
+\item $a_{E}\cap b_{E}\cap c_{I}=\{I_{C}\}$, excentro opuesto a $C$.
+\end{itemize}
+
+Ahora constrúyase la circunferencia inscrita añ $\triangle ABC$, ($\mathcal{C}(I,r)$) así como la excrita al $\triangle ABC$ por el lado opuesto a $K\in\{A,B,C\}$ ($\mathcal{C}(I_{K},r_{K})$).
+
+Sean $\mathcal{C}(I,r)\cap\overline{AB}=\{Z\}$, $\mathcal{C}(I,r)\cap\overline{BC}=\{X\}$, $\mathcal{C}(I,r)\cap\overline{CA}=\{Y\}$.
+ 
+Y para toda $K\in\{A,B,C\}$ sean:
+$\mathcal{C}(I_{K},r_{K})\cap\overline{AB}=\{Z_{K}\}$, $\mathcal{C}(I_{K},r_{K})\cap\overline{BC}=\{X_{K}\}$, $\mathcal{C}(I_{K},r_{K})\cap\overline{CA}=\{Y_{K}\}$.
+\begin{df}
+$s$ es el \textcolor{red}{\bf semiperímetro}\index{semiperímetro} del  $\triangle ABC$ si y solamente si $s=\frac{AB+BC+CA}{2}$ así que $AZ_{A}=Y_{A}A$. 
+\end{df}
+Veamos ahora algunas propiedades que se cumplen en la construcción hecha. 
+\begin{itemize}
+\item $Pot_{\mathcal{C}(I_{A},r_{A})}(A)=(AZ_{A})^{2}=(AY_{A})^{2}$. Entonces $(AZ_{A})^{2}=(AY_{A})^{2}$.
+
+Análogamente, $BZ_{A}=BX_{A}$, $AZ=YA$, $ZB=BX$, $XC=CY$, $X_{A}C=Y_{A}C$. 
+\item Como el perímetro del $\triangle ABC$ está dado por $P=AB+BC+CA$, tenemos que:
+\begin{eqnarray*}
+AB+BC+CA
+&=& AB+BX_{A}+X_{A}C+CA\\
+&=& AB+BZ_{A}+Y_{A}C+CA\\
+&=& AZ_{A}+Y_{A}A\\
+&=& 2(AZ_{A})\\
+\end{eqnarray*}
+
+Por tanto, $AZ_{A}=S=Y_{A}A$.
+\item 
+\begin{eqnarray*}
+AB+BC+CA
+&=& AZ+ZB+BX+XC+CY+YA\\
+&=& 2AZ+2ZB+2XC\\
+&=& 2(AZ+ZB+XC)\\
+\end{eqnarray*}
+Por tanto, $s=AB+XC$. Entonces $AZ_{A}=AB+XC$, así que $AB+BZ_{A}=AB+XC$, entonces $BZ_{A}=XC$, $BX_{A}=XC$, $BX_{A}+X_{A}X=X_{A}X+XC$, luego $BX=X_{A}C$. 
+
+\item Si $L$ es el punto medio de $BC$, entonces $L$ es punto medio de los puntos de tangencia. 
+
+Como $L$ es punto medio de $BC$, tenemos que $BL=LC$, entonces $BX+XL=LX_{A}+X_{A}C$ y como $BX=X_{A}C$ se tiene que $XL=LX_{A}$. 
+
+\item Tenemos que 
+\begin{eqnarray*}
+\A(\triangle ABC)
+&=& \A(\triangle ABI)+\A(\triangle BCI)+\A(\triangle CAI)\\
+&=& \frac{AB\cdot r}{2}+\frac{BC\cdot r}{2}+\frac{CA\cdot r}{2}\\
+&=& r\left(\frac{AB+BC+CA}{2}\right)\\
+&=& r\cdot s\\
+\end{eqnarray*}
+\begin{eqnarray*}
+\A(\triangle ABC)
+&=& \A(\triangle ABI_{A})+\A(\triangle CAI_{A})-\A(\triangle BCI_{A})\\
+&=& \frac{AB\cdot r_{A}}{2}+\frac{CA\cdot r_{A}}{2}-\frac{BC\cdot r_{A}}{2}\\
+&=& r_{A}\left(\frac{AB+CA-BC}{2}\right)\\
+&=& r_{A}\left(\frac{AB+BC+CA-2BC}{2}\right)\\
+&=& r_{A}(s-BC)\\
+\end{eqnarray*}
+
+Análogamente se tiene que:
+
+$\A(\triangle ABC)=r_{B}(s-CA)=r_{C}(s-AB)$.
+
+Así, $\frac{1}{r_{A}}=\frac{s-BC}{\A(\triangle ABC)}$, $\frac{1}{r_{B}}=\frac{s-CA}{\A(\triangle ABC)}$ y $\frac{1}{r_{C}}=\frac{s-AB}{\A(\triangle ABC)}$. 
+
+Y por tanto 
+\begin{eqnarray*}
+\frac{1}{r_{A}}+\frac{1}{r_{B}}+\frac{1}{r_{C}}
+&=& \frac{s-BC+s-CA+s-AB}{\A(\triangle ABC)}\\
+&=& \frac{3s-2s}{\A(\triangle ABC)}\\
+&=& \frac{s}{\A(\triangle ABC)}\\
+&=& \frac{1}{r}\\
+\end{eqnarray*}
+\end{itemize}
+
+
+\section{Cuadrángulo ortocéntrico}
+Sea $\triangle ABC$ y sean $a_{I}$ la bisectriz interna y $a_{E}$ la bisectriz externa por $A$, $b_{I}$ la bisectriz interna y $b_{E}$ la bisectriz externa por $B$, $c_{I}$ la bisectriz interna y $c_{E}$ la bisectriz externa por $C$. 
+
+Y consideremos $I$ el incentro del $\triangle ABC$, $I_{A}$ el excentro opuesto a $A$, $I_{B}$ el excentro opuesto a $B$, $I_{C}$ el excentro opuesto a $C$.
+
+Afirmación: $I,I_{A},I_{B},I_{C}$ son tales que cuando se elijen tres de estos puntos el restante es el ortocentro del triángulo que ellos determinan.
+Consideremos
+\begin{itemize}
+\item $\triangle II_{A}I_{C}$
+
+Tenemos que $h_{I}=b_{I}$, $h_{I_{A}}=c_{E}$ y $h_{I_{C}}=a_{E}$, entonces $h_{I}\cap h_{I_{A}}\cap h_{I_{C}}=b_{I}\cap c_{E}\cap a_{E}=\{I_{B}\}$. Por tanto, el ortocentro del $\triangle II_{A}I_{C}$ es $I_{B}$.
+\item $\triangle I_{A}I_{B}I_{C}$
+
+Tenemos que $h_{I_{A}}=a_{I}$, $h_{I_{B}}=b_{I}$ y $h_{I_{C}}=c_{I}$, entonces $h_{I_{A}}\cap h_{I_{B}}\cap h_{I_{C}}=a_{I}\cap b_{I}\cap c_{I}=\{I\}$. Por tanto, el ortocentro del $\triangle I_{A}I_{B}I_{C}$ es $I$.
+\item $\triangle II_{A}I_{B}$
+
+Tenemos que $h_{I}=c_{I}$, $h_{I_{A}}=b_{E}$ y $h_{I_{B}}=a_{E}$, entonces $h_{I}\cap h_{I_{A}}\cap h_{I_{B}}=c_{I}\cap b_{E}\cap a_{E}=\{I_{C}\}$. Por tanto, el ortocentro del $\triangle II_{A}I_{B}$ es $I_{C}$.
+\item $\triangle II_{B}I_{C}$
+
+Tenemos que $h_{I}=a_{I}$, $h_{I_{B}}=c_{E}$ y $h_{I_{C}}=b_{E}$, entonces $h_{I}\cap h_{I_{B}}\cap h_{I_{C}}=a_{I}\cap c_{E}\cap b_{E}=\{I_{A}\}$. Por tanto, el ortocentro del $\triangle II_{B}I_{C}$ es $I_{A}$.
+\end{itemize}
+
+\begin{obs}
+\begin{itemize}
+\item El triángulo pedal del $\triangle II_{A}I_{C}$ es el $\triangle BCA$.
+\item El triángulo pedal del $\triangle I_{A}I_{B}I_{C}$ es el $\triangle ABC$. 
+\item El triángulo pedal del $\triangle II_{A}I_{B}$ es el $\triangle CBA$.
+\item El triángulo pedal del $\triangle II_{B}I_{C}$ es el $\triangle ACB$.
+\end{itemize}
+Por tanto el triángulo pedal de los 4 triángulos obtenidos a partir de $I,I_{A},I_{B},I_{C}$ es el $\triangle ABC$. 
+\end{obs}
+
+Recordemos que la circunferencia de los nueve puntos de un triángulo pasa por los puntos medios de los lados del triángulo, los pies de las alturas y los puntos medios de los segmentos determinados por el ortocentro y cada vértice de triángulo. 
+
+Así, si $\mathcal{C}(O,r)$ es la circunferencia que inscribe al $\triangle ABC$ tenemos que $\mathcal{C}$ es la circunferencia de los nueve puntos de $\triangle II_{A}I_{C}$, $\triangle I_{A}I_{B}I_{C}$, $\triangle II_{A}I_{B}$ y $\triangle II_{B}I_{C}$.
+
+\begin{df}
+Sean $\{A,B,C,D\}$ un conjunto de puntos de tal forma que cada que elegimos tres de ellos el cuarto es el ortocentro del triángulo que ellos determinan. Llamaremos a $\{A,B,C,D\}$ un \textcolor{red}{\bf grupo ortocéntrico}\index{grupo ortocéntrico} de puntos. 
+\end{df}
+
+\section{Triángulos referidos a un grupo ortocéntrico de puntos}
+\begin{teo}
+En un grupo ortocéntrico de puntos, los cuatro triángulos que ellos determinan tienen la mismca circunferencia de los nueve puntos. 
+\end{teo}
+\begin{dem}
+Sean $\{A,B,C,D\}$ un grupo ortocéntrico de puntos y sean $\triangle ABC$, $\triangle ABD$, $\triangle BCD$ y $\triangle ACD$ los cuatro triángulo que estos determinan. 
+
+Consideremos $\mathcal{C_{A}}(O_{A},r)$, $\mathcal{C_{B}}(O_{B},r)$, $\mathcal{C_{C}}(O_{C},r)$ y $\mathcal{C_{D}}(O_{D},r)$ las circunferencias que inscriben al $\triangle BCD$, $\triangle ACD$, $\triangle ABD$ y al $\triangle ABC$ respectivamente, entonces $\overline{O_{B}O_{C}}$ es mediatriz de $AD$ pues $|O_{B}A|=|O_{B}D|=|O_{C}A|=|O_{C}D|=r$. Análogamente $\overline{O_{A}O_{D}}$ es mediatriz de $BC$, $\overline{O_{B}O_{D}}$ es mediatriz de $AC$ y $\overline{O_{C}O_{D}}$ es mediatriz de $AB$. 
+
+Sean $\overline{O_{A}O_{D}}\cap\overline{BC}=\{L\}$, $\overline{O_{B}O_{D}}\cap\overline{AC}=\{M\}$ y $\overline{O_{C}O_{D}}\cap\overline{AB}=\{N\}$.
+
+Observemos además que $\overline{BC}$ es mediatriz de $O_{A}O_{D}$, $\overline{AC}$ es mediatiz de $O_{B}O_{D}$ y $\overline{AB}$ es mediatriz de $O_{C}O_{D}$.
+
+De lo anterior tenemos que $|BL|=|LC|$, $|AM|=|MC|$, $|AN|=|NB|$, $|O_{D}L|=|LO_{A}|$, $|O_{B}M|=|O_{D}M|$ y $|O_{C}N|=|NO_{D}|$. 
+
+Entonces $|O_{D}O_{A}|=2|O_{D}L|$, $|O_{D}O_{B}|=2|O_{D}M|$ y $|O_{D}O_{C}|=2|O_{D}N|$.
+por lo tanto $\triangle LMN$ y $\triangle O_{A}O_{B}O_{C}$ son homotéticos desde $O_{D}$ con razón $\frac{1}{2}$. 
+
+Recordemos que $\triangle LMN$ es homotéticos al $\triangle ABC$ desde eñ centroide $G$ con razón $\frac{1}{2}$. Así que $\triangle ABC\equiv\triangle O_{A}O_{B}O_{C}$, entonces $\{O_{A},O_{B},O_{C},O_{D}\}$ es un grupo ortocéntrico de puntos.
+
+Puesto que $\mathcal{C}_{9}(\triangle ABC)$ contiene a $L,M,N$ por ser los puntos medios de sus lados y $\mathcal{C}_{9}(\triangle O_{A}O_{B}O_{C})$ contiene a $L,M,N$ por ser los puntos medios de los segmentos del vértice al ortocentro, concluimos que $\triangle BCD$, $\triangle ACD$, $\triangle ABD$, $\triangle ABC$, $\triangle O_{A}O_{B}O_{C}$, $\triangle O_{A}O_{B}O_{D}$, $\triangle O_{A}O_{C}O_{D}$ y $\triangle O_{B}O_{C}O_{D}$ tienen la misma circunferencia de los nueve puntos.
+\end{dem}
+
+
+\section{La línea de Simson}
+\begin{teo}\label{TLS}
+Sean $\triangle ABC$ y $P$ un punto en el plano. Consideremos la recta $a$ la ortogonal a $\overline{BC}$ por $P$, $b$ la ortogonal a $\overline{CA}$ por $P$ y $c$ la ortogonal a $\overline{AB}$ por $P$ tales que $a\cap\overline{BC}=\{X\}$, $b\cap\overline{CA}=\{Y\}$ y $c\overline{AB}=\{Z\}$. Entonces si $\mathcal{C}(O,r)$ es la circunferencia que inscribe al $\triangle ABC$, $P\in\mathcal{C}$ si y solamente si $X,Y\;\&\;Z$ son colineales. (Consideramos $\triangle ABC$ ordenado levógiramente).
+\end{teo}
+\begin{dem}
+\begin{enumerate}
+\item [($\Rightarrow$)]
+Supongamos que $P\in\mathcal{C}$ y sin perder generalidad supongamos $P\in\widehat{CA}$, entonces $\square ABCP$ es convexo y cíclico. 
+
+Observemos lo siguiente:
+\begin{itemize}
+\item $\angle CBA=2\perp-\angle APC$.
+\item $|\angle PZA|=|\angle PYA|=\perp$, entonces $\{P,Y,Z,A\}$ es concíclico.
+\item $|\angle PYC|=|\angle PXC|=\perp$, entonces $\{P,X,Y,C\}$ es concíclico. 
+\end{itemize}
+
+Por la segunda observación, tenemos dos casos:
+\begin{enumerate}
+\item $\angle PAZ=\angle PYZ$.
+\item $\angle PAZ=2\perp -\angle PYZ$. 
+\end{enumerate}
+Supongamos que $\angle PAZ=\angle PYZ$, entonces $\{A,Y,\}\subset\widehat{ZP}$, entonces $Z$ divide externamente a $AB$ y $X$ divide internamente a $BC$. Como $Z$ divide externamente, $\angle BAZ=2\perp$ además $\angle BAZ=\angle BAP+\angle PAZ$, entonces $\angle BAP=2\perp -\angle PAZ$, así $\angle BAP=2\perp - \angle PYZ$. 
+Como $\square ABCP$ es cíclico, $\angle BAP=2\perp - \angle PCB$, entonces $2\perp -\angle PCB=2\perp - \angle PYZ$, por tanto $\angle PCB=\angle PYZ$.
+
+Ahora como $X$ divide internamente a $BC$, entonces $\{X,Y,\}\subset\widehat{PC}$, $\angle XYP=2\perp -\angle PCY$ pero $X\in BC$, entonces $\angle PCX=\angle PCB$. Entonces $\angle XYP=2\perp -\angle PCB=\angle BAP$ por tanto $\angle XYP=\angle BAP$. 
+
+El caso 2 es análogo pues $X$ divide externamente a $BC$.
+
+Como $\angle BAP=2\perp$, tenemos que $\angle BAP+\angle PAZ=2\perp$, entonces $\angle XYP+\angle PYZ=2\perp$, por lo que $\angle XYZ=2\perp$ y por lo tanto $X$, $Y$ y $Z$ son colineales. 
+
+\item [($\Leftarrow$)]
+Supongamos que $X,Y,Z$ son colineales, entonces por el Teorema~\ref{Teo de Menelao} tenemos que 
+$$\frac{AZ}{ZB}\cdot\frac{BX}{XC}\cdot\frac{CY}{YA}=-1$$
+Supongamos que $0<\frac{CY}{YA}$, $0<\frac{AZ}{ZB}$, $0<\frac{BX}{XC}$. Como $Z$ divide externamente a $AB$, $\angle PAZ=\angle PYZ$ y como $X$ divide internamente a $BC$, $\angle XYP=2\perp -\angle PCX$ pero $X$ y $B$ son colineales, entonces $\angle XYP=2\perp - \angle PCB$. 
+
+Además como $X,Y,Z$ son colineales, entonces $\angle XYZ=2\perp$ y $\angle XYZ=\angle XYP+\angle PYZ$, entonces $\angle XYP+\angle PYZ==2\perp$, así $2\perp -\angle PCB+\angle PAZ=2\perp$ por tanto $\angle PAZ=\angle PCB$. 
+
+Por otra parte, como $\angle BAZ=2\perp$, entonces $\angle BAP+\angle PAZ=2\perp$, entonces $\angle BAP+\angle PCB=2\perp$.
+Por lo tanto $\square ABCP$ es concíclico, así que $P\in\mathcal{C}$.
+\end{enumerate}
+\end{dem}
+
+La línea que contiene a los puntos $X,Y,Z$ del Teorema~\ref{TLS} es llamada la \textcolor{red}{\bf linea de Simson}\index{línea de Simson} de $P$ con respexto al $\triangle ABC$.
+\section{Ángulo de intersección de líneas de Simson}
+
+Sea $\triangle ABC$ y $\mathcal{C}(O,r)$ la circunferencia que inscribe al $\triangle ABC$. Consideremos $P,P'\in\mathcal{C}(O,r)$ y sean $l,l'$ las líneas de Simson de $P,P'$ con respecto al $\triangle ABC$ respectivamente, tales que $l\cap BC=\{X\}$, $l\cap CA=\{Y\}$, $l\cap AB=\{Z\}$, $l'\cap BC=\{X'\}$, $l'\cap CA=\{Y'\}$ y $l'\cap AB=\{Z'\}$. 
+
+Sean $PX\cap\mathcal{C}\backslash\{P\}=\{U\}$ y $P'X'\cap\mathcal{C}\backslash\{P'\}=\{U'\}$.
+
+Afirmación: $AU$ es paralela a $l$.
+
+En efecto, como $\{P,C,X,Y\}$ es concíclico, $\angle PXY= \angle PCY=\angle PCA=\angle PUA$ por tanto $XY$ es paralela a $AU$.
+
+Ahora, notemos que $\angle (P\longrightarrow P')=\angle UAU'$, entonces $PU$ es paralela a $P'U'$ pues son ortogonales a $BC$, entonces $|\widehat{UU'}|=|\widehat{PP'}|$, luego $\angle UAU'=\frac{1}{2}\angle UOU'=\frac{1}{2}\angle POP'$.
+
+Por lo tanto, el $\angle (P\longrightarrow P')$ es la mitad del ángulo central que determina el arco $\widehat{PP'}$.
+
+
+\section{La línea de Simson y la circunferencia de los nueve puntos}
+\begin{teo}
+Sean $\triangle ABC$ y $H$ su ortocentro, entonces la línea de Simson de un punto $P$ con respecto al $\triangle ABC$ biseca al segmento $PH$ y también $\mathcal{C}_{9}(\triangle ABC)$ biseca a $PH$. 
+\end{teo}
+
+\begin{teo}
+Sea $\triangle ABC$ y $\mathcal{C}(O,r)$ la circunferencia que inscribe al $\triangle ABC$. Sean $P,Q\in\mathcal{C}$ tales que $O\in\overline{PQ}$, $l$ y $m$ la líneas de Simson con respecto al $\triangle ABC$ de $P$ y $Q$ respectivamente, entonces $l$ y $m$ se intersecan en ángulos rectos sobre $\mathcal{C}_{9}(\triangle ABC)$. 
+\end{teo}
+

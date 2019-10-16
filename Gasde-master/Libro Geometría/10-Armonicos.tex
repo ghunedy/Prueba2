@@ -1,0 +1,301 @@
+\chapter{Puntos y líneas armónicos}
+
+\section{División armónica}
+\begin{df}\label{DCA}
+Sean $\{A,B,C,D\}\subset l$, $A$ y $B$ son \textcolor{red}{\bf conjugados armónicos}\index{conjugados armónicos} de $C$ y $D$ si y solamente si $l\{A,B;C,D\}=-1$ y lo  denotaremos como $l(A,B;C,D)$.
+
+De manera similar, sean $a,b,c,d$ rectas concurrentes, $a\cap b\cap c\cap d=\{O\}$, $a$ y $b$ son conjugadas armónicas de $c$ y $d$ si y solamente si $O\{a,b;c,d\}=-1$ y lo denotaremos como $O(a,b;c,d)$.
+\end{df}
+\section{La naturaleza recíproca de la división armónica}
+De la Definición~\ref{DCA} observemos que
+$l(A,B;C,D)\leftrightarrow l\{A,B;C,D\}=-1\leftrightarrow \frac{AC}{CB}\Big/\frac{AD}{DB}=-1\leftrightarrow \frac{AC}{CB}=-\frac{AD}{DB}\leftrightarrow\frac{CA}{AD}=-\frac{CB}{BD}$. Esto se resume en el siguiente teorema.
+
+\begin{teo}\label{THA}
+Sean $\{A,B,C,D\}\subset l$, si $A$ y $B$ son conjugados armónicos con respecto a $C$ y $D$, entonces $C$ y $D$ son conjugados armónicos con respecto de $A$ y $B$. 
+\end{teo}
+
+Si tenemos $\{A,B,C,D\}\subset l$ de tal forma que un par de puntos es armónico con respecto al otro par y viceversa entonces a estos cuatro puntos se les conoce como \textcolor{red}{\bf puntos armónicos}\index{puntos armónicos} o también se dice que conforman un \textcolor{red}{\bf hilera armónica}\index{hilera armónica}.
+
+\section{Construcción de conjugados armónicos}
+En está sección veremos como construir el conjugado armónico de un punto con respecto a otros dos, más adelante el lector se percatar que está construcción nos es única.
+
+Sea $l$ una recta en el plano y sean $A,B,C\in l$.
+
+Construcción:
+\begin{itemize}
+\item Trazar por $A$ una recta $a$.
+\item trazar por $B$ una recta $b$ tal que $a\parallel b$.
+\end{itemize}
+Sea $l'$ por $C$ tal que $l'\cap a=\{M\}$ y $l'\cap b=\{N\}$ con $l\neq l'$. Sea $R\in b$ tal que $NB=BR$ y sea $MR\cap l=\{D\}$, entonces $l\{A,B;C,D\}=-1$.
+
+En efecto, consideremos $\triangle AMC$ y $\triangle BNC$, entonces $\triangle AMC\cong\triangle BNC$ \textbf{cs(AA)} ya que $|\angle MCA|=|\angle NCB|$ y $|\angle AMC|=|\angle BNC|$. Entonces por el Teorema~\ref{Thales1} se tiene que $\frac{AM}{BN}=\frac{MC}{NC}=\frac{AC}{BC}$, así $\frac{AC}{BC}=\frac{AM}{BN}$ si y sólo si $\frac{AC}{CB}=\frac{AM}{NB}$.
+
+Por otra parte, también tenemos que $\triangle AMD\cong\triangle BRD$ \textbf{cs(AA)} pues $|\angle MDA|=|\angle RDB|$ y $|\angle BRD|=|\angle AMD|$. Entonces, $\frac{AM}{BR}=\frac{MD}{RD}=\frac{AD}{BD}$, así $\frac{AD}{BD}=\frac{AM}{BR}$ si y sólo si $-\frac{AD}{DB}=\frac{AM}{BR}$ si y sólo si $\frac{AD}{DB}=-\frac{AM}{BR}$. Y como $NB=BR$, entonces:
+\begin{eqnarray*}
+\left(\frac{AC}{CB}\right)\left(\frac{AD}{DB}\right)=\left(\frac{AM}{NB}\right)\left(-\frac{AM}{BR}\right)
+&\leftrightarrow & \left(\frac{AC}{CB}\right)\left(\frac{DB}{AD}\right)=\left(\frac{NM}{AM}\right)\left(-\frac{AM}{NB}\right)\\
+&\leftrightarrow & \left(\frac{AC}{CB}\right)\left(\frac{DB}{AD}\right)=-1\\
+&\leftrightarrow & \left(\frac{AC}{CB}\right)=\left(-\frac{AD}{DB}\right)\\
+&\leftrightarrow & \frac{AC}{CB}\Big/\frac{AD}{DB}=-1\\
+\end{eqnarray*}
+
+Por lo tanto, $$l\{A,B;C,D\}=-1$$.
+\begin{obs}\label{OBPAI}
+Antes de continuar debe mencionarse que considerando la construcción anterior, hay un caso particular, cuando $C$ es el punto medio de $AB$, en esta caso resulta que el conjugado armónico de $C$ con respecto de $A$ y $B$ es el punto al infinito en $\overline{AB}$.
+\end{obs}
+\section{Propiedades de los puntos armónicos}
+\begin{prop}
+$l(A,B;C,D)\leftrightarrow l(B,A;C,D)\leftrightarrow l(A,B;D,C)\leftrightarrow l(B,A;D,C)\leftrightarrow l(C,D;A,B)\leftrightarrow l(D,C;A,B)\leftrightarrow l(C,D;B,A)\leftrightarrow l(D,C;B,A)$.
+\end{prop}
+
+\begin{prop}\label{P2PPA}
+Sean $\{A,B,C,D,O\}\subset l$ tal que $|AO|=|OB|$, entonces $l\{A,B;C,D\}=-1$ si y solamente si $OB^{2}=OC\cdot OD$.
+\end{prop}
+\begin{pba}
+
+\begin{eqnarray*}
+l\{A,B;C,D\}=-1
+&\leftrightarrow & \frac{AC}{CB}\Big/\frac{AD}{DB}=-1\\
+&\leftrightarrow & \frac{AC}{CB}=-\frac{AD}{DB}\\
+&\leftrightarrow & \frac{AO+OC}{CO+OB}=-\frac{AO+OD}{DO+OB}\\
+&\leftrightarrow & \frac{OB+OC}{CO+OB}=-\frac{OB+OD}{DO+OB}\;\; (pues\;AO=OB)\\
+&\leftrightarrow & \frac{OB+OC}{OB-OC}=\frac{OB+OD}{OD-OB}\\
+&\leftrightarrow & OB+OC(OD-OB)=OB+OD(OB-OC)\\
+&\leftrightarrow & OB\cdot OD+OC\cdot OD-OB^{2}-OC\cdot OB\\
+& & =OB^{2}+OD\cdot OB-OB\cdot OC-OD\cdot OC\\
+&\leftrightarrow & OB\cdot OD-OD\cdot OB-OB^{2}-OB^{2}-OC\cdot OB\\
+& & +OC\cdot OB=-OD\cdot OC-OC\cdot OD\\
+&\leftrightarrow & -2OB^{2}=-2(OC\cdot OD)\\
+&\leftrightarrow & OB^{2}=OC\cdot OD\\
+\end{eqnarray*}
+\end{pba}
+
+\section{Líneas armónicas}
+Sean $a=\overline{OA}, b=\overline{OB}, c=\overline{OC}, d=\overline{OD}$ rectas en el plano, 
+entonces decimos que $c$ y $d$ son conjugadas armónicas con respecto a $a$ y $b$ si 
+
+$$\frac{\sen(\angle AOC)}{\sen (\angle COB)}=-\frac{\sen (\angle AOD)}{\sen (\angle DOB)}$$
+($O$ un punto en el plano). Como se mencionó en la Definición~\ref{DCA}, cuando se presenta esta situación en un haz de rectas la notación a utilizar será $O(a,b;c,d)$ ò en este caso $O(A,B;C,D)$.
+ 
+Si un haz de cuatro rectas $a,b,c,d$ cumple la igualdad anterior también se dice que $a$ y $b$ están separadas armónicamente por $c$ y $d$.
+
+Ahora enunciaremos un teorema similar al Teorema~\ref{THA} pero en lugar de puntos utilizaremos rectas.
+
+\begin{teo}\label{TRA}
+Sean $a,b,c,d$ tales que $a\cap b\cap c\cap d=\{O\}$ (donde $O$ es un punto en el plano), si $a$ y $b$ son conjugadas armónicas con respecto a $c$ y $d$, entonces $c$ y $d$ son conjugadas armónicas con respecto a $a$ y $b$. 
+\end{teo}
+\begin{dem}
+Ver sección de ejercicios, Ejercicio~\ref{ETRA}.
+\end{dem}
+Si cuatro líneas cumplen el Teorema~\ref{TRA}, se dice que son \textcolor{red}{\bf líneas armónicas}\index{líneas armónicas} y el haz que constituyen se conoce como \textcolor{red}{\bf haz armónico}\index{haz armónico}.
+\section{Transversal de un haz armónico}
+\begin{teo}\label{T1TDHA}
+\begin{enumerate}
+
+\item Sean $a,b,c,d$ líneas armónicas en el plano tales que $a\cap b\cap c\cap d=\{O\}$  y $l$ una recta tal que $O\notin l$. Si $l\cap a=\{A\}, l\cap b=\{B\}, l\cap c=\{C\}, l\cap d=\{D\}$, entonces $A,B,C,D$ son puntos armónicos. 
+\item Sean $\{A,B,C,D\}\subset l$ puntos armónicos y $O$ un punto en el plano tal que $O\notin l$, entonces $\overline{OA}, \overline{OB}, \overline{OC}, \overline{OD}$ son líneas armónicas.
+\end{enumerate}
+\end{teo}
+\begin{dem}
+Primero probemos $1$. Como $a,b,c,d$ son líneas armónicas, sin perder generalidad supongamos que $O\{a,b;c,d\}=-1$, entonces por el Teorema~\ref{T1RRC} tenemos que $l\{A,B;C,D\}=-1$. Por tanto, $A,B;C,D$ son puntos armònicos.
+
+Análogamente probaremos $2$. Como $A,B;C,D$ son puntos armónicos, entonces supongamos que $l\{A,B;C,D\}=-1$ por lo cual aplicando el Teorema~\ref{T1RRC} se tiene que $O\{\overline{OA}, \overline{OB}; \overline{OC}, \overline{OD}\}=-1$ por tanto $\overline{OA}, \overline{OB}, \overline{OC}, \overline{OD}$ son líneas armónicas.
+\end{dem}
+
+\begin{cor}
+Sean $a,b,c,d$ rectas en el plano tales que $a\cap b\cap c\cap d=\{O\}$, $l$ una recta tal que $O\notin l$ y $l\cap a=\{A\}, l\cap b=\{B\}, l\cap c=\{C\}, l\cap d=\{D\}$, $l\{A,B;C,D\}=-1$. Si $m$ es una recta en el plano ($m\neq l$ y $O\notin m$) tal que $m\cap a=\{E\}, m\cap b=\{F\}, m\cap c=\{G\}, m\cap d=\{H\}$, entonces $m\{E,F;G,H\}=-1$. 
+\end{cor}
+\begin{pba}\label{CTDHA}
+Como $l\{A,B;C,D\}=-1$, entonces por el Teorema~\ref{T1TDHA} (inciso 2), se tiene que $O\{a,b;c,d\}=-1$. Además, como $m\cap a=\{E\}, m\cap b=\{F\}, m\cap c=\{G\}, m\cap d=\{H\}$, aplicando de nuevo Teorema~\ref{T1TDHA} (inciso 1), tenemos que $m\{E,F;G,H\}=-1$.
+\end{pba}
+\section{Hileras armónicas en perspectiva}
+\begin{teo}
+Sean $l$ y $l'$ rectas tales que $l\neq l'$ con $\{A,B,C,D\}\subset l$ y $\{A,B',C',D'\}\subset l'$, consideremos las rectas $b,c,d$ tales que $\{B,B'\}\subset b$, $\{C,C'\}\subset c$, $\{D,D'\}\subset d$. Si $l\{A,B;C,D\}=l'\{A,B';C',D'\}=-1$, entonces $b\cap c\cap d\neq\emptyset$.
+\end{teo}
+\begin{dem}
+Supongamos que $l\{A,B;C,D\}=l'\{A,B';C',D'\}=-1$ y que $b\cap c=\{P\}$. 
+Consideremos lo siguiente, sea $m$ la recta tal que $\{A,P\}\subset m$, $n$ la recta tal que $\{D,P\}\subset n$ y $n\cap l'=\{D''\}$. Entonces, por el Teorema~\ref{T1TDHA} $P\{A,B;C,D\}=-1$ pues $l$ es transversal a este haz. Así, por el Corolario~\ref{CTDHA} $l'\{A,B';C',D''\}=-1$ pues $l'$ es transversal al haz $P\{A,B;C,D\}=-1$. 
+
+Por lo tanto, $l'\{A,B';C',D''\}=l'\{A,B';C',D'\}$, entonces $D''=D'$ y así concluimos que $b\cap c\cap d=\{P\}$.
+\end{dem}
+\section{Líneas conjugadas ortogonales}
+\begin{teo}
+Sean $a,b,c,d$ rectas en el plano, $A\in a, B\in b, C\in c, D\in d$, tales que $O(A,B;C,D)$ y $O\notin\{A,B,C,D\}$. Entonces $c$ es ortogonal a $d$ si y solamente si $|\angle AOC|=|\angle COB|$ y $|\angle BOD|=|\angle DOA|$.
+\end{teo}
+\begin{dem}
+\begin{enumerate}
+\item [($\Rightarrow$)] Supongamos que $c$ es ortogonal a $d$. Sea $l$ una recta ($l\neq d$) tal que $l\parallel d$ y sean $l\cap a=\{A'\}, l\cap b=\{B'\}, l\cap c=\{C'\}, l\cap d=\{D'\}$ donde $D'$ es el punto al infinito en $l$, así resulta que el conjugado armónico de $C'$ es un punto al infinito, entonces por la Observación~\ref{OBPAI} tenemos que $|A'C'|=|C'B'|$. Ahora, notemos que $\triangle OA`C`\equiv\triangle OB'C'$ \textbf{cc(LAL)} ya que ademàs de que $|A'C'|=|C'B'|$, $OC'$ es común y  como $c$ es ortogonal a $d$ y $l$ es paralela a $d$, $c$ es ortogonal a $l$, entonces $|\angle OC'A'|=|\angle OC'B'|=\perp$. Así que como consecuencia se tiene que $|\angle A'OC'|=|\angle C'OB'|$ y así que $|\angle AOC|=|\angle COB|$ (por colinealidad) , por ello $OC'$ es bisectriz interna del $\angle A'OB'$. Y como las bisectrices de un ángulo se cortan ortogonalmente, entonces $d$ es bisectriz externa del $\angle A'OB'$ y así $|\angle BOD|=|\angle DOA|$.
+\item [($\Leftarrow$)] Supongamos que $|\angle AOC|=|\angle COB|$ y $|\angle BOD|=|\angle DOA|$. Sea $\{A,A''\}\subset a$ tal que $0<\frac{AO}{OA''}$. Sean $B\in b, C\in c, D\in d$, entonces $\angle AOC=\angle COB$ y $\angle BOD=\angle DOA''$, por ésto $\sen(\angle AOC)=\sen(\angle COB)$ y como $0<\frac{AO}{OA''}$, entonces $\angle AOD+\angle DOA''=2\perp$. Por tanto, $\sen(\angle AOD)=\sen(\angle DOA'')=\sen(\angle BOD)=-\sen(\angle DOB)$, entonces $\frac{\sen(\angle AOC)}{\sen(\angle AOD)}=\frac{\sen(\angle COB)}{-\sen(\angle DOB)}$ si y sólo si $\frac{\sen(\angle AOC)}{\sen(\angle COB)}=-\frac{\sen(\angle AOD)}{\sen(\angle DOB)}$.
+\end{enumerate}
+\end{dem}
+
+
+\section{Curvas ortogonales}
+\begin{df}
+Sean $\mathcal{C}(O,r)$ y $\mathcal{C'}(O',r')$ tales que ($O\neq O'$) y $\mathcal{C}\cap\mathcal{C'}\neq\emptyset$. Si $T\in\mathcal{C}\cap\mathcal{C'}$ y $t$ es la recta tangente a $\mathcal{C}$ por $T$ y $t'$ es la recta tangente a $\mathcal{C'}$ por $T$. Definimos el \textcolor{red}{\bf ángulo entre $\mathcal{C}$ y $\mathcal{C'}$}\index{ángulo ! entre $\mathcal{C}$ y $\mathcal{C'}$} como: $\angle(\mathcal{C}\longrightarrow^{T}\mathcal{C'})=\angle (t\longrightarrow^{T} t')$.
+\end{df}
+\begin{prop}
+Sean $\mathcal{C}(O,r)$ y $\mathcal{C'}(O',r')$ tales que $\mathcal{C}\cap\mathcal{C'}=\{A,B\}$, entonces $|\angle(\mathcal{C}\longrightarrow^{A}\mathcal{C'})|=|\angle(\mathcal{C}\longrightarrow^{B}\mathcal{C'})|$.
+\end{prop}
+\begin{pba}
+Supongamos que $\mathcal{C}\cap\mathcal{C'}=\{A,B\}$ y sean $a$ la recta tangente a $\mathcal{C}$ por $A$ y $b$ la recta tangente a $\mathcal{C}$ por $B$, tales que $a\cap b=\{P\}$. Consideremos $\triangle OAB$, entonces tenemos $\triangle OAB$ es isósceles pues $|OA|=|OB|=r$. Ahora consideremos $\triangle OAP$ y $\triangle OBP$, como $OA$ es ortogonal a $AP$ pues $A,P\in a$, entonces $|\angle OAP|=\perp$ del mismo modo se tiene que $|\angle PBO|=\perp$, también tenemos que $|OA|=|OB|=r$ y $OP$ es común, entonces podemos aplicar el Lema~\ref{lb} con lo que concluimos que $\triangle OAP\equiv\triangle OBP$, por tanto $|PA|=|PB|$ y así concluimos que $P$ y $O$ pertenecen a la mediatriz de $A$ y $B$.
+
+Análogamente, si $a'$ es la recta tangente a $\mathcal{C'}$ por $A$ y $b'$ es la recta tangente a $\mathcal{C'}$ por $B$ tales que $a'\cap b'=\{P'\}$, se tiene que $P$ y $O'$ están en la mediatriz de $AB$ y que $|P'A|=|P'B|$.
+
+Finalmente, también tenemos que $\triangle PAP'\equiv\triangle PBP'$ \textbf{LLL} pues $|PA|=|PB|$, $|P'A|=|P'B|$ y $|PP'|=|PP'|$, entonces $|\angle PAP'|=|PBP'|$. Por lo tanto, $| \angle(\mathcal{C}\longrightarrow^{A}\mathcal{C'}|
+)|=|\angle(\mathcal{C}\longrightarrow^{B}\mathcal{C'})|$.
+\end{pba}
+\begin{df}
+Sean $\mathcal{C}(O,r)$ y $\mathcal{C'}(O',r')$ con $O\neq O'$. Decimos que $\mathcal{C}$ y $\mathcal{C'}$ son \textcolor{red}{\bf circunferencias ortogonales}\index{circunferencias ortogonales} si y solamente si $|\angle(\mathcal{C}\longrightarrow\mathcal{C'}|=\perp$.
+\end{df}
+
+\begin{prop}\label{PCO}
+Si $\mathcal{C}(O,r)$ y $\mathcal{C'}(O',r')$ son ortogonales, entonces la tangente a cualquiera de estas circunferencias contiene al centro de la otra circunferencia. 
+\end{prop}
+\begin{pba}
+Ver sección de ejercicios, Ejercicio~\ref{EPCO}.
+\end{pba}
+\section{Una propiedad armónica en relación con circunferencias ortogonales}
+\begin{teo}
+Sean $\mathcal{C}(O,r)$ y $\mathcal{C'}(O',r')$ tal que $\mathcal{C}\cap\mathcal{C'}=\{P,Q\}$. Cosideremos $l$ la recta tal que $\{O,O'\}\subset l$ y sean $l\cap\mathcal{C}=\{A,B\}$, $l\cap\mathcal{C'}=\{C,D\}$. Entonces $l(A,B;C,D)$ si solamente si $\mathcal{C}(O,r)$ es ortogonal a $\mathcal{C'}(O',r')$.
+\end{teo}
+\begin{dem}
+\begin{enumerate}
+\item [($\Rightarrow$)] Supongamos que $l(A,B;C,D)$, como $AB$ es diámetro $\mathcal{C}$, $|AO|=|OB|~$, entonces por la Proposición~\ref{P2PPA} tenemos que $OB^{2}=OC\cdot OD$ pero como $|OB|=|OP|=r$, entonces $OP^{2}=OC\cdot OD$ (la potencia de $O$ con respecto a $\mathcal{C'}$), entonces $\overline{OP}$ es tangente a $\mathcal{C'}$ en $P$ y por tanto $\mathcal{C}(O,r)$ es ortogonal a $\mathcal{C'}(O',r')$.
+\item [($\Leftarrow$)] Ahora supogamos que $\mathcal{C}(O,r)$ es ortogonal a $\mathcal{C'}(O',r')$, como $P\in\mathcal{C'}$, entonces la tangente por $P$ a $\mathcal{C'}$ contiene a $O$ (Proposición~\ref{PCO}). Además como el diámetro $AB$ de $\mathcal{C}$ es tal que $AB\cap\mathcal{C'}=\{C,D\}$, entonces al considerar la potencia de $O$ con respecto de $\mathcal{C'}$ se tiene que $OP^{2}=OC\cdot OD$ (pues $\overline{OP}$ es tangente a $\mathcal{C'}$). Ahora como $|OB|=|OP|=r$, tenemos que $OB^{2}=OP^{2}=OC\cdot OD$, entonces por la Proposición~\ref{P2PPA} concluimos que $l(A,B;C,D)$.
+\end{enumerate}
+\end{dem}
+\section{Cuadrángulo completo}
+\begin{df}\label{CNCD}
+Sean $A,B,C,D$ cuatro puntos (vértices) en posición general, es decir, cualesquiera 3 puntos no son colineales. Definimos el \textcolor{red}{\bf cuadrángulo completo}\index{cuadrángulo completo} como la figura determinada por los cuatro puntos y las seis rectas (lados) que determinan esos cuatro puntos. 
+\end{df}
+\begin{df}
+Sea $ABCD$ un cuadrángulo completo. Decimos que dos lados son opuestos si y solamente si no tienen vèrtices en común. A los vértices determinados por los lados opuestos les llamamos \textcolor{red}{\bf puntos diagonales}\index{puntos diagonales} . Y al triángulo formado por los puntos diagonales se le llamará \textcolor{red}{\bf triángulo diagonal}\index{triángulo diagonal} del cuadrángulo $ABCD$.
+\end{df}
+
+\section{Cuadrilátero completo}
+\begin{df}\label{CLCD}
+Sean $a,b,c,d$ cuatro rectas (lados) en posición general, es decir, cualesquiera 3 rectas no son concurrentes. Definimos el \textcolor{red}{\bf cuadrilátero completo}\index{cuadrilátero completo} como la figura comprendida por las cuatro rectas y los seis puntos (vértices) que determinan esas cuatro rectas. 
+\end{df}
+\begin{df}
+Sea el cuadrilátero completo $abcd$. Decimos que dos vértices son opuestos si y solamente si no estàn en la misma recta. La recta determinada por los vértices opuestos se le llamará \textcolor{red}{\bf recta diagonal}\index{recta diagonal}. Y al trilátero (ver Definición~\ref{trilátero}) formado por las rectas diagonales se le llamará \textcolor{red}{\bf trilátero diagonal}\index{trilátero diagonal} del cuadrilátero completo $abcd$.
+\end{df}
+\section{Principio de dualidad}
+La Definición~\ref{CLCD} y la Definición~\ref{CNCD} son un ejemplo del principio de dualidad. Si observemos que si en la Definición~\ref{CLCD} intercambiamos rectas por puntos, concurrencias por colinealidades y otros mínimos cambios de escritura, podemos obtener la Definición~\ref{CNCD}. Este principio de dualidad es visto a mayo profundidad en un curso de geometría proyectiva en donde es de gran ayuda ya que dado un  teorema se puede probar que al dualizarlo el teorema dual es verdadero si el teorema inicial es también cierto. 
+
+Otro ejemplo en donde se puede apreciar el principio de dualidad lo podemos encontrar en la Definición~\ref{PDUP} y la Definición~\ref{PDUR} que vimos en el capítulo 7.
+
+Un último ejemplo se da en las siguientes definiciones, que se usaron previamente.
+
+\begin{df}\label{trilátero}
+Un \textcolor{red}{\bf trilátero}\index{trilátero} es una figura que consiste en tres rectas no concurrentes y los tres puntos que éstas determinan. 
+\end{df}
+\begin{df}
+Un \textcolor{red}{\bf triángulo}\index{triángulo} es la figura que consiste en tres puntos no colineales y las tres rectas que éstos determinan.   
+\end{df}
+\section{Propiedades armónicas de cuadrángulos y cuadriláteros}
+\begin{teo}
+En cada lado del trilátero diagonal de un cuadrilátero completo hay una hilera de puntos armónicos conformada por los dos vértices en la diagonal y los puntos por los que es intersecada por las diagonales restantes.
+\end{teo}
+\begin{pba}
+Sean $a,b,c,d$ rectas en el plano en posición general y sean $a\cap b=\{E\}, a\cap c=\{F\}, a\cap d=\{G\}, b\cap c=\{H\}, b\cap d=\{I\}, c\cap d=\{J\}$. 
+
+Sea $p$ la recta determinada por $E,J$, $q$ la recta determinada por $F,I$ y $r$ la recta determinada por $G,H$, tales que $p\cap q=\{R\}, q\cap r=\{P\}, r\cap p=\{Q\}$. 
+
+Consideremos $\triangle JEH$, tenemos que $\{J,I\}\subset d, \{E,F\}\subset a, \{H,Q\}\subset r$ y $a\cap d\cap r=\{G\}$. 
+
+Entonces por el Teorema~\ref{Teo de Ceva} tenemos que 
+$$\frac{JQ}{QE}\cdot\frac{EI}{IH}\cdot\frac{HF}{FJ}=1$$
+También como $\{F,I,R\}\subset q$ por el Teorema~\ref{Teo de Menelao}
+$$\frac{JR}{RE}\cdot\frac{EI}{IH}\cdot\frac{HF}{FJ}=-1$$
+Por tanto $\frac{JQ}{QE}=-\frac{JR}{RE}$, entonces $p(J,E;Q,R)$ así que por el Teorema~\ref{T1RRC} para cualquier $X\notin p$ se tiene que $X(J,E;Q,R)$, entonces $H(J,E;Q,R)$ y aplicando nuevamente el Teorema~\ref{T1RRC} tenemos que $q(F,I;P,R)$.
+
+Análogamente se tiene que como $p(J,E;Q,R)$, entonces $I(J,E;Q,R)$ y por tanto $r(G,H;Q,P)$.
+\end{pba}
+
+\begin{teo}
+En cada vértice del triángulo diagonal de un cuadrángulo completo hay un haz de rectas armónicas, conformado por las dos rectas que pasan por el punto diagonal y las rectas que lo unen con los puntos diagonales restantes. 
+\end{teo}
+\begin{dem}
+Sean $A,B,C,D$ puntos en el plano en posición general y sean $\overline{AB}=e$, $\overline{AC}=f$, $\overline{AD}=g$, $\overline{BC}=h$, $\overline{BD}=i$, $\overline{CD}=j$. 
+
+Sea $\{P\}=e\cap j$, $\{Q\}=f\cap i$ y $\{R\}=g\cap h$ tales que $\overline{PQ}=r$, $\overline{QR}=p$, $\overline{RP}=q$. 
+
+Consideremos $\triangle jeh=\triangle PCB$, tenemos que $j\cap i=\{D\}$, $e\cap f=\{A\}$, $h\cap q=\{R\}$ y $\{A,D,R\}\subset g$. 
+
+Entonces por el Teorema~\ref{Teo de Menelao} tenemos que 
+$$\frac{PD}{DC}\cdot\frac{CR}{RB}\cdot\frac{BA}{AP}=-1$$
+Sean $r\cap h=\{S\}$, $r\cap g=\{T\}$ y $q\cap i=\{U\}$. Como $f\cap i\cap r=\{Q\}$ por el Teorema~\ref{Teo de Ceva}
+$$\frac{PD}{DC}\cdot\frac{CS}{SB}\cdot\frac{BA}{AP}=1$$
+Por tanto $\frac{CR}{RB}=-\frac{CS}{SB}$, entonces $h(C,B;R,S)$ así que por el Teorema~\ref{T1RRC} para cualquier $X\notin h$ se tiene que $X(C,B;R,S)$, entonces $P(C,B;R,S)$ y por tanto $P(j,e;q,r)$. Y aplicando nuevamente el Teorema~\ref{T1RRC} tenemos que $Q(A,D;R,T)$ y así $Q(f,i;p,r)$.
+
+Análogamente se tiene que como $P(j,e;q,r)$, entonces $i(D,B;U,Q)$ y por tanto $R(g,h;q,p)$.
+
+\end{dem}
+
+\section{Cuadrángulo y cuadrilátero con triángulo diagonal común}
+En esta sección veremos cómo a partir de un cuadrilátero completo es posible encontrar un cuadrángulo completo que tenga el mismo triángulo diagonal que el cuadrilátero completo dado.
+
+Sean $a,b,c,d$ cuatro rectas en posición general tales que $a\cap b=\{E\}$, $a\cap c=\{F\}$, $a\cap d=\{G\}$, $b\cap c=\{H\}$, $b\cap d=\{I\}$, $c\cap d=\{J\}$. Así tenemos el cuadrilátero completo $abcd$ cuyo trilátero diagonal está determinado por $\overline{EJ}=p$, $\overline{FI}=q$ y $\overline{GH}=r$, tales que $p\cap q=\{R\}$, $q\cap r=\{P\}$, $p\cap r=\{Q\}$.
+
+Nuestra tarea ahora es encontrar un cuadrángulo completo que tenga como triángulo diagonal al $\triangle PQR$. 
+
+Construcción:
+
+Construir lar rectas por cada vértice del trilátero diagonal con los vértices del cuadrilátero que determinan la diagonal opuesta a dicho vértice. 
+
+Para $P$ la diagonal opuesta es $p$, para $Q$ la diagonal opuesta es $q$ y para $R$ la diagonal opuesta es $r$. Construir $p_{E}=\overline{PE}$, $p_{J}=\overline{PJ}$, $q_{F}=\overline{QF}$, $q_{I}=\overline{QI}$, $r_{G}=\overline{RG}$ y $r_{H}=\overline{RH}$.
+
+Consideremos $\triangle PQR$ y $\triangle JIH$, entonces:
+
+$\overline{PQ}\cap\overline{JI}=\{G\}$,
+$\overline{QR}\cap\overline{IH}=\{E\}$,
+$\overline{PR}\cap\overline{JH}=\{F\}$,
+$r\cap d=\overline{GH}\cap d=\{G\}$,
+$P\cap b=\overline{EJ}\cap b=\{E\}$,
+$q\cap c=\overline{FI}\cap c=\{F\}$. 
+Como $\{E,F,G\}\subset a$, entonces $\triangle PQR$ y $\triangle JIH$ están en perspectiva desde $\overline{PJ}\cap\overline{QI}\cap\overline{RH}$.
+
+Consideremos $\triangle PQR$ y $\triangle EFH$, entonces:
+
+$\overline{PQ}\cap\overline{EF}=r\cap a=\overline{GH}\cap a=\{G\}$,
+$\overline{QR}\cap\overline{FH}=p\cap c=\overline{EJ}\cap c=\{J\}$,
+$\overline{PR}\cap\overline{EH}=q\cap b=\overline{FI}\cap b=\{I\}$.
+
+Como $\{G,J,I\}\subset d$, entonces $\triangle PQR$ y $\triangle EFH$ están en perspectiva desde $\overline{PE}\cap\overline{QF}\cap\overline{RH}$.
+
+Consideremos $\triangle PQR$ y $\triangle JFE$, entonces:
+
+$\overline{PQ}\cap\overline{JF}=r\cap c=\overline{GH}\cap c=\{H\}$,
+$\overline{QR}\cap\overline{FG}=p\cap a=\overline{EJ}\cap a=\{E\}$,
+$\overline{PR}\cap\overline{GJ}=q\cap d=\overline{FI}\cap d=\{I\}$.
+
+Como $\{H,E,I\}\subset b$, entonces $\triangle PQR$ y $\triangle JFG$ están en perspectiva desde $\overline{PJ}\cap\overline{QF}\cap\overline{RG}$.
+
+
+Consideremos $\triangle PQR$ y $\triangle EIG$, entonces:
+
+$\overline{PQ}\cap\overline{EI}=r\cap b=\overline{GH}\cap b=\{H\}$,
+$\overline{QR}\cap\overline{IG}=p\cap d=\overline{EJ}\cap d=\{J\}$,
+$\overline{PR}\cap\overline{GE}=q\cap a=\overline{FI}\cap a=\{F\}$.
+
+Como $\{H,J,F\}\subset c$, entonces $\triangle PQR$ y $\triangle EIG$ están en perspectiva desde $\overline{PE}\cap\overline{QI}\cap\overline{RG}$.
+
+Ahora nombremos a:
+$\{Z\}=\overline{PJ}\cap\overline{QI}\cap\overline{RH}$,
+$\{Y\}=\overline{PE}\cap\overline{QF}\cap\overline{RH}$,
+$\{X\}=\overline{PJ}\cap\overline{QF}\cap\overline{RG}$ y 
+$\{W\}=\overline{PE}\cap\overline{QI}\cap\overline{RG}$. 
+
+Considerando al cuadrángulo $WXYZ$ tenemos que los vértices de su triángulo diagonal son:
+$\overline{WX}\cap\overline{YZ}=\{R\}$, $\overline{WZ}\cap\overline{XY}=\{Q\}$ y $\overline{WY}\cap\overline{XZ}=\{P\}$.
+
+De manera análoga, a partir de una cuadrángulo completo se puede construir un cuadrilátero completo cuyo triángulo diagonal sea el mismo que el del cuadrángulo completo dado. 
+
+\subsection*{Ejercicios}
+\begin{enumerate}
+\item Demostrar el Teorema~\ref{TRA}, página \pageref{TRA}. \label{ETRA}
+\item Probar la Proposición~\ref{PCO}, página \pageref{PCO}. \label{EPCO}
+\end{enumerate}
+
+

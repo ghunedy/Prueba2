@@ -1,0 +1,108 @@
+\documentclass[12pt]{book}
+
+\usepackage[T1]{fontenc}
+\usepackage[light,condensed]{iwona}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0pt}
+%
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection.\ #1}}
+%
+\fancyhead[LE,RO]{\bfseries\thepage}
+\fancyhead[LO]{\bfseries\rightmark}
+\fancyhead[RE]{\bfseries\leftmark}
+
+\usepackage[usenames]{color}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amscd}
+\usepackage{amsthm}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,mexico]{babel}
+\usepackage{enumerate}
+\usepackage{pgf,tikz}
+\usepackage{makeidx}
+\usetikzlibrary{arrows}
+
+\usepackage[colorlinks=true, linkcolor=blue, urlcolor=blue, citecolor=blue]{hyperref}
+
+\usepackage[Glenn]{fncychap}
+\ChNameVar{\bfseries\Large}
+\ChNumVar{\Huge}
+\ChTitleVar{\bfseries\Large}
+\ChRuleWidth{0.5 pt}
+\ChNameUpperCase
+\ChTitleUpperCase
+
+\theoremstyle{definition}
+\newtheorem{df}{\textcolor{blue}{Definición}}[chapter]
+\newtheorem{teo}{\textcolor{red}{Teorema}}[chapter]
+\newtheorem{ej}{\textcolor{orange}{Ejemplo}}[chapter]
+\newtheorem{prop}{\textcolor{blue}{Proposición}}[chapter]
+\newtheorem{lema}{\textcolor{blue}{Lema}}[chapter]
+\newtheorem{cor}{\textcolor{blue}{Corolario}}[chapter]
+\newtheorem{obs}{\textcolor{red}{Observación}}[chapter]
+
+\newenvironment{pba}{\noindent\textbf{Prueba:}}{\begin{flushright} $\square$ \end{flushright}}
+\newenvironment{dem}{\noindent\textbf{Demostración:}}{\begin{flushright} \rule{1ex}{1ex} \end{flushright}}
+
+\newcommand{\R}{\mathbb R}
+\newcommand{\s}{\mathbb S}
+\newcommand{\D}{\mathbb D}
+\newcommand{\B}{\mathbb B}
+\newcommand{\C}{\mathbb C}
+\newcommand{\E}{\mathbb E}
+\newcommand{\N}{\mathbb N}
+\newcommand{\A}{{\bf \acute{A}rea}}
+
+\makeindex
+
+\begin{document}
+
+\title{Notas de geometría}
+\author{}
+\date{}
+\maketitle
+
+\pagenumbering{roman}
+\tableofcontents
+
+
+
+%\chapter*{Libro I de Euclides}
+\pagenumbering{arabic}
+
+
+\input{01-Preliminares}
+
+\input{02-Introduccion}
+
+\input{03-Congruencia}
+
+\input{04-SemejanzaTriangulos}
+
+\input{05-Ceva}
+
+\input{06-Menelao}
+
+\input{07-Desargues}
+
+\input{08-SemejanzaPoligonos}
+
+\input{09-RazonCruzada}
+
+\input{10-Armonicos}
+
+\input{11-Triangulo}
+
+\input{12-Bibliografia}
+
+\printindex
+%\listoffigures
+%\listoftables
+
+\end{document}

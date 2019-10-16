@@ -1,0 +1,1224 @@
+\chapter{Semejanza de triángulos}
+
+\section{Teorema de Thales}
+A continuación, se enunciará uno de los teoremas fundamentales en el estudio de la semejanza de triángulos, atribuido al matemático griego Thales de Mileto. 
+%%%%%%
+%%%%%%
+%%%%%%
+\begin{teo}[Primer teorema de Thales o teorema fundamental de la proporcionalidad]\label{Thales1}
+Sean $\triangle ABC$, $N\in\overline{AB}$ y $M\in\overline{AC}$, entonces $\overline{BC}$ es paralela a          
+$\overline{NM}$ si y solamente si $$\frac{AB}{AN}=\frac{AC}{AM}.$$
+\end{teo}
+\begin{dem}
+Sean $\triangle ABC$, $N\in\overline{AB}$  y $M\in\overline{AC}$.
+\begin{enumerate}
+\item[($\Rightarrow$)]
+Supongamos que $\overline{BC}$ es paralela a $\overline{NM}$. Consideremos $\triangle ABM$ y $\triangle ANM$. Observemos que comparten la altura por M, entonces por la Proposición~\ref{prop4} se tiene que: $$\frac{\A(\triangle ABM)}{\A(\triangle ANM)}=\frac{AB}{AN}.$$ 
+Ahora consideremos $\triangle ACN$ y $\triangle AMN$ que comparten la altura por N, entonces por la Proposición~\ref{prop4}, tenemos que: $$\frac{\A(\triangle ACN)}{\A(\triangle AMN)}=\frac{AC}{AM}.$$ 
+
+Observación 1. $\A(\triangle AMN)=\A(\triangle ANM)$.
+
+Observación 2. $\A(\triangle NMB)=\A(\triangle NMC)$.
+
+Ahora notemos que:
+
+$\A(\triangle ABM)=\A(\triangle ANM)+\A(\triangle NMB)$
+
+$\A(\triangle ACN)=\A(\triangle AMN)+\A(\triangle NMC)$
+
+Entonces:
+\begin{eqnarray*}
+\frac{\A(\triangle ABM)}{\A(\triangle ANM)}
+&=& \frac{\A(\triangle ANM)+\A(\triangle NMB)}{\A(\triangle ANM)}\\
+&=& 1+\frac{\A(\triangle NMB)}{\A(\triangle ANM)}\\
+\end{eqnarray*}
+\begin{eqnarray*}
+\frac{\A(\triangle ACN)}{\A(\triangle AMN)}
+&=& \frac{\A(\triangle AMN)+\A(\triangle NMC)}{\A(\triangle AMN)}\\
+&=& 1+\frac{\A(\triangle NMC)}{\A(\triangle AMN)}\\
+\end{eqnarray*}
+
+Por las observaciones tenemos que $\frac{\A(\triangle NMB)}{\A(\triangle ANM)}=\frac{\A(\triangle NMC)}{\A(\triangle AMN)}$.
+
+Así, $$\frac{\A(\triangle ABM)}{\A(\triangle ANM)}=\frac{\A(\triangle ACN)}{\A(\triangle AMN)}
+$$
+Y por lo tanto,  $$\frac{AB}{AN}=\frac{AC}{AM}.$$
+\item[($\Leftarrow$)] 
+Sabemos que, $$\frac{AB}{AN}=\frac{AC}{AM}.$$ Supongamos que $\overline{BC}$ no es paralela a          
+$\overline{NM}$. Entonces consideremos $C'\neq C$ tal que $C'\in\overline{AC}$ y  $\overline{NM}$ es paralela a          
+$\overline{BC'}$.
+Aplicando el resultado anterior a $\triangle ABC'$ se tiene que:
+\begin{equation}
+\frac{AB}{AN}=\frac{AC'}{AM}
+\end{equation}	 
+Pero por hipótesis, 
+\begin{equation}
+\frac{AB}{AN}=\frac{AC}{AM}
+\end{equation}
+De esto tenemos que: 
+$$\frac{AC}{AM}=\frac{AC'}{AM}$$ entonces $AC=AC'$ y así $C=C'$ lo que es una contradicción. 
+\end{enumerate}
+\end{dem}
+	
+	
+\begin{obs}
+En el teorema anterior se obtuvo la siguiente relación, $$\frac{AB}{AN}=\frac{AC}{AM}$$ que nos dice más de lo parece.\\
+Notemos que: \\
+\begin{center}
+$\frac{AB}{AN}=\frac{AC}{AM}$ $\Leftrightarrow$ $\frac{AN+NB}{AN}=\frac{AM+MC}{AM}$ $\Leftrightarrow$ $1+\frac{NB}{AN}= 1+\frac{MC}{AM}$ $\Leftrightarrow$  $\frac{NB}{AN}=\frac{MC}{AM}$.
+\end{center}
+Esto significa que dadas dos rectas paralelas, la proporción que existe entre las rectas transversales que las cortan siempre es la misma aunque dichas rectas transversales cambien. 
+\end{obs}
+	
+	
+Ahora como una consecuencia inmediata del teorema anterior enunciaremos el siguiente.
+	
+\begin{teo}[Segundo teorema de Thales]\label{Thales2} Sean $l, m, n$ tres rectas dadas (distintas) y $t_{1}, t_{2}$ dos rectas (distintas) tales que:
+\begin{center}
+\begin{tabular}{r r}
+
+$l \cap t_{1}$=$\{A\}$ & $ l \cap t_{2}$=$\{D\}$\\
+$m \cap t_{1}$=$\{B\}$ & $ m \cap t_{2}$=$\{E\}$\\
+$n \cap t_{1}$=$\{C\}$ & $ n \cap t_{2}$=$\{F\}$\\
+	
+\end{tabular}
+\end{center}
+Tenemos que si $l$, $m$ y $n$ son paralelas entonces $$\frac{AB}{BC}=\frac{DE}{EF}.$$
+	
+\end{teo}
+	
+\begin{dem}
+Supongamos que $l$, $m$ y $n$ son paralelas.
+			
+Sean $\overline{AF}$=$p$ y $m\cap p=\{G\}$ como $n$ es paralela a $m$ y tenemos que el $\triangle ACF$ es tal que $B\in \overline{AC}$ y $G\in \overline{AF}$ entonces, del Teorema~\ref{Thales1} se sigue que:  $$\frac{AB}{BC}=\frac{AG}{GF}.$$
+Ahora, consideremos el $\triangle AFD$ y que $l$ es paralela a $m$ como $G\in \overline{AF}$ y $E\in \overline{DF}$ entonces, por el Teorema~\ref{Thales1} se tiene que: $$\frac{AG}{GF}=\frac{DE}{EF}.$$
+Y por tanto, de las igualdades obtenidas podemos concluir que: $$\frac{AB}{BC}=\frac{DE}{EF}$$\\
+\end{dem}
+			
+Además, si $$\frac{AB}{BC}=\frac{DE}{EF}$$ y dos de las rectas $l$, $m$ o $n$ son paralelas entonces las tres rectas son paralelas. 
+			
+\begin{dem}		
+Supongamos que $$\frac{AB}{BC}=\frac{DE}{EF}$$ y sin perder generalidad que $l$ es paralela a $m$.
+
+Ahora, para generar una contradicción, supongamos que $m$ no es paralela a $n$  y sean $m'$ paralela a $n$ por $B$  y $m'\cap t_{2}= \{E'\}$ con $E'\neq E$. Entonces, por el Teorema~\ref{Thales1} como $\overline{DE'}$ es paralela a $n= \overline{CF}$ se sigue que  $$\frac{AB}{BC}=\frac{DE'}{E'F}$$ pero por hipótesis sabemos que:  $$\frac{AB}{BC}=\frac{DE}{EF}$$ de este modo concluimos que  $$\frac{DE}{EF}=\frac{DE'}{E'F}$$ por lo que $DE'=DE$ y así $E'=E$ lo cual es una contradicción ya que $E'\neq E$. 
+Por lo tanto $m$ es paralela a $n$. 
+\end{dem}		
+	
+\section{Criterios de semejanza de triángulos}
+\begin{df}\label{Semejanza df}
+Sean $\triangle ABC$ y $\triangle DEF$ dos triángulos. Decimos que el $\triangle ABC$ es {\bf semejante} al $\triangle DEF$ si y solamente si:
+	
+$$|\angle ABC|=|\angle DEF|,  \;\;\;\;\;\;\;\;\;\;\;\;\; |\angle BCA|=|\angle EFD|,  \;\;\;\;\;\;\;\;\;\;\;\;\; |\angle CAB|=|\angle FDE|$$
+	
+Y existe $ k \in \mathbb{R} \backslash \{0\}$ tal que: 
+	
+$$|AB|=|k||DE|,  \;\;\;\;\;\;\;\;\;\;\;\;\; |BC|=|k||EF|,  \;\;\;\;\;\;\;\;\;\;\;\;\; |CA|=|k||FD|.$$
+Y escribiremos $(\triangle ABC \cong \triangle DEF)$.
+\end{df}
+	
+	
+Así como en la congruencia de triángulos se tiene a un conjunto de condiciones tales que si se cumplen, entonces podemos asegurar que los triángulos son congruentes, en el caso de la semejanza también se tiene y son los llamados {\bf Criterios de semejanza de triángulos}, que son tres: ángulo-ángulo-ángulo, lado-ángulo-lado y lado-lado-lado que denotaremos por \textbf{cs(AAA)}, \textbf{cs(LAL)} y \textbf{cs(LLL)} respectivamente.
+
+%%%%%%%
+%%%%% REVISAR LO QUE ERNESTO DIJO SOBRE LA "K".
+%%%%%%CORRECCIÓN REALIZADA :)	
+\begin{teo}[Criterio se semejanza AAA]
+Sean $\triangle ABC$ y $\triangle DEF$ tales que: 
+$$|\angle ABC|=|\angle DEF|,  \;\;\;\;\;\;\;\;\;\;\;\;\; |\angle BCA|=|\angle EFD|,  \;\;\;\;\;\;\;\;\;\;\;\;\; |\angle CAB|=|\angle FDE|$$
+entonces $\triangle ABC \cong \triangle DEF$
+\end{teo}
+	
+\begin{dem}
+Consideremos $0<AB$ y sea $N \in \overline{AB}$ tal que $0<AN$ y $|AN|=|DE|.$
+Y también consideremos $0<AC$ y sea $M \in \overline{AC}$ tal que $0<AM$ y $|AM|=|DF|$.
+	
+Como $N \in \overline{AB}$  y $M \in \overline{AC}$, entonces  $|\angle NAM|=|\angle DEF|$ y además por hipótesis sabemos que $|\angle BCA|=|\angle EFD|$ por tanto, $|\angle NAM|=|\angle EFD|$, entonces $\triangle ANM \equiv \triangle DEF$ \textbf{cc(LAL)}. Como consecuencia, notemos que $|NM|=|EF|$,  $|\angle NMA|=|\angle EFD|$ y  $|\angle MNA|=|\angle FED|.$
+
+Ahora, consideremos $0<NM$. Sea $L \in \overline{NM}$ tal que $0<NL$ y $\frac{NL}{LM}<0.$
+Así, $|\angle LMC|=|\angle NMA|$  ya que son opuestos por el vértice y además por hipótesis, $|\angle BCA|=|\angle EFD|$ por ello, $|\angle BCA|=|\angle NMA|$ pues $|\angle NAM|=|\angle DEF|$, por tanto $\overline{NM}$ es paralela a $\overline{BC}$, entonces por el Teorema~\ref{Thales1}, concluimos que:
+$$ \frac{|AB|}{|AN|}=\frac{|AC|}{|AM|}.$$ 
+Y como $|AN|=|DE|$ y $|AM|=|DF|$, entonces:
+$$ \frac{|AB|}{|DE|}=\frac{|AC|}{|DF|}.$$ 
+De manera análoga, se tiene que $ \frac{|AC|}{|DF|}=\frac{|BC|}{|EF|}$ y así,
+$$\frac{|AB|}{|DE|}=\frac{|AC|}{|DF|}=\frac{|BC|}{|EF|}=k \;\;\;\;\;\; (k\in\mathbb{R})$$
+Por lo tanto, $\triangle ABC \cong \triangle DEF.$
+\end{dem}	 
+%%%%%%%
+%%%%%
+%%%%%%%
+
+\begin{cor}
+Como la suma de los ángulos internos de cualquier triángulo es $2\perp$, entonces el criterio de semejanza AAA (\textbf{cs(AAA)}) se reduce a AA (\textbf{cs(AA)}).
+\end{cor}
+	
+Ahora, probaremos un lema que nos ayudará a demostrar el criterio de semejanza LAL.
+
+%%%
+%%% Pienso que puede ser ejercicio
+%%%	
+\begin{lema}\label{LemacsLAL}
+Sean $\triangle ABC$, $\triangle DEF$ y $\triangle GHI$ tales que: $\triangle ABC \cong \triangle DEF$ y $\triangle DEF \equiv \triangle GHI.$ Entonces $\triangle ABC \cong \triangle GHI.$
+\end{lema}
+\begin{dem}
+Como $\triangle ABC \cong \triangle DEF$, entonces: 
+$$|\angle ABC|=|\angle DEF|,  \;\;\;\;\;\;\;\;\;\;\;\;\; |\angle BCA|=|\angle EFD|,  \;\;\;\;\;\;\;\;\;\;\;\;\; |\angle CAB|=|\angle FDE|$$
+	
+Y existe $ k \in \mathbb{R} \backslash \{0\}$ tal que:
+	
+$$|AB|=|k||DE|,  \;\;\;\;\;\;\;\;\;\;\;\;\; |BC|=|k||EF|,  \;\;\;\;\;\;\;\;\;\;\;\;\; |CA|=|k||FD|.$$
+Además como $\triangle DEF \equiv \triangle GHI$, tenemos que:
+$$|\angle DEF|=|\angle GHI|,  \;\;\;\;\;\;\;\;\;\;\;\;\; |\angle EFD|=|\angle HIG|,  \;\;\;\;\;\;\;\;\;\;\;\;\; |\angle FDE|=|\angle IGH|$$
+	
+y
+	
+$$|DE|=|GH|,  \;\;\;\;\;\;\;\;\;\;\;\;\; |EF|=|HI|,  \;\;\;\;\;\;\;\;\;\;\;\;\; |FD|=|IG|.$$
+Por tanto,
+$$|\angle ABC|=|\angle GHI|,  \;\;\;\;\;\;\;\;\;\;\;\;\; |\angle BCA|=|\angle HIG|,  \;\;\;\;\;\;\;\;\;\;\;\;\; |\angle CAB|=|\angle IGH|$$
+	
+Y existe $ k \in \mathbb{R} \backslash \{0\}$ tal que:
+	
+$$|AB|=|k||GH|,  \;\;\;\;\;\;\;\;\;\;\;\;\; |BC|=|k||HI|,  \;\;\;\;\;\;\;\;\;\;\;\;\; |CA|=|k||IG|.$$
+Así, $\triangle ABC \cong \triangle GHI.$
+\end{dem}
+	
+\begin{teo}[Criterio de semejanza LAL]
+Sean $\triangle ABC$ y $\triangle DEF$ tales que: 
+$$\frac{|AB|}{|DE|}=\frac{|CA|}{|FD|}$$ y $|\angle BAC|=|\angle EDF|$, entonces $\triangle ABC \cong \triangle DEF.$
+\end{teo}
+\begin{dem}
+Consideremos:
+	
+$0<AB$ y sea $N \in \overline{AB}$ tal que $0<AN$ y $|AN|=|DE|$.
+	
+$0<AC$ y sea $M \in \overline{CA}$ tal que $0<AM$ y $|AM|=|DF|$.
+Entonces,
+$$\frac{|AB|}{|DE|}=\frac{|AB|}{|AN|}$$ y $$\frac{|CA|}{|FD|}=\frac{|AC|}{|AM|}.$$
+Así, $$\frac{|AB|}{|AN|}=\frac{|AC|}{|AM|}.$$
+Entonces, por el Teorema~\ref{Thales1}, se tiene que: $\overline{NM}=\overline{BC}$ y por ello $|\angle ABC|=|\angle ANM|$. Como $N \in \overline{AB}$ y $M \in \overline{AC}$, $|\angle BAC|=|\angle NAM|$, entonces $\triangle ABC \cong \triangle ANM$ \textbf{cs(AA)}. Y además, $\triangle ANM \equiv \triangle DEF$ \textbf{cc(LAL)} ya que $|AN|=|DE|$, $|AM|=|DF|$ y $|\angle BAC|=|\angle NAM|$, entonces aplicando el Lema~\ref{LemacsLAL}, podemos concluir que $\triangle ABC \cong \triangle DEF.$ 
+\end{dem}
+	
+\begin{teo}[Criterio de semejanza LLL]
+Sean $\triangle ABC$ y $\triangle DEF$ tales que: 
+$$\frac{|AB|}{|DE|}=\frac{|BC|}{|EF|}=\frac{|CA|}{|FD|}.$$ 
+Entonces $\triangle ABC \cong \triangle DEF.$
+\end{teo}
+\begin{dem}
+Consideremos:
+$0<AB$ y sea $N \in \overline{AB}$ tal que $0<AN$ y $|AN|=|DE|$.
+	
+$0<AC$ y sea $M \in \overline{CA}$ tal que $0<AM$ y $|AM|=|DF|$.
+Entonces, 
+$$\frac{|AB|}{|DE|}=\frac{|AB|}{|AN|}$$ y
+$$\frac{-|CA|}{|FD|}=\frac{|CA|}{|MA|}=\frac{|AC|}{|AM|}.$$	
+Ahora, como $N \in \overline{AB}$ y $M \in \overline{CA}$, entonces $|\angle BAC|=|\angle NAM|$ por tanto $\triangle ANM \cong \triangle ABC$ \textbf{cs(LAL)} lo que implica que:
+$$\frac{|BC|}{|NM|}=\frac{|AB|}{|AN|}=\frac{|CA|}{|MA|}.$$
+Notemos que $\frac{|BC|}{|NM|}=\frac{|CA|}{|MA|}\Leftrightarrow |BC|\left(\frac{|MA|}{|CA|}\right)=|NM|$ y además por hipótesis 
+$\frac{|BC|}{|EF|}=\frac{|CA|}{|FD|}$, entonces $|BC|\left(\frac{|FD|}{|CA|}\right)=|EF|$ y como $|FD|=|MA|$, tenemos que: $|NM|=|EF|$ y así $\triangle ANM \equiv \triangle DEF$ \textbf{cc(LLL)}. 
+Finalmente, aplicando el Lema~\ref{LemacsLAL} concluimos que $\triangle ABC \cong \triangle DEF.$
+\end{dem}
+
+%%%
+%%% Pienso que sea ejercicio
+%%%
+
+\begin{prop}\label{c->s}
+Sean $\triangle ABC$ y $\triangle DEF$ tales que $\triangle ABC \equiv \triangle DEF$, entonces $\triangle ABC \cong \triangle DEF.$
+\end{prop}
+\begin{pba}
+Como $\triangle ABC \equiv \triangle DEF$, entonces tenemos que:
+$|\angle CAB|=|\angle FDE|$, $|\angle ABC|=|\angle DEF|$ y $|\angle ACB|=|\angle DFE|$, así concluimos que $\triangle ABC \cong \triangle DEF$ \textbf{cs(AA)}.
+\end{pba}	
+
+\begin{obs} 
+Notemos que la Proposición~\ref{c->s} nos dice que congruencia implica semejanza y de hecho la razón de semejanza $|k|=1$. Pero el regreso no sucede siempre, es decir si dos triángulos son semejantes no necesariamente son congruentes, esto sólo pasa cuando la razón de semejanza $|k|=1$
+\end{obs}
+	
+\section{Teorema de Pitágoras y su recíproco}
+Ahora vamos a probar un teorema que seguramente el lector conoce de tiempo atrás, el teorema de Pitágoras, para ello antes probaremos un lema que nos será útil para la prueba de dicho teorema.
+
+%%%
+%%% Tres puntos en el plano no colineales
+%%% CORRECCIÓN REALIZADA :)
+
+\begin{lema}\label{LemaPitágoras}
+Sea $\triangle ABC$ (en donde $A, B, C$ son tres puntos en el plano no colineales) tal que $|\angle CBA|=\perp$, entonces la altura $h_{B} \cap CA =\{D\}$ cumple que
+$0<\frac{AD}{DC}$.
+\end{lema}
+\begin{pba}
+	
+Supongamos que $\frac{AD}{DC}\leqslant 0$. 
+Tenemos dos casos:
+\begin{enumerate}
+\item $\frac{AD}{DC}=0$.
+Esto implica que $A=D$, lo que nos da como resultado un triángulo en el cual $C$ es un punto al infinito, lo cual es una contradicción ya que por hipotésis $C$ es un punto en el plano.
+\item $\frac{AD}{DC}<0$. 
+Supongamos que $0<\frac{CA}{AD}$.
+Como el ángulo $|\angle CAB|$ es un ángulo externo del $\triangle ABD$ entonces $|\angle CAB|=|\angle ADB|+|\angle DBA|$ por el mismo argumento se tiene que $|\angle BAD|=|\angle BCA|+|\angle ABC|$, como por hipótesis tenemos que $|\angle CBA|=\perp$ entonces $|\angle BAD|=|\angle BCA|+ \perp $, además como $D$ es pie de altura $|\angle CAB|= \perp+|\angle DBA|$ . Notemos que $|\angle CAB|+|\angle BAD|= 2 \perp$ ya que $C, A, D$ son colineales. Entonces tenemos que, $|\angle BCA|+ \perp+ \perp+|\angle DBA|= 2 \perp $, así $|\angle BCA|+|\angle DBA|=0 $, entonces $|\angle BCA|=0=|\angle DBA|$. Por ello, $|\angle CAB|=|\angle ADB|= \perp$, por lo que podemos concluir que $A=D$. De esto se sigue que $\frac{AD}{DC}=0$ lo que es una contradicción pues supusimos que $\frac{AD}{DC}<0$, de manera análoga se llega a una contradicción si $0<\frac{DC}{CA}$. 
+\end{enumerate}
+Por lo tanto, $0<\frac{AD}{DC}$.
+\end{pba}
+	
+\begin{teo} [De Pitágoras]\label{TeoPitágoras}
+Sea $\triangle ABC$ tal que $|\angle CBA|= \perp$, entonces $AB^{2} + BC^{2} = CA^{2}$.
+\end{teo}
+\begin{dem} Sea $\triangle ABC$.
+Supongamos que $|\angle CBA|= \perp$ . Consideremos $h_{B}$ la altura por el vértice B. Sea $h_{B} \cap \overline{CA} =\{D\}$. Consideremos $\triangle ABD$ y $\triangle BDC$. Notemos que: $\triangle ABC \cong \triangle ADB$ \textbf{cs(AA)}, pues $|\angle CBA|=|\angle BDA|=\perp$ y $|\angle BAC|=|\angle DAB|$ pues A, D y C son colineales, entonces $\frac{|AB|}{|AC|}=\frac{|AD|}{|AB|}$. De esto tenemos que $|AB||AB|=|AD||AC|$, entonces $|AB|^{2}=|AD||AC|.$
+
+Además $\triangle ABC \cong \triangle BDC$ \textbf{cs(AA)}, pues $|\angle CBA|=|\angle CDB|=\perp$ y $|\angle BCA|=|\angle DCB|$ pues A, D y C son colineales, entonces $\frac{|AC|}{|BC|}=\frac{|BC|}{|DC|}$. De esto tenemos que $|BC||BC|=|AC||DC|$, entonces $|BC|^{2}=|AC||DC|$. 
+	
+De lo  anterior se tiene que: $|AB|^{2}+|BC|^{2}=|AD||AC|+|AC||DC|=|AC|(|AD|+|DC|).$
+
+Ahora notemos que: Si $0<CA$, entonces $|AC|=CA$ y por el Lema~\ref{LemaPitágoras} $|DC|=CD$ y $|AD|=DA.$ Así, $|AC|(|AD|+|DC|)= CA(DA+CD)=CA(CA)=CA^{2}.$
+En otro caso, si $CA<0$, entonces $|AC|=AC$ y por el Lema~\ref{LemaPitágoras} $|DC|=DC$ y $|AD|=AD.$ Así, $|AC|(|AD|+|DC|)= AC(AD+DC)=AC(AC)=AC^{2}=CA^{2}.$ Y como $|AB|^{2}= AB^{2}$ y $|BC^{2}= BC^{2}$. Concluimos que $AB^{2}+BC^{2}=CA^{2}$.
+\end{dem}
+
+\begin{teo}[Recíproco del teorema de Pitágoras]
+Sea $\triangle ABC$ tal que $AB^{2} + BC^{2} = CA^{2}$, entonces $|\angle CBA|= \perp$.
+\end{teo}
+\begin{dem}
+Sea $\triangle ABC$ y supongamos que $AB^{2} + BC^{2} = CA^{2}$. Consideremos $l_{B}$ la recta ortogonal a $\overline{AB}$ por $B$. Sea $D \in l_{B}$ tal que $|DB|=|BC|$, entonces $DB^{2}=BC^{2}$.
+Además por hipótesis tenemos que $AB^{2} + BC^{2} = CA^{2}$, entonces $AB^{2} + DB^{2} = CA^{2}.$
+Ahora, considerando $\triangle ABD$ por el Teorema~\ref{TeoPitágoras} concluimos que $AB^{2} + BD^{2} = DA^{2}$, entonces $CA^{2}=DA^{2}$, así $|CA|=|DA|.$ Por lo cual $\triangle ABC\equiv \triangle ABD$ \textbf{cc(LLL)}. Por tanto, $|\angle CBA|=|\angle DBA|=\perp.$ 
+\end{dem}
+     
+%%%%%%%
+%%%%% AGREGAR MÁS EJERCICIOS.
+%%%%%%%     
+\subsection*{Ejercicios}
+\begin{enumerate}
+\item Sean $\triangle ABC$, $\triangle DEF$ y $\triangle GHI$. Demostrar que:
+\begin{itemize}
+\item $\triangle ABC \cong \triangle ABC$ (es decir, la relación de semejanza es {\bf {reflexiva}}).
+\item Si $\triangle ABC \cong \triangle DEF$, entonces $\triangle DEF \cong \triangle ABC$ (es decir, la relación de semejanza es {\bf {simétrica}}).
+\item Si $\triangle ABC \cong \triangle DEF$ y $\triangle DEF \cong \triangle GHI$, entonces $\triangle ABC \cong \triangle GHI$ (es decir, la relación de semejanza es {\bf {transitiva}}).
+\end{itemize}
+Lo que demuestra que la relación de de semejanza es una {\bf{realción de equivalencia}}.
+\item Sean $\triangle ABC$ y $\triangle DEF$ tales que $\frac{AB}{DE}=\frac{AC}{DF},$ $AC<AB,$ $DF<DE$ y $|\angle ACB|=|\angle DFE|,$ entonces $\triangle ABC\cong \triangle DEF.$
+\item Dado un segmento de recta $AB$ y $k \in \mathbb{R}$, entontrar $C \in \overline{AB}$ tal que $\frac{AC}{CB}=k.$
+\item Dividir un segmento de recta en $n$ segmentos de la misma longitud. Argumentar el resultado. 
+\item Sea $\triangle ABC$ y $L$, $M$ y $N$ los puntos medios de $BC$, $AC$ y $AB$ respectivamente. Demostrar que $\triangle ABC \cong \triangle LMN.$
+\item Sea $\triangle ABC$ y $L$, $M$ y $N$ los puntos medios de $BC$, $AC$ y $AB$ respectivamente. Demostrar que:
+$$\triangle ABC \cong \triangle LMN \cong \triangle ANM \cong \triangle NBL \cong \triangle MLC.$$
+\item Demostrar que si $\{A, B, C\}\subset l$, donde $l$ es una recta en el plano y $D$ cualquier otro punto en el plano, entonces: 
+$$DA^{2}\cdot BC+ DB^{2}\cdot CA+ DC^{2}\cdot AB+ AB\cdot BC\cdot CA=0.$$
+\item Demostrar que dado un paralelogramo $\square ABCD$ (donde los vértices están ordenados levógiramente o dextrógiramente) se tiene que $AC^{2}+BD^{2}=2(AB^{2}+BC^{2}).$
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%
+%***************************REVISAR QUÉ DEBES AGREGAR EN EL INDEX.
+%%%%%%%%%%%%%%%%%%%%%
+     
+\section{Trigonometría}
+$\bullet$ suma seno y coseno\\
+
+Sea $\triangle ABC$, observemos que se tienen las siguientes razones entre sus lados:
+
+
+$$\frac{|BC|}{|CA|}\;\;\;\;\;\;\;\;\frac{|AB|}{|CA|}\;\;\;\;\;\;\;\;\frac{|BC|}{|AB|}\;\;\;\;\;\;\;\;\frac{|AB|}{|BC|}\;\;\;\;\;\;\;\;\frac{|CA|}{|AB|}\;\;\;\;\;\;\;\;\frac{|CA|}{|BC|}$$
+
+Veamos también que con las dos primeras mediante cálculos sencillos podemos obtener las demás, de manera que podemos comenzar a trabajar con esas dos y más adelante extender los resultados a las demás. 
+
+\begin{df}\label{ratrig}
+Sea el $\triangle ABC$ rectángulo de tal manera que $|\angle CBA|\,=\,\perp$.
+
+Definimos para $|\angle BAC|$  las razones siguientes:
+     
+
+$$\sen (|\angle BAC|)= \frac{|BC|}{|CA|}\;\;\;\;\;\;\;\;\;\;\;\; \cos (|\angle BAC|)= \frac{|AB|}{|CA|}$$
+
+Al segmento $CA$ le llamaremos \textcolor{red}{\bf hipotenusa}\index{hipotenusa} del $\triangle ABC$, el lado $BC$ cateto opuesto al ángulo $|\angle BAC|$ y $AB$ \textcolor{red}{\bf catetos adyacentes}\index{catetos adyacentes} al ángulo $|\angle BAC|$.
+\end{df}
+
+\begin{obs}\label{sencos}
+Si en la definición~\ref{ratrig} cambiaramos al ángulo $|\angle ACB|$ tenemos que:
+$$\sen (|\angle BAC|)= \cos(|\angle ACB|)\;\;\;\;\;\;\;\;\;\;\cos(|\angle BAC|)=\sen(|\angle ACB|)$$ 
+\end{obs}
+
+
+Ya definidas estas razones notemos que dado un ángulo $0\,<\,\alpha\,<\,\perp$  utilizando los lados de un triángulo rectángulo que tenga a $\alpha$ como uno de sus ángulos internos podemos calcular $\sen(\alpha)$ y $cos(\alpha)$, pero para poder asegurar que estas razones se comportan como funciones hay que probar que $\sen(\alpha)$ y $cos(\alpha)$ no toman distintos valores al cambiar el triángulo con el que se calculen.
+
+A continuaión veremos que estas razones dependen del ángulo y no del triángulo que se utilice para calcularlas.
+
+\begin{prop}\label{bndef}
+Sea $0 < \alpha < \perp$ y $\{ A,B,C,D,E,F\}$ puntos en el plano tales que
+\[ |\angle ABC| = \alpha = |\angle DEF| \quad \textit{(ángulos congruentes).}\]
+entonces:
+\[ \sen( |\angle ABC|) = \sen( |\angle DEF|)\] y
+\[ \cos( |\angle ABC|) = \cos( |\angle DEF|)\]
+
+\begin{pba}
+Notemos que $A$, $B$ y $C$ no son colineales, esto pues $ 0<|\angle ABC|$, entonces en particular tenemos que $A\notin \overline{BC}$.
+
+Así sean $\mathit{l}$ la recta ortogonal a $\overline{BC}$ por $A$ y $\mathit{l} \cap \overline{BC} = \{P\}$. Por construcción $\triangle ABP$ es rectángulo con $|\angle BPA| = \perp$ y $|\angle ABC| = |\angle ABP|$ pues $\{B,P,C\}$ son colineales, entonces por definición:
+
+\begin{equation}\label{trig1}
+\sen( |\angle ABC|)=  \sen(|\angle ABP|) = \frac{|PA|}{|AB|}
+\end{equation}
+
+\begin{equation}\label{trig2}
+\cos( |\angle ABC|)=  \cos(|\angle ABP|) = \frac{|BP|}{|AB|}
+\end{equation}
+
+(En este caso podemos asegurar la igualdad del seno y coseno pues nos referimos exactamente al mismo ángulo)
+ 
+De manera análoga tenemos podemos construir $\mathit{m}$ la recta ortogonal a $\overline{EF}$ y $\mathit{m} \cup \overline{EF} = \{Q\}$ y así el $\triangle DEQ$ es rectángulo con $|\angle EQD| = \perp$ y  $|\angle DEF| = |\angle DEQ|$ pues $\{E,F,Q\}$ son colineales, entonces por definición:
+
+\begin{equation}\label{trig3}
+\sen( |\angle DEF|)=  \sen(|\angle DEQ|) = \frac{|QD|}{|DE|}
+\end{equation}
+
+\begin{equation}\label{trig4}
+       \cos( |\angle DEF|)=  \cos(|\angle DEQ|) = \frac{|EQ|}{|DE|}
+\end{equation}
+
+Notemos que $\triangle ABP \cong \triangle DEQ$ \textbf{cs(AA)} pues:
+\[ |\angle ABP| = \alpha = |\angle DEQ| \quad\&\quad |\angle BPA| = \perp = |\angle EQD| \]
+
+por lo que:
+\[ \frac{|AB|}{|DE|} = \frac{|BP|}{|EQ|} = \frac{|PA|}{|QD|} \]
+
+De donde obtenemos:
+
+ \[ \frac{|AB|}{|DE|} = \frac{|PA|}{|QD|} \Rightarrow \frac{|QD|}{|DE|} = \frac{|PA|}{|AB|}\]
+
+y de ~\ref{trig1} y ~\ref{trig3} tenemos que
+
+ \[ \sen( |\angle ABC|) = \sen( |\angle DEF|)\]
+ 
+De la misma manera 
+ 
+ \[ \frac{|AB|}{|DE|} = = \frac{|BP|}{|EQ|} \Rightarrow \frac{|EQ|}{|DE|} = \frac{|BP|}{|AB|}\]
+ 
+ y por ~\ref{trig2} y ~\ref{trig4} concluimos
+
+\[ \cos( |\angle ABC|) = \cos( |\angle DEF|)\]
+ 
+\end{pba}
+\end{prop}
+         
+Hasta ahora sólo podemos definir las funciones trigonométricas en ángulos que permitan su cálculo mediante triángulos rectángulos, es decir, en ángulos $\alpha$ con $0 < \alpha < \perp$.
+
+Nuestra intención será extender estas funciones de manera que podamos calcularlas en cualquier ángulo. 
+
+Primero probaremos  una de las identidades más importantes de la trigonometría, la cual relaciona al seno y al coseno de un ángulo mediante el teorema de Pitágoras. 
+
+\begin{prop} \label{idpit}
+Sea $0\, < \alpha \, < \, \perp$, entonces:
+         
+\[ (\sen(\alpha))^2 + (\cos(\alpha))^2 = 1 \]
+            
+\begin{pba} 
+Sea el $\triangle ABC$ rectángulo de tal manera que $|\angle ABC|\,=\,\perp$ y 
+sin pérdida de generalidad sea $\alpha = |\angle BAC|$.\\
+De la definición ~\ref{ratrig} y al aplicando el Teorema~\ref{TeoPitágoras} tenemos que:
+\begin{align*}
+(\sen(|\angle BAC|))^2 + (\cos(|\angle BAC|))^2 & = \left( \frac{|BC|}{|CA|} \right)^2 + \left( \frac{|AB|}{|CA|}\right)^2\\
+&= \frac{BC^2}{CA^2} + \frac{BC^2}{CA^2}\\
+&= \frac{BC^2 + CA^2}{CA^2}\\
+&= \frac{CA^2}{CA^2}\\
+&= 1
+\end{align*}
+\end{pba}          
+\end{prop}    
+
+\begin{prop}\label{sumsen}
+Sean $0 < \alpha\, , \,\beta <\, \perp$ ángulos tales que $\alpha + \beta\, < \,\perp$, entonces:
+     
+     \[ \sen(\alpha + \beta) = \sen(\alpha)\cos(\beta) + \sen(\beta)\cos(\alpha) \]
+
+     \[ \cos(\alpha + \beta) = \cos(\alpha)\cos(\beta) - \sen(\alpha)\sen(\beta) \]
+\end{prop}     
+\begin{pba}
+Sean $l$ y $m$ rectas tales que $\angle (l\,\longrightarrow m)\,=\,\alpha$,
+%Revisar si la construcción es un ejercicio de alguna sección anterior.
+sobre $m$ contruimos una recta $n$ tal que $\angle ( m \longrightarrow n)\,=\,\beta$.  Así $\angle (l \longrightarrow n) \,=\, \alpha + \beta$.
+
+Sean $l\,\cap\,m\,\cap\,n \,=\,\{ A \}$ ,  $B\in\,l\,\backslash\, \{A\}$,
+$r$ la ortogonal a $l$ por $B$ y $r\,\cap\,n\,=\{C\}$.
+
+Por construcción el  $\triangle ABC$ es rectángulo y $|\angle CBA |=\perp$, entonces:
+\begin{equation}\label{sumsen1}
+\sen(\alpha+\beta)\,=\,\sen(|\angle BAC)|)\,=\,\frac{|BC|}{|CA|}
+\end{equation}
+\begin{equation}\label{sumcos1}
+\cos(\alpha + \beta) =\,\cos(|\angle BAC)|)\,=\, \frac{|AB|}{|CA|}
+\end{equation}
+     
+Sean $s$ la recta ortogonal a $m$ por $C$ y $m\cap\,s\,=\{D\}$.
+
+Luego construimos $t$ la paralela a $l$ por $D$ y $u$ la paralela a $r$ por $D$, y tomamos $r\,\cap\,t\,= \{ E\}$, $l\,\cap\,u\,= \{ F\}$ y $r\,\cap\,m\,= \{G\}$.
+
+El $\triangle DAF$ es rectángulo por construcción pues $u\,\parallel\,r\,\perp\, l$ y $|\angle DFA|=\perp$, entonces:
+
+\[\sen(\alpha)\,=\,\sen(|\angle FAD|)\,=\,\frac{|FD|}{|DA|}\]
+\[\cos(\alpha)\,=\,\cos(|\angle FAD|)\,=\,\frac{|AF|}{|DA|}\]
+Por lo tanto  \begin{equation}\label{sumsen2}
+|DA|\sen(\alpha)\,=\,|FD|
+\end{equation}
+              
+\begin{equation}\label{sumcos2}
+|DA|\cos(\alpha)\,=\,|AF|
+\end{equation}
+
+Como $s \perp m$ por construcción, los  $\triangle CDG$  y $\triangle ADC$ son rectángulos con $|\angle CDG|=\perp$ y $|\angle CDA|\,=\,\perp$.
+\\
+
+Entonces para $\triangle ADC$:
+
+\begin{equation}\label{sumsen3}
+\sen(\beta)\,=\,\sen(|\angle DAC|)\,=\,\frac{|DC|}{|CA|}
+\end{equation}
+
+\begin{equation}\label{sumsen4}
+\cos(\beta)\,=\,\cos(|\angle DAC|)\,=\,\frac{|AD|}{|CA|}
+\end{equation}
+
+
+Además $t \perp r$, por lo que t es la altura del $\triangle CDG$ por $D$, entonces:
+\[ \triangle CDG\, \cong \, \triangle DEG\, \cong \, \triangle CED \quad \textit{(Ver Teorema~\ref{TeoPitágoras})} \]
+
+También tenemos que $t$ es paralela a $l$ y $m$ una transversal implica que $\alpha\,=|\angle BAG|\,=\,|\angle GDE|$.
+
+Por la semejanza $\triangle CDG\, \cong \, \triangle DEG$ podemos concluir entonces $\alpha\,=\,|\angle ECD|$ y al ser $\triangle CDG$ rectángulo por definición:
+\[ \cos(\alpha)\,= \,\cos(|\angle ECD|)\,=\,\frac{|CE|}{|DC|}\]
+\[ \sen(\alpha)\,= \,\sen(|\angle ECD|)\,=\,\frac{|ED|}{|DC|}\]
+Por lo tanto:
+\begin{equation}\label{sumsen5}
+|DC|\cos(\alpha)\,=\,|CE|
+\end{equation}
+\begin{equation}\label{sumcos3}
+|DC|\sen(\alpha)\,=\,|ED|
+\end{equation}
+
+Por construcción la recta $m$ está entre $l$ y $n$, por lo que $E$ divide internamente a $BC$, es decir, $|BC|=|BE|+|EC|$. Por último $\square EBFD$ es un paralelogramo lo que implica $|EB|=|FD|$ y $|BF|=|DE|$. por lo tanto $|BC|=|FD|+|CE|$.
+
+
+Regresando a ~\ref{sumsen1} tenemos al aplicar ~\ref{sumsen2} y ~\ref{sumsen5}:
+\begin{align*}
+ \sen(\alpha+\beta)  
+&=\,\frac{|FD|+|CE|}{|CA|}\\
+&=\,\frac{|FD|}{|CA|} + \frac{|CE|}{|CA|}\\
+&=\,\frac{|DA|\sen(\alpha)}{|CA|} + \frac{|DC|\cos(\alpha)}{|CA|}\\
+&=\,\sen(\alpha)\left(\frac{|AD|}{|CA|}\right) + \left(\frac{|DC|}{|CA|}\right)\cos(\alpha)\\
+\end{align*}
+Así por ~\ref{sumsen3} y ~\ref{sumsen4}:
+
+\[ \sen(\alpha + \beta) = \sen(\alpha)\cos(\beta) + \sen(\beta)\cos(\alpha) \]
+  
+Tenemos también que $F$ divide externamente a $AB$, por lo tanto $|AB|=|AF|-|BF|$ y como $|BF|=|DE|$, entonces $|AB|=|AF|-|ED|$. 
+%%%%%%%%%%%%%%%%%%%%
+%**************************Falta justificar que F divide externamente.
+%%%%%%%%%%%%%%%%%%%%
+Así para ~\ref{sumcos1}:
+\begin{align*}
+\cos(\alpha + \beta) 
+&=  \frac{|AB|}{|CA|}\\
+&= \frac{|AF|}{|CA|} - \frac{|ED|}{CA|}\\
+\end{align*}  
+  
+Por ~\ref{sumcos2}, ~\ref{sumsen3}, ~\ref{sumsen4} y ~\ref{sumcos3} tenemos entonces:
+\begin{align*}
+\cos(\alpha + \beta) 
+&= \frac{|DA|\cos(\alpha)}{|CA|} - \frac{|DC|\sen(\alpha)}{CA|}\\
+&=\cos(\alpha)\left(\frac{|AD|}{|CA|}\right) - \sen(\alpha)\left(\frac{|DC|}{|CA|}\right)\\
+&=\cos(\alpha)\cos(\beta) - \sen(\alpha)\sen(\beta)\\ 
+\end{align*}  
+\end{pba}
+
+Antes de continuar daremos dos definiciones que nos ayudarán más adelante:
+\begin{df}
+Sean $\alpha$ y $\beta$ dos ángulos, decimos que $\alpha$ y $\beta$ son \textcolor{red}{\bf ángulos  complementarios}\index{ángulos ! complementarios} si $\alpha+\beta\,=\,\perp$, y son \textcolor{red}{\bf ángulos suplementarios}\index{ángulos !  suplementarios} si   $\alpha+\beta\,=\,2\perp$.
+
+Note que en un triángulo rectángulo los ángulos distintos del ángulo recto son complementarios.
+\end{df}
+
+Para extender las funciones a cualquier valor de $\alpha$ haremos la siguiente construcción.
+\begin{df}
+Sean $l$ y $m$ dos rectas ortogonales y $l\cap m = \{A\}$, definimos:
+\begin{itemize}
+\item $l_{A}^{+} \,=\,\{X\in\, l \,\, | \,\, AX \geq 0\}$ el rayo positivo desde $A$ en $l$,
+\item $l_{A}^{-} \,=\,\{X\in\, l \,\, | \,\, AX \leq 0\}$ el rayo negativo desde $A$ en $l$,
+\item $m_{A}^{+} \,=\,\{X\in\, m \,\, | \,\, AX \geq 0\}$ el rayo positivo desde $A$ en $m$,
+\item $m_{A}^{-} \,=\,\{X\in\, m \,\, | \,\, AX \leq 0\}$ el rayo negativo desde $A$ en $m$,
+\end{itemize}
+Observemos que por el cuarto postulado el ángulo formado por cualesquiera dos rayos de rectas distintas mide un recto, así partiendo de $l_{A}^{+}$ consideraremos la orientación positiva de los angulos de tal manera que \[|\angle( l_{A}^{+} \rightarrow m_{A}^{+})| = \angle (l_{A}^{+} \rightarrow m_{A}^{+})\]
+\end{df}
+
+Sean $\zeta(A,r)$ la circunferencia con centro en $A$ y radio $r>0$, $\{P\}=\zeta \cap l_{A}^{+}$ y $\{Q\}=\zeta \cap m_{A}^{+}$ . $\widehat{AB}$
+
+Tomemos  $C \in\widehat{PQ}\backslash \{P,Q\} $, $m'$ la ortogonal a $l$ por $C$ y $\{B\} = m' \cap l_A^{+}$.
+
+Por construcción $\triangle ABC$ es rectángulo y el $\angle BAC$ es menor a un recto pues está comprendido entre $\angle (l_{A}^{+} \rightarrow m_{A}^{+}) = \perp$.
+%%%%%%%%%%%%%%%%
+%***************************Revisar el uso de arcos. 
+%%%%%%%%%%%%%%%%%
+Calculamos el seno y coseno de $\alpha\,=\, \angle BAC$:
+
+\[\sen(\alpha)\,=\,\frac{|BC|}{|CA|}\,=\frac{|BC|}{r}\]
+\[\cos(\alpha)\,=\,\frac{|AB|}{|CA|}\,=\frac{|AB|}{r}\]
+
+Por la proposición ~\ref{bndef} podemos considerar solamente el caso cuanro $r=1$ y tomando la orientación de las rectas (heredando en $m'$ la orientación de $m_{A}^{+}$ tenemos entonces:
+             
+\[\sen(\alpha)\,=\,BC\,\]
+\[\cos(\alpha)\,=\,AB\,\]
+
+Que son los catetos del $\triangle ABC$. 
+
+Con esta circunferencia podremos extender las funciones trigonométricas a cualquier valor de $\alpha$.
+
+Sean $\{P'\}=\zeta \cap l_{A}^{-}$ y $\{Q'\}=\zeta \cap m_{A}^{-}$ así dado $C \in \zeta$, $m'$ la ortogonal a $l$ por $C$ y $\{B\} = m' \cap l$.
+\begin{df}Definimos el seno y el coseno de $\alpha=\angle BAC$ de la siguiente manera:
+               
+\[\sen(\alpha)=BC \]
+\[\cos(\alpha)=AB \]
+                      
+Note que  estamos considerando los segmentos y el ángulo dirigidos.                      
+\end{df}
+
+\begin{obs}\label{ext} Veamos que ocurre en los posibles valores de $\alpha$:
+\begin{itemize}
+\item Cuando $\alpha\,=0$ tenemos que, $C=B=P$ con $B \in l_A^{+}$ y por lo tanto:
+\[\sen(0)\,=\,CC\,=\,0\]
+\[\cos(0)\,=\,AP\,=\,1\]
+   
+\item Cuando $0 < \alpha < \perp$ la definición coincide con la que dimos al inicio del capítulo (por construcción).
+                   
+\item si $\alpha\,=\perp$ tenemos que $C=Q$, $B=A$  y por lo tanto:
+           
+\[\sen(\perp)\,=\,AQ\,=\,1\]
+\[\cos(\perp)\,=\,AA\,=\,0\]
+  
+\item si $\perp < \alpha < 2\perp$, $B \in l_A^{-}$, el $\triangle ABC$ tiene a $\alpha$ como ángulo externo y en este caso el ángulo interno $\angle CAB = 2\perp - \alpha$ y 
+             
+\[\sen(\alpha)\,=\sen(2\perp-\alpha)\]
+\[\cos(\alpha)\,=-\cos(2\perp-\alpha)\]
+              
+\item si $\alpha\,=2\perp$ tenemos que $C=P'$, $C=P'=B$ con $B \in l_A^{-}$ y por lo tanto:
+           
+\[\sen(2\perp)\,=\,P'P'\,=\,0\]
+\[\cos(2\perp)\,=\,AP'\,=\,-1\] 
+              
+\item si $2\perp < \alpha < 3\perp$, $B \in l_A^{-}$, el $\triangle ABC$ tiene como ángulo interno $\angle BAC = \alpha - 2\perp$ y 
+             
+\[\sen(\alpha)\,=-\sen(\alpha - 2\perp)\]
+\[\cos(\alpha)\,=-\cos(\alpha - 2\perp)\]
+                         
+\item si $\alpha\,=3\perp$ tenemos que $C=Q'$, $A=B$ y por lo tanto:
+           
+\[\sen(3\perp)\,=\,AQ'\,=\,-1\]
+\[\cos(3\perp)\,=\,AA\,=\,0\]
+              
+\item si $3\perp < \alpha < 4\perp$, $B \in l_A^{+}$ , el $\triangle ABC$ tiene como ángulo interno $\angle CAB = 4\perp - \alpha$ y
+  
+\[\sen(\alpha)\,=-\sen(4\perp-\alpha)\]
+\[\cos(\alpha)\,=\cos(4\perp-\alpha)\]
+  
+\item por último $\alpha= 4\perp$, de manera análoga a $0$ tenemos:
+  
+\[\sen(4\perp)\,=\,0\]
+\[\cos(4\perp)\,=\,1\]
+  
+\end{itemize}        
+Todo esto se puede probar en la construcción construyendo un $\triangle AB'C'$ congruente al $\triangle ABC$ tal que el seno y coseno del ángulo en $A$ coincidan con el ángulo correspondiente a cada caso y se recomienda como ejercicio. 
+\end{obs}
+
+Ya que estamos considerando ángulos dirigidos, necesitamos definir las funciones seno y coseno para ángulos negativos, recordemos entonces que para los ángulos $-\alpha = 4\perp - \alpha$ por lo tanto:
+\begin{df} Sea $\alpha \in [0,4\perp]$ definimos:
+
+\[sen(-\alpha)=\sen(4\perp -\alpha)\]
+\[cos(-\alpha)=\cos(4\perp -\alpha)\]
+\end{df}
+
+\begin{prop}Sea $\alpha \in [0,4\perp]$ entonces:
+\[sen(-\alpha)=-\sen(\alpha)\]
+\[cos(-\alpha)=\cos(\alpha)\]
+\end{prop}
+\begin{pba}
+Utilizando la observación ~\ref{ext}:
+\begin{itemize}
+\item si $\alpha \in [0,\perp]$ entonces $4\perp -\alpha \in [3\perp,4\perp]$ y por lo tanto:
+ 
+\[sen(-\alpha)=\sen(4\perp -\alpha)=-\sen(4\perp-(4\perp - \alpha))=-\sen(\alpha)\]
+\[cos(-\alpha)=\cos(4\perp -\alpha)= \cos(4\perp-(4\perp - \alpha))= \cos(\alpha)\]
+     
+\item si $\alpha \in [\perp,2\perp]$ entonces $4\perp -\alpha \in [2\perp,3\perp]$ y por lo tanto:
+ 
+\[sen(-\alpha)=\sen(4\perp -\alpha)=-\sen((4\perp-\alpha) - 2\perp)=-\sen(2\perp - \alpha)=-\sen(\alpha)\]
+\[cos(-\alpha)=\cos(4\perp -\alpha)= \cos((4\perp-\alpha) - 2\perp)= \cos(2\perp - \alpha)=\cos(\alpha)\]
+     
+\item si $\alpha \in [2\perp,3\perp]$ entonces $4\perp -\alpha \in [\perp,2\perp]$ y por lo tanto:
+ 
+\[sen(-\alpha)=\sen(4\perp -\alpha)= \sen(2\perp -(4\perp - \alpha))= \sen(\alpha - 2\perp)=-\sen(\alpha)\]
+\[cos(-\alpha)=\cos(4\perp -\alpha)= \cos(2\perp -(4\perp - \alpha))= \cos(\alpha - 2\perp)=\cos(\alpha)\] 
+     
+\item si $\alpha \in [3\perp,4\perp]$ entonces $4\perp -\alpha \in [0,\perp]$ y por lo tanto:
+ 
+\[sen(-\alpha)=\sen(4\perp -\alpha)= -\sen(\alpha)\]
+\[cos(-\alpha)=\cos(4\perp -\alpha)= \cos(\alpha)\]
+\end{itemize}     
+\end{pba}
+
+Veamos que estas nuevas definiciones son consistentes con lo que ya desarrollamos. 
+
+\begin{prop}\label{sumsencoscom}Las proposiciones ~\ref{idpit} y ~\ref{sumsen} son ciertas para cualquier ángulo $\alpha, \beta \in [0,4\perp]$, es decir:
+\end{prop}
+\begin{enumerate}
+\item[a)] \[ (\sen(\alpha))^2 + (\cos(\alpha))^2 = 1 \]
+\item[b)] \[ \sen(\alpha + \beta) = \sen(\alpha)\cos(\beta) + \sen(\beta)\cos(\alpha) \]
+          \[ \cos(\alpha + \beta) = \cos(\alpha)\cos(\beta) - \sen(\alpha)\sen(\beta) \]
+\end{enumerate}
+\begin{pba}Sean $\alpha, \beta \in [0,4\perp]$ en la construcción anterior. 
+
+\begin{enumerate}
+\item[a)]Por definición si $C \in \{P,Q,P',Q'\}$ el seno y el coseno representan los catetos de un trángulo rectángulo así por el Teorema~\ref{TeoPitágoras}
+\begin{align*}
+(\sen(\alpha))^2+(\cos(\alpha))^2 &= (BC)^2 + (AB)^2 \\
+&= (CA)^2 =1
+\end{align*}
+Para los casos especiales $(\sen(\alpha))^2+(\cos(\alpha))^2 = 1 + 0 = 1$
+\item[b)] Evaluaremos por casos:
+\begin{enumerate}
+\item[Caso 1] para $0$ y $\alpha\,\in\,[0,4\perp]$
+\begin{align*}
+\sen(0+\alpha)&=\sen(0)\cos(\alpha) + \cos(0)\sen(\alpha)= 0\cdot\cos(\alpha) + 1\cdot\sen(\alpha)= \sen(\alpha)\\
+\cos(0+\alpha)&=\cos(0)\cos(\alpha) - \sen(0)\sen(\alpha)= 1\cdot\cos(\alpha) - 0\cdot\sen(\alpha)= \cos(\alpha)
+\end{align*}
+\item[Caso 2] Si $\alpha, \beta \in [0,\perp]$ son complementarios.
+\begin{align*}
+\sen(\alpha + \beta) 
+&= \sen(\alpha)\cos(\beta) + \sen(\beta)\cos(\alpha)\\
+&= \cos(\beta)\cos(\beta) + \sen(\beta)\sen(\beta)\\
+&= (\cos(\beta))^2 + (\sen(\beta))^2\\
+&= 1\\
+\textit{Y}  \quad
+\sen(\perp) &= 1\\                   
+\cos(\alpha + \beta) 
+&= \cos(\alpha)\cos(\beta) - \sen(\alpha)\sen(\beta) \\
+&= \sen(\beta)\cos(\beta) - \cos(\beta)\sen(\beta)\\
+&= 0\\
+\textit{Y}   \quad        
+cos(\perp)&= 0\\
+\end{align*}
+
+\item[Caso 3] para $\perp$ y $\alpha\,\in\,[0,\perp)$.
+
+Por un lado, 
+\[\sen(\perp)\cos(\alpha) + \cos(\perp)\sen(\alpha)= 1\cdot\cos(\alpha) + 0\cdot\sen(\alpha)= \cos(\alpha)\]
+\[\cos(\perp)\cos(\alpha) - \sen(\perp)\sen(\alpha)= 0\cdot\cos(\alpha) - 1\cdot\sen(\alpha)= -\sen(\alpha)\]
+
+Y como $\alpha+\perp \in [\perp,2\perp$ por la observación ~\ref{ext} (y al ser $\alpha$ y $\perp - \alpha$ complementarios). 
+
+\[\sen(\perp + \alpha)=\sen(2\perp-(\perp + \alpha))=\sen(\perp - \alpha)=\cos(\alpha)\]
+\[\cos(\perp + \alpha)=-\cos(2\perp-(\perp + \alpha))=-\cos(\perp - \alpha)=-\sen(\alpha)\]
+
+
+\item[Caso 4] Si $\alpha + \beta \in (\perp,2\perp]$ entonces al menos un ángulo es menor a un recto, s.p.g sea $\alpha \in [0,\perp]$, sabemos que existe $\gamma \in [0,\perp]$ tal que:
+\[ \alpha + \beta = \perp + \gamma \]
+Así 
+\[\sen(\alpha + \beta) = \sen(\perp + \gamma)=\cos(\gamma)\]
+\[\cos(\alpha + \beta) = \cos(\perp + \gamma)=-\sen(\gamma)\]
+
+Por otro lado $\beta = (\perp-\alpha) + \gamma$ y $\perp - \alpha \in [0,\perp]$, por lo que:
+\begin{align*}
+\sen(\beta)
+&=\cos(\perp-\alpha)\sen(\gamma)+\sen(\perp -\alpha)\cos(\gamma)\\
+&=\sen(\alpha)\sen(\gamma)+ \cos(\alpha)\cos(\gamma)\\
+\cos(\beta)
+&=\cos(\perp-\alpha)\cos(\gamma)-\sen(\perp -\alpha)\sen(\gamma)\\
+&=\sen(\alpha)\cos(\gamma)-\cos(\alpha)\sen(\gamma)\\           
+\end{align*}
+Entonces: 
+\begin{align*}
+\sen(\alpha)\cos(\beta) + \sen(\beta)\cos(\alpha)&= (\sen(\alpha))^2\cos(\gamma)-\sen(\alpha)\cos(\alpha)\sen(\gamma)\\
+&\quad + \sen(\alpha)\cos(\alpha)\sen(\gamma)+ (\cos(\alpha))^2\cos(\gamma)\\
+&=\cos(\gamma)((\sen(\alpha))^2+(\cos(\alpha))^2)\\
+&=\cos(\gamma)\\
+\& &\\   
+\cos(\alpha)\cos(\beta) - \sen(\beta)\sen(\alpha)&= \sen(\alpha))\cos(\alpha)\cos(\gamma)-(\cos(\alpha))^2\sen(\gamma)\\
+&\quad - (\sen(\alpha))^2\sen(\gamma)- \sen(\alpha)\cos(\alpha)\cos(\gamma)\\
+&=-\sen(\gamma)((\sen(\alpha))^2+(\cos(\alpha))^2)\\
+&=-\sen(\gamma)\\            
+\end{align*}
+\item[Caso 5]  Si $\alpha + \beta \in (2\perp,4\perp]$ entonces al menos un ángulo es menor a dos rectos, s.p.g sea $\alpha \in [0,2\perp]$, sabemos que existe $\gamma \in [0,2\perp]$ tal que:
+\[ \alpha + \beta = 2\perp + \gamma \]
+El resto de la demostración es análoga al caso 4.
+\end{enumerate}  
+\end{enumerate}
+\end{pba}                   
+
+Ahora podemos saber que ocurre con la resta de ángulos:
+\begin{cor}Sean $\alpha,\beta \in [0,4\perp]$ entonces:
+\[ \sen(\alpha - \beta) = \sen(\alpha)\cos(\beta) - \sen(\beta)\cos(\alpha) \]
+\[ \cos(\alpha - \beta) = \cos(\alpha)\cos(\beta) + \sen(\alpha)\sen(\beta) \]
+\end{cor}
+\begin{pba}
+\begin{align*}
+\sen(\alpha - \beta) 
+&= \sen(\alpha + (4\perp - \beta))\\
+&= \sen(\alpha)\cos(4\perp - \beta) - \sen(4\perp - \beta)\cos(\alpha)\\
+&= \sen(\alpha)\cos(-\beta) + \sen( - \beta)\cos(\alpha)\\
+&= \sen(\alpha)\cos(\beta) +(- \sen( \beta))\cos(\alpha)\\
+&= \sen(\alpha)\cos(\beta) - \sen( \beta)\cos(\alpha)\\
+\cos(\alpha - \beta) 
+&= \cos(\alpha + (4\perp - \beta))\\
+&= \cos(\alpha)\cos(4\perp - \beta) - \sen(4\perp - \beta)\sen(\alpha)\\
+&= \cos(\alpha)\cos(-\beta) - \sen( - \beta)\sen(\alpha)\\
+&= \cos(\alpha)\cos(\beta) -(- \sen( \beta))\sen(\alpha)\\
+&= \cos(\alpha)\cos(\beta) + \sen( \beta)\sen(\alpha)\\                    
+\end{align*} 
+\end{pba}
+
+\begin{teo}[Ley de cosenos]\label{LDC}
+Sea $\triangle ABC$, entonces
+$$CA^{2}=AB^{2}+BC^{2}-2|AB||BC|Cos(\angle CBA).$$
+$$AB^{2}=BC^{2}+CA^{2}-2|BC||CA|Cos(\angle ACB).$$
+$$BC^{2}=CA^{2}+AB^{2}-2|CA||AB|Cos(\angle BAC).$$
+\end{teo}
+\begin{dem}
+Sea $l$ la recta ortogonal a $BC$ por $A$ y $BC\cap l=\{D\}.$ Entonces por el Teorema~\ref{TeoPitágoras} tenemos los siguiente: 
+\begin{eqnarray*}
+CA^{2}&=&AD^{2}+DC^{2}\\
+&=& AD^{2}+(DB+BC)^{2}\\
+&=& AD^{2}+DB^{2}+2|DB|\cdot |BC|+BC^{2}\\
+&=& AD^{2}+(AB^{2}-DA^{2})+2|DB|\cdot |BC|+BC^{2}\;\;\text{(Por el Teorema~\ref{TeoPitágoras})}\\ 
+&=& AB^{2}+BC^{2}+2|DB|\cdot |BC| 
+ \end{eqnarray*}
+Ahora, como $\cos \angle  CAB=\frac{BD}{AB}$, entonces $AB\cos \angle CAB=BD$ así $-AB\cos \angle CAB=DB$.
+
+Por lo tanto,
+$$ CA^{2}=AB^{2}+BC^{2}-2|AB||BC|\cos\angle CBA.$$
+
+Análogamente, se puede demostrar que:
+$$AB^{2}=BC^{2}+CA^{2}-2|BC||CA|Cos(\angle ACB).$$
+$$BC^{2}=CA^{2}+AB^{2}-2|CA||AB|Cos(\angle BAC).$$
+
+(ver sección de ejercicios, Ejercicio~\ref{LDCE}). 
+\end{dem}
+
+\begin{teo}[Ley de senos]\label{LDS}
+Sea $\triangle ABC$, entonces
+$$\frac{|AC|}{\sen(\angle ABC)}=\frac{|BA|}{\sen(\angle BCA)}=\frac{|CB|}{\sen(\angle CAB)}.$$
+\end{teo} 
+\begin{dem}
+Sea $l$ la recta ortogonal a $\overline{AB}$ por $C$, tal que $l\cap\overline{AB}= \{T\}.$ Entonces,
+$$\sen(\angle CAB)=\frac{|CT|}{|AC|}\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\sen(\angle ABC)=\frac{|CT|}{|CB|}$$
+Así que:
+$$|AC|\sen(\angle CAB)=|CT|\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;|CB|\sen(\angle ABC)=|CT|$$
+Por tanto, $|AC|\sen(\angle CAB)=|CB|\sen(\angle ABC)$. Entonces, 
+$$\frac{|AC|}{\sen(\angle ABC)}=\frac{|CB|}{\sen(\angle CAB)}$$
+Análogamente, se obtiene que $\frac{|AC|}{\sen(\angle ABC)}=\frac{|BA|}{\sen(\angle BCA)}$ y $\frac{|CB|}{\sen(\angle CAB)}=\frac{|BA|}{\sen(\angle BCA)}$ (ver sección de ejercicios, Ejercicio~\ref{LDSE}). 
+
+Entonces, por transitividad concluimos que
+$$\frac{|AC|}{\sen(\angle ABC)}=\frac{|BA|}{\sen(\angle BCA)}=\frac{|CB|}{\sen(\angle CAB)}.$$
+\end{dem}
+
+\subsection*{Ejercicios}
+\begin{enumerate}
+\item Demostrar que si $0<\alpha+\beta<\perp$, entonces:
+\begin{enumerate}
+\item $\sen(\alpha+\beta)=\sen(\alpha)\cos(\beta)+\sen(\beta)\cos(\alpha).$
+\item $\cos(\alpha+\beta)=\cos(\alpha)\cos(\beta)-\sen(\alpha)\sen(\beta).$
+\end{enumerate}
+\item Sean $0<\alpha<\perp$ y $0<\beta<\perp$. Demostrar que si $\alpha+\beta=\perp$, entonces $\sen(\alpha)=\cos(\beta).$
+\item En la Teorema~\ref{LDC} (página \pageref{LDC}), probar que:
+$$AB^{2}=BC^{2}+CA^{2}-2|BC||CA|Cos(\angle ACB).$$
+$$BC^{2}=CA^{2}+AB^{2}-2|CA||AB|Cos(\angle BAC).$$ .\label{LDCE}
+\item En la Teorema~\ref{LDS} (página \pageref{LDS}), probar que:
+
+$$\frac{|AC|}{\sen(\angle ABC)}=\frac{|BA|}{\sen(\angle BCA)}\;\; y \;\;\frac{|CB|}{\sen(\angle CAB)}=\frac{|BA|}{\sen(\angle BCA)}$$.\label{LDSE} 
+\end{enumerate}
+
+
+\section{Teorema generalizado de la bisectríz}
+\begin{teo}[Generalizado de la bisectriz]\label{TGB}\index{Teorema ! generalizado de la bisectriz}
+Sea $\triangle ABC$ y $L\in\overline{BC}\backslash \{B,C\}$, entonces
+$$\frac{BL}{LC}=\frac{AB\;\sen(\angle BAL)}{CA\;\sen(\angle LAC)}$$
+\end{teo}
+\begin{dem} Sea $b$ la recta ortogonal a $\overline{AL}$ por $B$ y $c$ la recta ortogonal a $\overline{AL}$ por $C$. Entonces $\overline{AL}\cap b=\{P\}$ y $\overline{AL}\cap c=\{Q\}.$ De esta forma, por construcción tenemos que $\triangle BAP$ y  $\triangle CAQ$ son triángulos rectángulos, en donde  $\angle APB=\perp$ y $\angle CQA=\perp.$
+Notemos que $\angle BAL=\angle BAP$ ya que $L$ y $P$ son colineales, así que $\sen(\angle BAL)=\sen(\angle BAP)=\frac{|BP|}{|AB|}=\frac{BP}{AB}.$
+Por tanto, $AB\;\sen(\angle BAL)=BP.$ Análogamente, como $L$ y $Q$ son colineales $\angle LAC=\angle QAC=\frac{|QC|}{|AC|}=\frac{QC}{CA}.$ Entonces, $CA\;\sen(\angle LAC)=QC.$
+
+En consecuencia, tenemos que:$$\frac{BP}{QC}=\frac{AB\;\sen(\angle BAL)}{CA\;\sen(\angle LAC)}.$$
+
+Finalmente, probemos que $\frac{BP}{QC}=\frac{BL}{LC}.$ 
+Primero notemos que $\triangle BPL\cong\triangle CQL$ \textbf{cs(AA)} ya que $|\angle BPL|=|\angle CQL|=\perp$ y $|\angle PLB|=|\angle QLC|$ pues $P$ y $Q$ son colineales al igual que $B$ y $C.$
+Así, $\frac{|BP|}{|CQ|}=\frac{|BL|}{|CL|}$, entonces $\frac{BP}{QC}=\frac{BL}{LC}.$
+Por lo tanto, podemos concluir que:$$\frac{BL}{LC}=\frac{AB\;\sen(\angle BAL)}{CA\;\sen(\angle LAC)}.$$
+\end{dem}
+
+%%%%%%%%%%%%%%%
+%*************************Detallar el uso de las orientaciones. 
+%%%%%%%%%%%%%%%
+
+\begin{cor}[Teorema de la bisectriz]\index{Teorema ! de la bisectriz}
+Sea $\triangle ABC$ y $L\in\overline{BC}$ tal que $AL$ es bisectriz del $\angle BAC$, entonces:
+$$\frac{BL}{LC}=\frac{AB}{CA}.$$
+\end{cor}
+\begin{pba}
+Como $L\in\overline{BC}$, entonces por el Teorema~\ref{TGB}, tenemos que: 
+$$\frac{BL}{LC}=\frac{AB\;\sen(\angle BAL)}{CA\;\sen(\angle LAC)}.$$
+
+Ahora, como $AL$ es bisectriz del $\angle BAC$, $\angle BAL=\angle LAC$ por tanto $\sen\angle BAC=\sen\angle LAC.$
+De ésto podemos concluir que:
+$$\frac{BL}{LC}=\frac{AB}{CA}.$$
+\end{pba}
+
+\section{Ángulos en la circunferencia}
+Para el desarrollo de esta sección introduciremos la siguiente notación: Dada una circunferencia con centro en $O$ y radio $r\in\mathbb{R^{+}}$ escribiremos $\mathcal{C}(O,r)$.
+
+\subsection{Ángulos inscritos en la circunferencia}
+\begin{df}
+Sea $\mathcal{C}(O, r)$ y $\{A,B\}\subseteq\mathcal{C}(O,r)$, el $\angle AOB$ será llamado \textcolor{red}{\bf ángulo central}\index{ángulo ! central}. Si $P\in\mathcal{C}(O,r)$, entonces $\angle APB$ es un \textcolor{red}{\bf ángulo inscrito}\index{ángulo ! inscrito}. 
+\end{df}
+
+\begin{df}
+Sea $\mathcal{C}(O,r)$, $\{A,B\}\subseteq\mathcal{C}(O,r)$ y $\alpha\in\mathbb{R}^{+}$. El conjunto de puntos $P$ en $\mathcal{C}(O,r)$ para los que se cumple que: Si $0<\angle AOB=\alpha$, entonces $0\leq\angle AOP\leq\alpha$, es el \textcolor{red}{\bf arco de circunferencia dirigido}\index{arco de circunferencia dirigido} AB y se denotará como $\widehat{AB}.$
+Al considerar el arco de circunferencia dirigido, se tiene que: $\widehat{AB}=-\widehat{BA}$.
+\end{df}
+
+\begin{prop}\label{P1AIC}
+Sea $\mathcal{C}(O,r)$ una circunferencia, $\{A,B\}\subseteq\mathcal{C}(O,r)$ y $P\in\widehat{BA}\backslash\{B, A\}$, entonces $\angle AOB=2\angle APB.$
+\end{prop}
+\begin{pba}
+Sea $\{C\}=\mathcal{C}(O,r)\cap\overline{OA}\backslash\{A\}$ y $\{D\}=\mathcal{C}(O,r)\cap\overline{OB}\backslash\{B\}.$ Entonces tenemos los siguientes casos:
+
+\begin{itemize}
+\item $P=C.$
+
+Supongamos que $P=C.$
+
+Consideremos $\triangle BOP$, tenemos que $|OP|=|OB|$ ya que ambos segmentos son radios de $\mathcal{C}(O,r)$, por tanto $\triangle BOP$ es isósceles y así $|\angle OBP|=|\angle OPB|$. Como $|\angle AOB|=|\angle OBP|+|\angle OPB|$, entonces $|\angle AOB|=2|\angle OPB|.$ Ahora, como $P\in\overline{OA}$, tenemos que $|\angle AOB|=2|\angle APB|$ por lo tanto, $\angle AOB=2\angle APB.$
+
+\item $P=D.$
+
+Supongamos que $P=D.$
+
+Consideremos $\triangle AOP$, tenemos que $|OP|=|OA|$ ya que ambos segmentos son radios de $\mathcal{C}(O,r)$, por tanto $\triangle BOP$ es isósceles y así $|\angle APO|=|\angle OAP|$. Como $|\angle AOB|=|\angle OAP|+|\angle APO|$, entonces $|\angle AOB|=2|\angle APO|.$ Ahora, como $P\in\overline{OB}$, tenemos que $|\angle AOB|=2|\angle APB|$ por lo tanto, $\angle AOB=2\angle APB.$
+%%%%%%%%%%%%%%%%%%%%
+%**********************Quizá la prueba de este caso debería ser ejercicio como en el caso 4. COMENTARLO
+%%%%%%%%%%%%%%%%%%%%%
+\item $P\in\widehat{BC}\backslash\{C\}.$
+
+Supongamos que $P\in\widehat{BC}\backslash\{C\}$ y sea $\overline{PO}\cap\mathcal{C}(O,r)\backslash\{P\}=\{Q\}.$
+
+Primero notemos que: $|\angle APB|=|\angle OPB|-|\angle OPA|.$ Por el caso anterior tenemos que $2|\angle OPB|=|\angle QOB|$ y $2|\angle OPA|=|\angle QOA|$, ahora notemos que $|\angle QOB|=|\angle POD|$ y $|\angle QOA|=|\angle POC|$ ya que son ángulos  opuestos por el vértice, por tanto, $|\angle OPB|=\frac{|\angle POD|}{2}$ Y $|\angle OPA|=\frac{|\angle POC|}{2}.$ Así, tenemos que: $|\angle APB|=\frac{|\angle POD|}{2}-\frac{|\angle POC|}{2}=\frac{|\angle POD|-|\angle POC|}{2}=\frac{|\angle QOB|-|\angle QOA|}{2}=\frac{|\angle AOB|}{2}.$ 
+
+Por lo tanto, podemos concluir que $2\angle APB=\angle AOB.$
+
+\item $P\in\widehat{DA}\backslash\{D\}.$ La prueba es análoga (ver sección de ejercicios, Ejercicio~\ref{P1AICC4}).
+
+\item $P\in\widehat{CD}\backslash\{D\}.$
+
+Supongamos que $P\in\widehat{CD}\backslash\{D\}$ y sea $\overline{PO}\cap\mathcal{C}(O,r)\backslash\{P\}=\{Q\}.$
+
+Por el primer caso tenemos que $\angle QOB=2\angle QPB$ y $\angle AOQ=2\angle APQ$, entonces $\angle AOQ+\angle QOB=2\angle APQ+2\angle QPB=2(\angle APQ+\angle QPB)$ por tanto, $\angle AOB=2\angle APB.$
+\end{itemize}
+\end{pba}
+%%%%%%%%%%%%%%%
+%***************************Revisar los detalles. 
+%%%%%%%%%%%%%%%%
+\begin{cor}\label{C1AIC}
+Sea $\mathcal{C}(O,r)$ una circunferencia, $\{A,B\}\subseteq\mathcal{C}(O,r)$ y $\{P,Q\}\subseteq\widehat{BA}\backslash\{B, A\}$, entonces $\angle APB=\angle AQB.$
+\end{cor}
+\begin{pba}
+Por la Proposición~\ref{P1AIC} sabemos que $2\angle APB=\angle AOB$ y $2\angle AQB=\angle AOB$, entonces $2\angle APB=2\angle AQB$ por lo tanto, $\angle APB=\angle AQB.$ 
+\end{pba}
+
+\begin{cor}
+Sea $\mathcal{C}(O,r)$ una circunferencia, $\{A,B\}\subseteq\mathcal{C}(O,r)$, $P\in\widehat{BA}\backslash\{B, A\}$ y $Q\in\widehat{AB}\backslash\{A,B\}$, entonces $\angle APB+\angle BQA=2\perp.$
+\end{cor}
+\begin{pba}
+Por la Proposición~\ref{P1AIC} tenemos que: 
+$$\angle APB+\angle AQB=\frac{\angle AOB}{2}+\frac{\angle BOA}{2}=\frac{\angle AOB+\angle BOA}{2}=\frac{4\perp}{2}=2\perp.$$
+\end{pba}
+
+\subsection{Ángulos semi-inscritos en la circunferencia}
+
+$\bullet$ ley senos.
+
+$\bullet$ construcciones regla y compás
+
+\begin{df}
+Sea $\mathcal{C}(O,r)$ y $P\in\mathcal{C}(O,r)$, $t$ es \textcolor{red}{\bf tangente}\index{tangente} a $\mathcal{C}(O,r)$ por $P$ si y solamente si $P\in t$ y $t$ es ortogonal a $\overline{OP}.$
+\end{df}
+
+\begin{df}
+Sea $\mathcal{C}(O,r)$ y $t$ una tangente a $\mathcal{C}(O,r)$ por $T\in\mathcal{C}(O,r)$. Sea $A\in\mathcal{C}(O,r)\backslash\{T\}$ arbitraria, entonces definimos el \textcolor{red}{\bf ángulo semi-inscrito}\index{ángulo ! semi-inscrito} como el águlo cuyo vértice es el punto $T$ y que inicia en la recta $\overline{TA}$ y termina en la recta $t$, al cual denotaremos como $\angle (\overline{TA}\longrightarrow^\text{T}t)$.
+\end{df}
+%%%%%%%%%%%%%%%%%%%%%%
+%***************************Revisar notación. 
+%%%%%%%%%%%%%%%%%%%%%%
+\begin{prop}\label{PTP}
+Si $t$ es tangente a $\mathcal{C}(O,r)$ por $P$, entonces $t\cap\mathcal{C}(O,r)=\{P\}.$
+\end{prop}
+\begin{pba}
+Supongamos para generar una contradicción que $t\cap\mathcal{C}(O,r)=\{P,Q\}$ donde $P\neq Q$, por definición $\angle (t \longrightarrow^\text{P}\overline{OP})=\perp$. Observemos que $\triangle OPQ$ tiene dos lados congruentes ya que $|OP|=|OQ|$. Entonces $|\angle OQP|=|\angle OPQ|=\perp$ por lo cual $\overline{OP}$ es paralela a $\overline{OQ}$ pero $\overline{OP}\cap\overline{OQ}=\{O\}$ lo cual no es posible. 
+
+Por lo tanto $P=Q$ y así $t\cap\mathcal{C}(O,r)=\{P\}.$
+\end{pba}
+
+Ya que se definió qué es una recta tangente a una circunferencia por un punto, debería ser natural hacernos la siguiente pregunta. 
+
+¿Cómo construir una recta tangente a $\mathcal{C}(O,r)$ por cualquier punto $P$ del plano?
+
+Observemos que se tienen los siguientes dos casos:
+\begin{itemize}
+\item Caso 1: $P\in\mathcal{C}(O,r)$. 
+
+Basta trazar la recta ortogonal $t$ a $OP$ por $P$. De esta manera, $t$ es la recta tangente a $\mathcal{C}(O,r)$ por $P$.
+
+\item Caso 2: $P\notin\mathcal{C}(O,r)$.
+
+Ahora, notemos que aquí tenemos dos subcasos:
+\begin{enumerate}
+\item $|OP|<r$.
+
+En este caso no es posible construir una recta tangente a $\mathcal{C}(O,r)$ por $P$, veamos por qué. Supongamos que existe $l$ tangente a $\mathcal{C}(O,r)$ por $P$, como  $|OP|<r$ tenemos que $|\mathcal{C}(O,r)\cap l|=2$ pero esto contradice la Proposición ~\ref{PTP}.
+
+\item $r<|OP|$.
+
+Consideremos el segmento $OP$, sea $Q$ el punto medio de $OP$ y construyamos $\mathcal{C}(Q,|QP|)$. Entonces tenemos que $\mathcal{C}(O,r)\cap\mathcal{C}(Q,|QP|)=\{R,S\}$, como $R\in\mathcal{C}(Q,|QP|)$, por la Proposición~\ref{P1AIC} sabemos que $2|\angle ORP|=|\angle OQP|$ puesto que $Q\in OP$, $|\angle OQP|=2\perp$ por lo tanto $2|\angle ORP|=2\perp$, entonces $|\angle ORP|=\perp$ y así tenemos que $OR$ es ortogonal a $RP$.
+
+De hecho, de manera análoga se tiene que $OS$ es ortogonal a $SP$. Es decir, si $P\notin\mathcal{C}(O,r)$, se pueden construir dos rectas tangentes a $\mathcal{C}(O,r)$ por $P$.  
+\end{enumerate}
+\end{itemize}
+
+\begin{prop}
+Sea $\mathcal{C}(O,r)$, $T\in\mathcal{C}(O,r)$ y $t$ la recta tangente a $\mathcal{C}(O,r)$ por $T$, entonces para $A\in\mathcal{C}(O,r)\backslash\{T\}$ arbitraria, $2 \angle (\overline{TA}\longrightarrow^\text{T}t)=\angle AOT$.
+\end{prop}
+\begin{pba} 
+Sea $A\in\mathcal{C}(O,r)\backslash\{T\}$ y $\{P\}=\mathcal{C}(O,r)\cap\overline{OT}\backslash\{T\}$, entonces $\angle (\overline{PT}\longrightarrow^\text{T}t)=\perp$ ya que $t$ es la recta tangente a $\mathcal{C}(O,r)$ por $T$.
+Ahora, observemos que $\angle PTA+\angle (\overline{TA}\longrightarrow^\text{T}t)=\perp$. Por la Proposición~\ref{P1AIC}, tenemos que $\frac{\angle POA}{2}+\angle (\overline{TA}\longrightarrow^\text{T}t)=\perp$. Así que, $\angle (\overline{TA}\longrightarrow^\text{T}t)=\perp-\frac{\angle POA}{2}.$
+De este modo, nos resta demostrar que $\perp-\frac{\angle POA}{2}=\frac{\angle AOT}{2}.$
+
+En enfecto, notemos que $\angle POA+\angle AOT=\angle POT=2\perp$ ya que $O\in\overline{PT}$. Entonces, $\frac{\angle POA}{2}+\frac{\angle AOT}{2}=\perp$, por ello $\perp-\frac{\angle POA}{2}=\frac{\angle AOT}{2}.$ y así $\angle (\overline{TA}\longrightarrow^\text{T}t)=\frac{\angle AOT}{2}.$
+
+Por lo tanto, $2 \angle (\overline{TA}\longrightarrow^\text{T}t)=\angle AOT$.
+\end{pba}
+
+\begin{prop}\label{PLGA}
+Sea $\mathcal{C}(O,r)$ una circunferencia y $\{A,B\}\subseteq\mathcal{C}(O,r)$ dos puntos fijos. El lugar geométrico de los puntos $P$ tales que $|\angle APB|=\alpha\;\;(0<\alpha<2\perp)$  son dos arcos de circunferencia del mismo radio que contienen a $A\;y\;B.$
+\end{prop}
+\begin{pba}
+
+\end{pba}
+
+Finalmente, daremos otra prueba del Teorema~\ref{LDS} haciendo uso de lo recientemente aprendido. 
+\begin{teo}[Ley de senos]\label{LDS2}
+Sea $\triangle ABC$, si $\mathcal{C}(O,r)$ es la circunferencia que inscribe al $\triangle ABC$, entonces tenemos que:
+$$\frac{|AC|}{\sen(\angle ABC)}=\frac{|BA|}{\sen(\angle BCA)}=\frac{|CB|}{\sen(\angle CAB)}=2r.$$
+\end{teo}
+\begin{dem}
+Sea $l=\overline{OC}$ y $l\cap\mathcal{C}(O,r)=\{C,D\}.$ Consideremos $\triangle ADC$, como $CD$ es diámetro, entonces $\triangle ADC$ es rectángulo (ver sección de ejercicios, Ejercicio~\ref{LGCE}), por lo cual $|\angle DAC=\perp$ y como $\angle ABC$ y $\angle ADC$ abren el mismo arco, por el Corolario~\ref{C1AIC} sabemos que  $\angle ABC=\angle ADC$ así que 
+$$\sen(\angle ABC)=\sen(\angle ADC)=\frac{|AC|}{|DC|}=\frac{|AC|}{2r}.$$
+
+Por lo tanto, $$2r=\frac{|AC|}{\sen(\angle ABC)}.$$
+
+Sea $m=\overline{OA}$ y $m\cap\mathcal{C}(O,r)=\{A,E\}.$ Consideremos $\triangle ABE$, como $AE$ es diámetro, entonces $\triangle ABE$ es rectángulo (ver sección de ejercicios, Ejercicio~\ref{LGCE}), por lo cual $|\angle ABE=\perp$ y como $\angle BEA$ y $\angle BCA$ abren el mismo arco, por el Corolario~\ref{C1AIC} sabemos que  $\angle BEA=\angle BCA$ así que 
+$$\sen(\angle BCA)=\sen(\angle BEA)=\frac{|BA|}{|AE|}=\frac{|BA|}{2r}.$$
+
+Por lo tanto, $$2r=\frac{|BA|}{\sen(\angle BCA)}.$$
+
+Análogamente se prueba que $2r=\frac{|CB|}{\sen(\angle CAB)}$ (ver sección de ejercicios, Ejercicio~\ref{LDS2E}).
+
+Entonces podemos concluir que 
+$$\frac{|AC|}{\sen(\angle ABC)}=\frac{|BA|}{\sen(\angle BCA)}=\frac{|CB|}{\sen(\angle CAB)}=2r.$$
+\end{dem}
+%%%%%%%%%%%%%%%%%%
+%************************ Revisar, me parece que hay casos. 
+%%%%%%%%%%%%%%%%%%
+
+\subsection*{Ejercicios}
+\begin{enumerate}
+
+\item En la Proposición~\ref{P1AIC} (página \pageref{P1AIC}), probar el  caso en el que $P\in\widehat{DA}\backslash\{D\}$.\label{P1AICC4}
+\item Sea $\mathcal{C}(O,r)$ una circunferencia y $\{A,B\}\subseteq\mathcal{C}(O,r)$ dos puntos fijos. Demostrar que el lugar geométrico de los puntos $P$ tales que $|\angle APB|=\perp$, es una circunferencia de diámetro $AC$.\label{LGCE}   
+\item En el Teorema~\ref{LDS2} (página \pageref{LDS2}), probar que $2r=\frac{|CB|}{\sen(\angle CAB)}$.\label{LDS2E}
+%%%%%%%%%%%%%%%%%%
+%*************************Definición de diámetro ¿Es necesaria?. 
+%%%%%%%%%%%%%%%%%%%%%
+\end{enumerate}
+
+\section{Puntos y rectas importantes sobre el triángulo}
+\subsection{Las medianas}
+\begin{df}
+Sea $\triangle ABC$, $L$ el punto medio de $BC$, $M$ el punto medio de $CA$ y $N$ el punto medio de $AB$.
+Una \textcolor{red}{\bf mediana}\index{mediana} del $\triangle ABC$ es la recta determinada por un vértice y el punto medio del lado opuesto, es decir, $\overline{AL}$, $\overline{BM}$ y $\overline{CN}$ son las medianas del $\triangle ABC$.
+\end{df}
+
+Las medianas generan a uno de los puntos importantes del triángulo para saber más acerca de éste, veamos el siguiente teorema. 
+
+\begin{teo}\label{LMC}
+Sea $\triangle ABC$, entonces las medianas del $\triangle ABC$ son rectas concurrentes.
+\end{teo}
+\begin{dem}
+Sea $\triangle ABC$ (ordenado levógiramente), $L$ el punto medio de $BC$, $M$ el punto medio de $CA$ y $N$ el punto medio de $AB$. Así, $BL=LC$, $CM=MA$ y $AN=NB$, de esto se sigue que $\frac{LC}{BL}=1=\frac{NB}{AN}$, entonces por el Teorema~\ref{Thales1} $\overline{LN}$ es paralela a $\overline{CA}$.
+Como $|\angle ABC|=|\angle NBL|$ (pues $A$, $N$ y $C$, $L$ son colineales) y $|\angle NLB|=|\angle ACB|$ (por ser $\overline{LN}$ y $\overline{CA}$ paralelas), $\triangle NBL\cong\triangle ABC$ \textbf{cs(AA)} por tanto, $\frac{|BL|}{|BC|}=\frac{|NB|}{|AB|}=\frac{|LN|}{|CA|}$. Ahora notemos que como $L$ es punto medio de $BC$, $|BC|=2|BL|$ así que $\frac{|LN|}{|CA|}=\frac{|BL|}{|BC|}=\frac{1}{2}$. Finalmente, vamos a establecer que $0<ML$, $0<LN$ y $0<NM$ con esto tenemos que $\frac{LN}{CA}=\frac{1}{2}.$
+Análogamente se tiene que: $\frac{NM}{BC}=\frac{1}{2}=\frac{ML}{AB}$. 
+
+Como $\frac{MA}{CM}=1=\frac{LC}{BL}$, por el Teorema~\ref{Thales1} $\overline{ML}$ es paralela a $\overline{AB}$ por lo que $\triangle ABC\cong\triangle MLC$ \textbf{cs(AA)} pues $|\angle ACB|=|\angle MCL|$ y $|\angle CLM|=|\angle CBA|$, por tanto, $\frac{|ML|}{|AB|}=\frac{|LC|}{|BC|}=\frac{|CM|}{|CA|}=\frac{1}{2}$ ($M$ es punto medio de $CA$). Y como $0<ML$, $\frac{ML}{AB}=\frac{1}{2}$. 
+
+Y de la misma manera para la última razón, como $\frac{NB}{AN}=1=\frac{MA}{CM}$, por el Teorema~\ref{Thales1} $\overline{NM}$ es paralela a $\overline{BC}$ por lo que $\triangle ABC\cong\triangle ANM$ \textbf{cs(AA)} pues $|\angle NAM|=|\angle BAC|$ y $|\angle MNA|=|\angle CBA|$, por tanto, $\frac{NM}{BC}=\frac{MA}{CA}=\frac{AN}{AB}=\frac{1}{2}$ ($N$ es punto medio de $AB$). Y como $0<NM$, $\frac{NM}{BC}=\frac{1}{2}$.
+
+Sean $m_{1}$ la mediana por $A$, $m_{2}$ la mediana por $B$ y $m_{3}$ la mediana por $C$. Debemos probar que $m_{1}\cap m_{2}\cap m_{3}\neq\emptyset$. 
+En efecto, sea $m_{1}\cap m_{2}=\{G\}$, consideremos $\triangle MLG$ y $\triangle BAG$, entonces tenemos que $\triangle MLG\cong\triangle BAG$ \textbf{cs(AA)} ya que $|\angle LGM|=|\angle AGB|$ por ser opuestos por el vértice y $|\angle BML|=|\angle ABM|$ pues $\overline{ML}$ es paralela a $\overline{AB}$, por tanto, $\frac{|ML|}{|BA|}=\frac{|LG|}{|AG|}=\frac{|GM|}{|GB|}$. Ahora, por la correspondencia de los ángulos de ambos triángulos se considerarán ordenados levógiramente, es decir, $\frac{ML}{BA}=\frac{LG}{AG}=\frac{GM}{GB}$.
+
+Por otra parte, sea $m_{1}\cap m_{3}=\{P\}$ consideremos $\triangle LNP$ y $\triangle ACP$, entonces tenemos que $\triangle LNP\cong\triangle ACP$ \textbf{cs(AA)} ya que $|\angle PLN|=|\angle PAC|$ y $|\angle LNP|=|\angle ACP|$ pues $\overline{LN}$ es paralela a $\overline{CA}$, por tanto, $\frac{|LN|}{|AC|}=\frac{|NP|}{|CP|}=\frac{|LP|}{|AP|}$. Como se hizo anteriormente, debido a la correspondencia que hay entre los ángulos de estos triángulos también se consideran ordenados levógiramente, así se tiene que $\frac{LN}{AC}=\frac{NP}{CP}=\frac{LP}{AP}$.
+
+Para terminar, bastará demostrar que $P=G$. Notemos que con respecto al orden inicial de los triángulos $\triangle ABC$ y $\triangle MLN$ (levógiro), tenemos que:
+
+$\frac{ML}{BA}=-\frac{1}{2}$ y $\frac{LN}{AC}=-\frac{1}{2}$, entonces $\frac{LG}{AG}=-\frac{1}{2}=\frac{LP}{AP}$, por lo cual $\frac{LG}{GA}=\frac{1}{2}=\frac{LP}{PA}$. Por tanto, $\frac{LG}{GA}=\frac{LP}{PA}$ pero esto es posible si y solamente si $P=G$.
+
+Así, concluimos que $m_{1}\cap m_{2}\cap m_{3}=\{G\}\neq\emptyset.$
+\end{dem}
+
+Recordemos que en uno de los párrafos anteriores se mencionó que el punto de intersección de las medianas de un triángulo es uno de los puntos importantes que hay sobre éste. A tal punto se le denotará con la letra $G$ y es llamado el \textcolor{red}{\bf gravicentro}\index{gravicentro}, \textcolor{red}{\bf centro de gravedad}\index{centro ! de gravedad}, \textcolor{red}{\bf centroide}\index{centroide} o \textcolor{red}{\bf baricentro}\index{baricentro} del triángulo.
+
+\subsection{Las bisectrices}
+Otras rectas importantes del triángulo son las bisectrices. Para caracterizarlas daremos una breve introducción. 
+
+\begin{df}
+Sea $l$ una recta en el plano y $P$ un punto en el plano, la \textcolor{red}{\bf distancia}\index{distancia} de $P$ a $l$ que se denotará como $d(P,l)$ es la longitud del segmento de recta que es ortogonal a $l$ por $P$.
+\end{df}
+
+\begin{df}\label{db}
+Sean $l$ y $m$ dos rectas distintas en el plano, la \textcolor{red}{\bf bisectriz}\index{bisectriz} de $l$ y $m$ es el lugar geométrico de los puntos en el plano que equidistan de $l$ y $m$. 
+\end{df}
+
+\begin{lema}\label{lb}
+Sean $\triangle ABC$ y $\triangle DEF$ triángulos rectángulos tales que sus hipotenusas son congruentes y tienen un par de lados congruentes, entonces $\triangle ABC\equiv\triangle DEF$.
+\end{lema}
+
+\begin{pba}
+Supongamos sin perder generalidad que $|\angle ABC=\perp|$, $|\angle DEF|=\perp$ y que $|AB|=|DE|$, entonces $|CA|=|FD|$. Así que aplicando el Teorema~\ref{TeoPitágoras} a los triángulos $\triangle ABC$ y $\triangle DEF$, tenemos que: 
+$$AC^{2}=AB^{2}+BC^{2}\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;DF^{2}=DE^{2}+EF^{2}$$
+Entonces, $BC^{2}=AC^{2}-AB^{2}=DF^{2}-DE^{2}=EF^{2}$ así $BC=EF$.
+
+Por lo tanto, $\triangle ABC\equiv\triangle DEF$ \textbf{cc(LLL)}.
+\end{pba}
+
+\begin{teo}
+Las bisectrices de $l$ y $m$ son las rectas que bisecan el ángulo formado por $l$ y $m$.
+\end{teo}
+\begin{dem}
+Sea $P$ en una de las bisectrices de $l$ y $m$, $n$ la recta ortogonal a $l$ por $P$ y $t$ la ortogonal a $m$ por $P$. Consideremos $n\cap l=\{A\}$, $t\cap m=\{B\}$ y $l\cap m=\{O\}$, como $P$ está en una de las bisectrices de $l$ y $m$, de la Definición~\ref{db} se sigue que $|AP|=|PB|$, además $|PO|=|PO|$ y por construcción $|\angle PAO|=|\angle OBP|=\perp$, así $\triangle APO$ y $\triangle BPO$  son triángulos rectángulos con esto tenemos todas las hipotesis del Lema~\ref{lb}, por tanto $\triangle APO\equiv\triangle BPO$, entonces $|\angle AOP|=|\angle POB|$.
+\end{dem}
+
+Antes de continuar haremos una importante observación. 
+\begin{obs}
+Dado un $\triangle ABC$ al considerar un par de sus lados, la Definición~\ref{db} permite distinguir dos tipos de bisectrices: Una \textcolor{red}{\bf bisectriz interna}\index{bisectriz ! interna} es aquella recta que biseca algún ángulo interno del $\triangle ABC$, mientras que una \textcolor{red}{\bf bisectriz externa}\index{bisectriz ! externa} es aquella que biseca algún ángulo externo del $\triangle ABC$.
+\end{obs}
+
+\begin{teo}
+Sea $\triangle ABC$, entonces las bisectrices internas del $\triangle ABC$ concurren. 
+\end{teo}
+\begin{dem}
+Sean $b_{A}$, $b_{B}$ y $b_{C}$ las bisectrices internas por el vértice $A$, $B$ y $C$ respectivamente. Consideremos $b_{A}\cap b_{B}=\{I\}$, entonces por la Definición~\ref{db} tenemos que $d(I,AB)=d(I,CA)$ y $d(I,AB)=d(I,BC)$, así concluimos que $d(I,CA)=d(I,BC)$ y por lo tanto $I\in b_{C}$.
+Con esto se tiene que $b_{A}\cap b_{B}\cap b_{C}=\{I\}$
+\end{dem}
+
+\begin{teo}\label{TBEII}
+Sea $\triangle ABC$, $b_{A'}$ y $b_{C'}$ las bisectrices externas por $A$ y $C$ respectivamente y $b_{B}$ las bisectriz interna por $B$, entonces $b_{A'}\cap b_{C'}\cap b_{B}\neq\emptyset$.
+\end{teo}
+\begin{dem}
+Sea $b_{A'}\cap b_{C'}=\{E_{B}\}$, entonces por la Definición~\ref{db} $d(E_{B},AB)=d(E_{B},CA)$ y $d(E_{B},CA)=d(E_{B},BC)$, por lo cual $d(E_{B},AB)=d(E_{B},BC)$. Así concluimos que $E_{B}\in b_{B}$. Por lo tanto, $b_{A'}\cap b_{C'}\cap b_{B}=\{E_{B}\}\neq\emptyset$
+\end{dem}
+
+Al punto donde concurren las bisectrices internas del $\triangle ABC$ se le denotará por $I$ y se conoce como \textcolor{red}{\bf incentro}\index{incentro}, además existe una circunferencia con centro este punto que es tangente a los lados del triángulo y se queda completamente contenida en él, conocida como \textcolor{red}{\bf incírculo}\index{incírculo}. Por otra parte, el Teorema~\ref{TBEII} nos dice que las bisectrices externas de dos ángulos exteriores de una triángulo concurren con la bisectriz interna por el vértice restante y a este punto de concurrencia se le conoce como \textcolor{red}{\bf excentro}\index{excentro}. 
+\subsection{Las mediatrices}
+
+\begin{df}\label{dm}
+Sea $PQ$ un segmento de recta y $R$ el punto medio de $PQ$, entonces la \textcolor{red}{\bf mediatriz}\index{mediatriz} de $PQ$ es la recta ortogonal a $PQ$ por $R$. Otra forma de definir a la mediatriz de un segmento es como el lugar geométrico de los puntos $S$ tal que la dictancia a cada extremos del segmento es la misma, es decir, $SP=SQ$.
+\end{df}
+
+Dado un $\triangle ABC$ y $L$, $M$, $N$ los puntos medios de los lados $AB$, $BC$, $CA$ respectivamente. Entonces las mediatrices del $\triangle ABC$ son las rectas ortogonales a $AB$ por $L$, a $BC$ por $N$ y a $CA$ por $M$.
+
+\begin{teo}\label{LMDTC}
+Sea $\triangle ABC$, entonces las mediatrices del $\triangle ABC$ concurren.
+\end{teo}
+\begin{dem}
+Sean $m_{AB}$, $m_{BC}$ y $m_{CA}$ las mediatrices de los lados $AB$, $BC$ y $CA$ respectivamente. Debemos probar que $m_{AB}\cap m_{BC}\cap m_{CA}\neq\emptyset$, sea $m_{AB}\cap m_{BC}=\{O\}$. Como $O\in m_{AB}$ por la Definición~\ref{dm} se tiene que $|OA|=|OB|$, de igual manera por estar $O\in {BC}$, $|OB|=|OC|$, entonces $|OA|=|OC|$, esto es, $O\in m_{CA}$.
+
+Por lo tanto, $m_{AB}\cap m_{BC}\cap m_{CA}=\{O\}\neq\emptyset$. 
+\end{dem}
+ 
+Además llamaremos al punto $O$ \textcolor{red}{\bf circuncentro}\index{circuncentro} del $\triangle ABC$, notemos que $\mathcal{C}(O,|OA|)$ contiene a los vértices del $\triangle ABC$. Y a $\mathcal{C}(O,|OA|)$ la llamaremos \textcolor{red}{\bf circuncircunferencia}\index{circuncircunferencia} o la circunferencia que inscribe al $\triangle ABC$. 
+\subsection{Las alturas} 
+Ahora, veremos otras de las rectas importantes del triángulo, las cuáles ya hemos tratado previamente, las alturas de un triángulo (véase Definición~\ref{ADUT}).
+
+\begin{teo}
+Sea $\triangle ABC$, entonces las alturas del $\triangle ABC$ concurren. 
+\end{teo}
+\begin{dem}
+Sea $h_{A}$, $h_{B}$ y $h_{C}$ las alturas por $A$, $B$ y $C$ respectivamente. 
+
+Construir $a$ la recta paralela  a $BC$ por $A$, $b$ la paralela a $CA$ por $B$ y $c$ la paralelala a $AB$ por $C$. Sean $a\cap b=\{C'\}$, $b\cap c=\{A'\}$ y  $c\cap a=\{B'\}$. 
+Observemos que $\square ACBC'$ es un paralelogramos (ver Definición~\ref{paralelogramo}) pues $\{A,C'\}\subset a$, $\{B,C'\}\subset b$ y $a\parallel BC$, $b\parallel AC$. Entonces por el Ejercicio~\ref{EPLI}(página \pageref{EPLI}), $|AC|=|BC'|$ y $|AC'|=|BC|$. Análogamente tenemos que $\square AB'CB$ es un paralelogramo, entonces $|AB'|=|CB|$, $|B'C|=|AB|$ y $\square ACA'B$ es un paralelogramo , entonces $|AC|=|A'B|$, $|CA'|=|BA|$. 
+
+Por lo tanto, $|A'B|=|AC|=|BC'|$, $|AB'|=|BC|=|AC'|$ y $|B'C|=|AB|=|CA'|$. Ahora, como $\{A',B,C'\}\subset b$ y $|A'B|=|BC'|$, entonces $B$ está en la mediatriz de $A'C'$, de igual manera como $\{B',A,C'\}\subset a$ y $|B'A|=|AC'|$, entonces $A$ está en la mediatriz de $B'C'$ y como $\{B',C,A'\}\subset c$ y $|B'C|=|CA'|$, entonces $C$ está en la mediatriz de $B'A'$. 
+
+La mediatriz del $A'C'$ es la recta ortogonal al segmento $A'C'$ por $B$ y además $\overline{AC}\parallel b$, entonces la mediatriz del $A'C'$ es ortogonal a $CA$ por $B$. Por tanto la mediatriz de $A'C'$ es $h_{B}$, análogamente la mediatriz de $B'C'$ es $h_{A}$ y la mediatriz de $B'A'$ es $h_{C}$. 
+Para concluir, recordemos que por el Teorema~\ref{LMDTC} tenemos que la mediatrices del $\triangle A'B'C'$ son concurrentes, entonces $h_{A}$, $h_{B}$ y $h_{C}$ son concurrentes. 
+
+Por lo tanto,  $h_{A}\cap h_{B}\cap h_{C}\neq\emptyset$.
+\end{dem}
+
+Al punto donde concurren las alturas los llamamos \textcolor{red}{\bf ortocentro}\index{ortocentro} y se denotará con la letra $H$. 
+\section{La recta de Euler}
+\begin{teo}\label{TRE}
+Sea $\triangle ABC$, entonces el ortocentro, el circuncentro y el gravicentro del $\triangle ABC$ son colineales. A la recta que contiene a estos tres puntos se le conoce como \textcolor{red}{\bf Recta de Euler}\index{Recta de Euler} del $\triangle ABC$.
+\end{teo}
+\begin{dem}
+Sea $\triangle ABC$, construir $h_{A}$ y $h_{B}$ y sean $h_{A}\cap\overline{BC}=\{D\}$, $h_{B}\cap\overline{CA}=\{E\}$ y $h_{A}\cap h_{B}\cap h_{C}=\{H\}$. Construir $m_{BC}$ la mediatriz de $BC$ y $m_{CA}$ la mediatriz de $CA$, sean $m_{BC}\cap m_{CA}\cap m_{AB}=\{O\}$, $m_{BC}\cap\overline{BC}=\{L\}$ y $m_{CA}\cap\overline{CA}=\{M\}$.
+
+Afirmación: $|AH|=2|OL|$, arguméntemos por qué.
+
+Primero notemos que como $L$ y $M$ son puntos medios de $BC$ y $CA$, tenemos que $BL=LC$ y $CM=MA$, entonces $\frac{LB}{CL}=\frac{MA}{CM}$ así que por el Teorema~\ref{Thales1} $\overline{LM}\parallel\overline{BA}$.
+Consideremos $\triangle ABC$ y $\triangle MLC$, entonces $\triangle ABC\cong\triangle MLC$ \textbf{cs(AA)} ya que $|\angle ACB|=|\angle MCL|$ (pues $M$, $A$ y $L$, $B$ son colineales) y  $|\angle BAC|=|\angle LMC|$ y (por ser $\overline{BA}\parallel\overline{LM}$) por tanto, $\frac{|AB|}{ML|}=\frac{|BC|}{|LC|}=\frac{|CA|}{|CM|}$ y como $M$ es punto medio de $CA$, $2|CM|=|CA|$, así  $\frac{|AB|}{ML|}=\frac{|CA|}{|CM|}=2$, entonces $\frac{|AB|}{|LM|}=2$, por tanto $|AB|=2|LM|$.
+
+Ahora observemos que $\triangle ABH\cong\triangle LMO$ \textbf{cs(AA)} pues $|\angle BAH|=|\angle MLO|$ Y $|\angle ABH|=|\angle LMO|$. 
+%%%%%%%%%%%
+%*****************
+%%%%%%%%%%%
+Por tanto, $\frac{|AB|}{|LM|}=\frac{|BH|}{|MO|}=\frac{|AH|}{|OL|}$ y como ya sabemos $|AB|=2|LM|$, así que $\frac{|AH|}{|OL|}=\frac{|AB|}{|LM|}=2$ con lo que concluimos que $|AH|=2|OL|$.
+
+Sea $\overline{AL}\cap\overline{BM}\cap\overline{CN}=\{G\}$ (donde $N$ es punto medio de $AB$) y tomemos en cuenta que $\overline{AL}$ es transversal a $m_{BC}$ y $h_{A}$ que son rectas paralelas, de esto se tiene que $|\angle GAH|=|\angle GLO|$, además como ya sabemos $|AH|=2|OL|$ y $|AG|=2|GL|$ (véase Teorema~\ref{LMC}), entonces $\triangle GAH\cong\triangle GLO$ \textbf{cs(LAL)}, por tanto $|\angle AGH|=|\angle LGO|$ con lo que tenemos que $H$, $G$ y $O$ son colineales. 
+\end{dem}
+
+En el último párrafo de la demostración del Teorema~\ref{TRE} vimos que $\triangle GAH\cong\triangle GLO$, entonces $\frac{|GA|}{|GL|}=\frac{|AH|}{|LO|}=\frac{|GH|}{|GO|}$ y como $2|LO|=|AH|$, tenemos que $|GH|=2|GO|$.
+
+Consideremos el $\triangle LMN$, sabemos que $\overline{NM}$ es paralela a $\overline{BC}$ y $\overline{AB}$ es paralela a $\overline{ML}$, así que $\square LBNM$ es un paralelogramo, sea $\overline{LN}\cap\overline{BM}=\{X\}$, entonces por el ejercicio~\ref{IDDP} (página \pageref{IDDP}) tenemos que $|LX|=|XN|$ y $|BX|=|XM|$, entonces $\overline{MX}=\overline{MB}$ (pues $M$ y $X$ son colineales) es mediana del $\triangle LMN$, de la misma manera se puede probar que $\overline{AL}$ y $\overline{CN}$, es decir, las medianas del $\triangle ABC$ también son medianas del $\triangle LMN$. Por lo tanto, $G$ es el gravicentro del $\triangle ABC$ y del $\triangle LMN$.
+
+Por otro lado tenemos que $m_{BC}$ es ortogonal a $\overline{BC}$ por $L$ ya que es mediatriz del $BC$ y como $\overline{NM}$ es paralela a $\overline{BC}$, entonces $m_{BC}$ es ortogonal a $\overline{MN}$ y $L\in m_{BC}$, por lo cual $m_{BC}=h_{L}$. Análogamente $m_{CA}=h_{M}$ y $m_{AB}=h_{N}$, es decir, las mediatrices del $\triangle ABC$ son las alturas del $\triangle LMN$. Por lo tanto, el circuncentro del $\triangle ABC$ es el ortocentro del $\triangle LMN$. 
+
+Observemos además que el circuncentro del $\triangle LMN$ (llamémosle $O_{1}$) pertenece a la recta de Euler del $\triangle ABC$ y además cumple que $|GO|=2|GO_{1}|$.
+
+Recordemos que al inicio de este breve análisis teníamos que $|GH|=2|GO|$, por lo cual podemos concluir que el circuncentro del $\triangle LMN$ es el punto medio entre el circuncentro del $\triangle ABC$ y el ortocentro del $\triangle ABC$. 
+\section{Circunferencia de los nueve puntos}
+\begin{teo}[La circunferencia de los nueve puntos] Sea $\triangle ABC$, entonces los pies de las alturas, los puntos medios de cada uno de sus lados y los puntos medios de los segmentos determinados por cada uno de los vértices y el ortocentro se encuentran en una misma circunferencia. A esta circunferencia se le conoce como la \textcolor{red}{\bf circunferencia de los nueve puntos}\index{Circunferencia ! de los nueve puntos} del $\triangle ABC$ que denotaremos como $\mathcal{C}_{9}(\triangle ABC)$.
+\end{teo}
+\begin{dem}
+Sea $\triangle ABC$, $m_{AB}$ la mediatriz de $AB$, $m_{BC}$ la mediatriz de $BC$, $m_{CA}$ la mediatriz de $CA$, $h_{A}\cap h_{B}\cap h_{C}=\{H\}$, $m_{AB}\cap m_{BC}\cap m_{CA}=\{O\}$, $m_{AB}\cap\overline{AB}=\{N\}$, $m_{BC}\cap\overline{BC}=\{L\}$, $m_{CA}\cap\overline{CA}=\{M\}$, $h_{A}\cap\overline{BC}=\{D\}$, $h_{B}\cap\overline{CA}=\{E\}$, $h_{C}\cap\overline{BA}=\{F\}$, $P\in h_{A}$ tal que $|AP|=|PH|$, $Q\in h_{B}$ tal  que $|BQ|=|QH|$ y $R\in h_{C}$ tal que $|CR|=|RH|$. Entonces existe una circunferencia $\mathcal{C}$ tal que $\{L,M,N,P,Q,R,D,E,F\}\subset\mathcal{C}$. 
+
+Consideremos $\triangle LMN$ y sea $X$ el circuncentro del $\triangle LMN$, sabemos que $\mathcal{C}(X,|XL|)$ circunscribe al $\triangle LMN$. Primero recordemos que $\overline{AB}\parallel\overline{LM}$ y $|AB|=2|LM|$, $\overline{BC}\parallel\overline{MN}$ y $|BC|=2|MN|$, $\overline{CA}\parallel\overline{NL}$ y $|CA|=2|NL|$ (véase la demostración del Teorema~\ref{LMC}, página \pageref{LMC}).
+
+Ahora tomemos $\triangle HAB$ y $\triangle HPQ$, como $|HA|=2|HP|$, $|HB|=2|HQ|$  y $|\angle AHB|=|\angle PHQ|$, entonces $\triangle HAB\cong\triangle HPQ$ \textbf{cs(LAL)}, entonces $\frac{|HA|}{|HP|}=\frac{|AB|}{|PQ|}=\frac{|HB|}{|HQ|}=2$, por lo cual $|AB|=2|PQ|$. Y como  $\frac{|HA|}{|HP|}=\frac{|HB|}{|HQ|}$, por el Teorema~\ref{Thales1} $\overline{AB}\parallel\overline{PQ}$, por lo tanto $\overline{LM}\parallel\overline{PQ}$.
+
+Por otra parte, tenemos que $\triangle AHC\cong\triangle APM$ \textbf{cs(LAL)} ya que $|AH|=2|AP|$, $|CA|=2|MA|$ y $|\angle HAC|=|\angle PAM|$, entonces $\frac{|AH|}{|AP|}=\frac{|HC|}{|PM|}=\frac{|CA|}{|MA|}=2$ y por el Teorema~\ref{Thales1} $\overline{HC}\parallel\overline{PM}$. Además como $|BH|=2|BQ|$, $|BC|=2|BL|$ y $|\angle CBH|=|\angle LBQ|$, entonces $\triangle BHC\cong\triangle BQL$ \textbf{cs(LAL)} así que $\frac{|BH|}{|BQ|}=\frac{|HC|}{|QL|}=\frac{|BC|}{|BL|}=2$ y por el Teorema~\ref{Thales1} $\overline{HC}\parallel\overline{QL}$, por tanto $\overline{QL}\parallel\overline{PM}$.
+
+Por lo anterior, podemos considerar el paralelogramo $\square QLM$ y notemos que como $\overline{PQ}\parallel\overline{AB}$ y $\overline{AB}$ es ortogonal a $\overline{HC}$ que a su vez es paralela a $\overline{PM}$, entonces $\overline{PQ}$ es ortogonal $\overline{PM}$, es decir, $|\angle QPM|=\perp$. Así, $\square QLMP$ es un rectángulo y si $\overline{QM}\cap\overline{LP}=\{Y\}$, $|QY|=|YM|$ y $|LY|=|YP|$ con lo que concluimos que $\{Q,L,M,P\}\subset\mathcal{C}(Y,|YL|)$. Además observemos que $E\in\mathcal{C}(Y,|YL|)$ pues $|\angle QEM|=\perp$.
+
+Análogamente, podemos considerar el rectángulo $\square QRMN$ y si $\overline{QM}\cap\overline{RN}=\{Z\}$, entonces $|QZ|=|ZM|$ y $|RZ|=|ZN|$, por tanto $Z=Y$ con lo que tenemos que $\{Q,L,M,P,E,R,N\}\subset\mathcal{C}(Y,|YL|)$. Como existe una única circunferencia que inscribe al $\triangle LMN$, entonces $\mathcal{C}(X,|XL|)=\mathcal{C}(Y,|YL|)$, así que $\{Q,L,M,P,E,R,N\}\subset\mathcal{C}(X,|XL|)$. Como $P$, $L$ y $Y=X$ son colineales, $PL$ es diámetro de $\mathcal{C}(X,|XL|)$ y por ser $|\angle PDL|=\perp$, $D\in\mathcal{C}(X,|XL|)$. También notemos que $|\angle NFR|=\perp$, entonces $F$ pertenece a la circunferencia de diámetro $NR$, por tanto $F\in\mathcal{C}(X,|XL|)$ ya que $R$, $N$ y $Y$ son colineales.
+
+Concluyendo así que $\{L,M,N,P,Q,R,D,E,F\}\subset\mathcal{C}(X,|XL|)$.
+\end{dem}
+
+El centro de $\mathcal{C}_{9}(\triangle ABC)$ es el punto medio entre el circuncentro y el ortocentro del $\triangle ABC$, es decir, el circuncentro del triángulo determinado por los tres puntos medios de cada lado del $\triangle ABC$ que se conoce como el \textcolor{red}{\bf triángulo medial}\index{triángulo ! medial} del $\triangle ABC$. 
+
+
+\subsection*{Ejercicios}
+\begin{enumerate}
+\item Sean $l$ y $m$ dos rectas en el plano, $b_{1}$ y $b_{2}$ las bisectrices de $\angle (l\longrightarrow m)$ y
+$\angle (m\longrightarrow l)$ respectivamente, entonces $b_{1}$ es ortogonal a $b_{2}$.
+\end{enumerate}
+

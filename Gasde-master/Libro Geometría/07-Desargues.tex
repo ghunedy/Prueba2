@@ -1,0 +1,45 @@
+\chapter{Teorema de Desargues}
+
+\begin{df}\label{PDUP} Sean $\triangle ABC$ y $\triangle DEF$ ($A\neq D$, $B\neq E$, $C\neq F$).
+Decimos que $\triangle ABC$ y $\triangle DEF$ están en \textcolor{red}{\bf perspectiva desde un punto}\index{perspectiva ! desde un punto} $O$ si y solamente si $\overline{AD}\cap\overline{BE}\cap\overline{CF}=\{O\}$. Al punto $O$ lo llamamos \textcolor{red}{\bf centro de perspectiva}\index{centro ! de perspectiva}.
+\end{df}
+\begin{df}\label{PDUR} Sean $\triangle ABC$ y $\triangle DEF$ ($A\neq D$, $B\neq E$, $C\neq F$).
+Decimos que $\triangle ABC$ y $\triangle DEF$ están en \textcolor{red}{\bf perspectiva desde una recta}\index{perspectiva ! desde una recta} $o$ si y solamente si $\overline{AB}\cap\overline{DE}=\{P\}$, $\overline{BC}\cap\overline{EF}=\{Q\}$, $\overline{CA}\cap\overline{FD}=\{R\}$ y $\{P,Q,R\}\subset o$.
+\end{df}
+
+\begin{teo}[Teorema de Desargues]\index{Teorema ! de Desargues}
+$\triangle ABC$ y $\triangle DEF$ están en perspectiva desde un punto si y solamente si $\triangle ABC$ y $\triangle DEF$ están en perspectiva desde una recta. 
+\end{teo}
+\begin{dem}
+\begin{enumerate}
+\item[($\Rightarrow$)]Supongamos que $\triangle ABC$ y $\triangle DEF$ están en perspectiva desde un punto $O$, es decir $\overline{AD}\cap\overline{BE}\cap\overline{CF}=\{O\}$.
+
+Sea $\overline{AB}\cap\overline{DE}=\{P\}$, $\overline{BC}\cap\overline{EF}=\{Q\}$ y $\overline{CA}\cap\overline{FD}=\{R\}$. Mostremos que $P$, $Q$ y $R$ son colineales.
+
+Primero consideremos $\triangle OAB$ y la recta $\overline{DE}$, entonces por el Teorema~\ref{Teo de Menelao} tenemos que:
+$$\frac{AP}{PB}\cdot\frac{BE}{EO}\cdot\frac{OD}{DA}=-1$$
+
+Ahora, tomemos $\triangle OBC$ y la recta $\overline{EF}$, por el Teorema~\ref{Teo de Menelao}, entonces:
+$$\frac{OE}{EB}\cdot\frac{BQ}{QC}\cdot\frac{CF}{FO}=-1$$
+
+Y finalmente, consideremos $\triangle OCA$ y la recta $\overline{FD}$, entonces por el Teorema~\ref{Teo de Menelao} se tiene que:
+$$\frac{OF}{FC}\cdot\frac{CR}{RA}\cdot\frac{AD}{DO}=-1$$
+
+De esto tenemos lo siguiente,
+$$\frac{AP}{PB}\cdot\frac{BE}{EO}\cdot\frac{OD}{DA}\cdot\frac{OE}{EB}\cdot\frac{BQ}{QC}\cdot\frac{CF}{FO}\cdot\frac{OF}{FC}\cdot\frac{CR}{RA}\cdot\frac{AD}{DO}=(-1)(-1)(-1)=-1$$
+Entonces
+$$\frac{AP}{PB}\cdot\frac{BQ}{QC}\cdot\frac{CR}{RA}=-1$$
+Por lo tanto, aplicando nuevamente el Teorema~\ref{Teo de Menelao} concluimos que $P$, $Q$ y $R$ son colineales y así $\triangle ABC$ y $\triangle DEF$ están en perspectiva desde una recta.
+
+\item[($\Leftarrow$)] Supongamos que $\triangle ABC$ y $\triangle DEF$ están en perspectiva desde una recta. Esto es, si $\overline{AB}\cap\overline{DE}=\{P\}$, $\overline{BC}\cap\overline{EF}=\{Q\}$ y $\overline{CA}\cap\overline{FD}=\{R\}$, entonces $P$, $Q$ y $R$ son colineales. Debemos demostrar que $\overline{AD}\cap\overline{BE}\cap\overline{CF}\neq\emptyset$. 
+
+Notemos que $\triangle ADR$ y $\triangle BEQ$ están en perspectiva desde un punto ya que $\overline{AB}\cap\overline{DE}\cap\overline{RQ}=\{P\}$, entonces por la primera implicación de este teorema tenemos que $\triangle ADR$ y $\triangle BEQ$ están en perspectiva desde una recta, es decir, si $\overline{AD}\cap\overline{BE}=\{O\}$ y como sabemos $\overline{DR}\cap\overline{EQ}=\{F\}$ y $\overline{AR}\cap\overline{BQ}=\{C\}$, entonces $O$, $F$ y $C$ son colineales con lo que se tiene que $O\in\overline{CF}$ y así $\overline{AD}\cap\overline{BE}\cap\overline{CF}=\{O\}$ por lo que concluimos que $\triangle ABC$ y $\triangle DEF$ están en perspectiva desde $O$. 
+\end{enumerate}
+\end{dem}
+
+\subsection*{Ejercicios}
+\begin{enumerate}
+\item 
+\end{enumerate}
+
+

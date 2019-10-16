@@ -1,0 +1,50 @@
+\chapter{Teorema de Menelao}
+\begin{teo}[Teorema de Menelao]\label{Teo de Menelao}\index{Teorema ! de Menelao}
+Sea $\triangle ABC$, $L\in\overline{BC}\backslash \{B,C\}$, $M\in\overline{CA}\backslash \{C,A\}$ y $N\in\overline{AB}\backslash \{A,B\}$, entonces $L$, $M$ y $N$ son colineales si y solamente si 
+$$\frac{AN}{NB}\cdot\frac{BL}{LC}\cdot\frac{CM}{MA}=-1$$.
+\end{teo}
+\begin{dem} Sea $\triangle ABC$, $L\in\overline{BC}\backslash \{B,C\}$, $M\in\overline{CA}\backslash \{C,A\}$ y $N\in\overline{AB}\backslash \{A,B\}$.
+\begin{enumerate}
+\item[($\Rightarrow$)] Supongamos que $L$, $M$ y $N$ son colineales.
+
+Sea $o$ tal que $\{L,M,N\}\subset o$, $a$ ortogonal a $o$ por $A$, $b$ ortogonal a $o$ por $B$ y $c$ ortogonal a $o$ por $C$. Y llamemos $a\cap o=\{P\}$, $b\cap o=\{Q\}$ y $c\cap o=\{R\}$.
+Entonces:
+
+\begin{itemize}
+\item $\triangle QBN\cong\triangle PAN$ \textbf{cs(AA)} pues $|\angle PNA|=|\angle QNB|$ y $|\angle APN|=|\angle BQN|=\perp$, entonces $\frac{|AN|}{|BN|}=\frac{|AP|}{|BQ|}=\frac{|NP|}{|NQ|}$.
+\item $\triangle QBL\cong\triangle RCL$ \textbf{cs(AA)} ya que $|\angle BLQ|=|\angle CLR|$ y $|\angle LRC|=|\angle LQB|=\perp$, entonces $\frac{|BL|}{|CL|}=\frac{|BQ|}{|CR|}=\frac{|QL|}{|RL|}$.
+\item $\triangle CMR\cong\triangle AMP$ \textbf{cs(AA)} pues $|\angle CMR|=|\angle AMP|$ y $|\angle MRC|=|\angle MPA|=\perp$, entonces $\frac{|CM|}{|AM|}=\frac{|CR|}{|AP|}=\frac{|MR|}{|MP|}$.
+
+Por tanto, 
+$$\frac{|AN|}{|BN|}\cdot\frac{|BL|}{|CL|}\cdot\frac{|CM|}{|AM|}=\frac{|AP|}{|BQ|}\cdot\frac{|BQ|}{|CR|}\cdot\frac{|CR|}{|AP|}=1.$$
+
+Así tenemos que $$\frac{|AN|}{|BN|}\cdot\frac{|BL|}{|CL|}\cdot\frac{|CM|}{|AM|}=1$$.
+
+Notemos que en este teorema también los segmentos dirigidos juegan un papel importante. 
+Veamos algunos casos:
+\begin{itemize}
+\item Consideremos $\triangle ABC$ dirigido levógiramente y sean $0<\frac{NA}{AB}$, $0<\frac{BC}{CL}$ y $0<\frac{CA}{AM}$. Entonces
+$$\frac{NA}{NB}\cdot\frac{BL}{CL}\cdot\frac{CM}{AM}=1$$
+Por tanto, 
+$$\frac{AN}{NB}\cdot\frac{BL}{LC}\cdot\frac{CM}{MA}=-1$$.
+
+\item Sea $\triangle ABC$ dirigido levógiramente, $0<\frac{AN}{NB}$, $0<\frac{LB}{BC}$ y $0<\frac{CM}{MA}$. Así
+$$\frac{AN}{NB}\cdot\frac{LB}{LC}\cdot\frac{CM}{MA}=1$$
+Entonces,
+$$\frac{AN}{NB}\cdot\frac{BL}{LC}\cdot\frac{CM}{MA}=-1$$.
+\end{itemize}
+
+\item[($\Leftarrow$)] Supongamos que $\frac{AN}{NB}\cdot\frac{BL}{LC}\cdot\frac{CM}{MA}=-1$ y que $L$, $M$ y $N$ no son colineales.
+
+Sea $\overline{LM}\cap\overline{AB}=\{N'\}$, entonces $L$, $M$ y $N'$ son colineales. Usando la primera implicación de esta prueba sabemos que 
+$$\frac{AN'}{N'B}\cdot\frac{BL}{LC}\cdot\frac{CM}{MA}=-1$$.
+Por lo tanto,
+$$\frac{AN}{NB}\cdot\frac{BL}{LC}\cdot\frac{CM}{MA}=\frac{AN'}{N'B}\cdot\frac{BL}{LC}\cdot\frac{CM}{MA}$$.
+Entonces, $$\frac{AN}{NB}=\frac{AN'}{N'B}$$
+con esto tenemos que $N=N'$ y $L$, $M$ y $N$ son colineales, lo que contradice nuestra supusición. 
+
+\end{itemize}
+\end{enumerate}
+\end{dem}
+
+

@@ -1,0 +1,558 @@
+\documentclass[smalldemyvopaper,11pt,twoside,onecolumn,openright,extrafontsizes]{memoir}
+
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,mexico]{babel}
+
+% PACKAGE DEFINITION
+% typographical packages
+\usepackage{microtype} % for micro-typographical adjustments
+\usepackage{setspace} % for line spacing
+\usepackage{lettrine} % for drop caps and awesome chapter beginnings
+\usepackage{titlesec} % for manipulation of chapter titles
+
+
+% other
+%\usepackage{calc}
+%\usepackage{hologo}
+\usepackage[colorlinks=true, linkcolor=blue, urlcolor=blue, citecolor=blue]{hyperref}
+%\usepackage{showframe}
+
+% PHYSICAL DOCUMENT SETUP
+% media settings
+%\setstocksize{8.5in}{5.675in}
+%\settrimmedsize{8.5in}{5.5in}{*}
+%\setbinding{0.175in}
+%\setlrmarginsandblock{0.611in}{1.222in}{*}
+%\setulmarginsandblock{0.722in}{1.545in}{*}
+
+
+\title{Un paseo por Funmacionthema}
+\author{Gasde Augusto Hunedy López \\ Ernesto Alejandro Vázquez Navarro}
+\newcommand{\ISBN}{0-000-00000-0}
+\newcommand{\press}{Facultad de Ciencias, UNAM}
+
+% custom second title page
+\makeatletter
+\newcommand*\halftitlepage{\begingroup % Misericords, T&H p 153
+  \setlength\drop{0.1\textheight}
+  \begin{center}
+  \vspace*{\drop}
+  \rule{\textwidth}{0in}\par
+  {\Large\textsc\thetitle\par}
+  \rule{\textwidth}{0in}\par
+  \vfill
+  \end{center}
+\endgroup}
+\makeatother
+
+% custom title page
+\thispagestyle{empty}
+\makeatletter
+\newlength\drop
+\newcommand*\titleM{\begingroup % Misericords, T&H p 153
+  \setlength\drop{0.15\textheight}
+  \begin{center}
+  \vspace*{\drop}
+  \rule{\textwidth}{0in}\par
+  {\Huge\textsc\thetitle\par}
+  \rule{\textwidth}{0in}\par
+  {\Large\textit\theauthor\par}
+  \vfill
+  {\Large\scshape\press}
+  \end{center}
+\endgroup}
+\makeatother
+
+% chapter title manipulation
+% padding with zero
+\renewcommand*\thechapter{\ifnum\value{chapter}<10 0\fi\arabic{chapter}}
+% chapter title display
+\titleformat
+{\chapter}
+[display]
+{\normalfont\scshape\huge}
+{\HUGE\thechapter\centering}
+{0pt}
+{\vspace{18pt}\centering}[\vspace{42pt}]
+
+% typographical settings for the body text
+\setlength{\parskip}{0em}
+\linespread{1.04}
+
+% HEADER AND FOOTER MANIPULATION
+  % for normal pages
+  \nouppercaseheads
+  \headsep = 0.16in
+  \makepagestyle{mystyle} 
+  \setlength{\headwidth}{\dimexpr\textwidth+\marginparsep+\marginparwidth\relax}
+  \makerunningwidth{mystyle}{\headwidth}
+  \makeevenhead{mystyle}{}{\textsf{\scriptsize\scshape\thetitle}}{}
+  \makeoddhead{mystyle}{}{\textsf{\scriptsize\scshape\leftmark}}{}
+  \makeevenfoot{mystyle}{}{\textsf{\scriptsize\thepage}}{}
+  \makeoddfoot{mystyle}{}{\textsf{\scriptsize\thepage}}{}
+  \makeatletter
+  \makepsmarks{mystyle}{%
+  \createmark{chapter}{left}{nonumber}{\@chapapp\ }{.\ }}
+  \makeatother
+  % for pages where chapters begin
+  \makepagestyle{plain}
+  \makerunningwidth{plain}{\headwidth}
+  \makeevenfoot{plain}{}{}{}
+  \makeoddfoot{plain}{}{}{}
+  \pagestyle{mystyle}
+% END HEADER AND FOOTER MANIPULATION
+
+% table of contents customisation
+\renewcommand\contentsname{\normalfont\scshape Contents}
+\renewcommand\cftchapterfont{\normalfont}
+\renewcommand{\cftchapterpagefont}{\normalfont}
+\renewcommand{\printtoctitle}{\centering\Huge}
+
+% layout check and fix
+\checkandfixthelayout
+\fixpdflayout
+
+
+
+% BEGIN THE DOCUMENT
+\begin{document}
+\pagestyle{empty}
+% the half title page
+\halftitlepage
+\cleardoublepage
+% the title page
+\titleM
+\clearpage
+% copyright page
+\noindent{\small{Esta novela es totalmente una obra de ficción. Los nombres, personajes e incidentes retratados en ella son el producto de la imaginación de los autores. Cualquier parecido con personas reales (vivas o muertas), eventos o localidades es pura coincidencia.\par\vfill \noindent 
+
+\textbf{Un paseo por Funmacionthema}
+
+$1^a$ edición, \today
+
+ISBN\space\ISBN \par \vfill \noindent \copyright Gasde Augusto Hunedy López y Ernesto Alejandro Vázquez Navarro. Todos los derechos reservados.\par \vfill \noindent Gasde Augusto Hunedy López y Ernesto Alejandro Vázquez Navarro afirman el derecho moral a ser identificados como el autor de este trabajo. Todos los derechos reservados en todos los medios. Ninguna parte de esta publicación puede ser reproducida, almacenada en un sistema de recuperación, transmitida en cualquier forma o por cualquier medio, ya sea electrónico, mecánico, fotocopia, grabación o cualquier otro, sin el permiso previo y por escrito del autor y/o el editor.\par}}
+
+\clearpage
+
+% dedication
+\begin{center}
+\itshape{\noindent{Dedicado a ???}}
+\end{center}
+
+% begin front matter
+\frontmatter
+\pagestyle{mystyle}
+
+
+% preface
+\chapter*{Prefacio}
+
+% acknowledgements
+\chapter*{Agradecimientos}
+
+% table of contents
+\clearpage
+\tableofcontents*
+
+% begin main matter
+\mainmatter
+
+\chapter{Capítulo uno}
+
+Ya es casi medianoche, estoy acostado en mi suave cama, mirando hacia mi ventana desgastada por el tiempo, puedo apreciar a los vecinos pelear de manera silenciosa, pero hiriente. Mi calle es vieja, tiene tremendos boquetes que los autos deben sortear para no quedar atrapados en ellos. Después de apreciar mi cuarto y tan pintoresca calle, el sueño captura mi atención, es justo cuando mis ojos se cierran. No sé cuánto dormí, pero de pronto, un olor a libro viejo me despierta, me levanto apresurado, como si estuviese asustado, aunque no lo estoy, creo que sólo es la curiosidad. Al tener un mejor manejo de mis sentidos, noto que mi habitación esta completamente llena de un humo rosado, aún sentado en mi cama y luchando contra este humo que no me permite observar lo que ocurre, mi cama comienza a moverse, a tambalearse como si se tratase de un temblor, brinco asustado de ella, al caer al piso, trato de tranquilizarme y observo cómo este humo se disipa, aunque estoy a la expectativa, el humo va desapareciendo como si una aspiradora lo estuviese succionando debajo de mi cama, cosa que me llama la atención, mi madre guarda su aspiradora en el cuarto de los triques, si descubre que está bajo mi cama, no saldré a jugar con mi valedor \textit{el botas} a los penales. Me acerco a mi cama para buscar este aparato, para mi sorpresa, encuentro un libro de dimensiones grandes, yo digo que casi del tamaño de mi cama, al tratar de saber más de éste, el libro sale de mi cama repentinamente, como se abre el cajón de una máquina registradora al momento de cobrar, este movimiento me arroja hasta el ropero, me levanto rápidamente para defenderme del libro, pero éste sólo se quedó afuera de mi cama sin moverse, estoy petrificado sin saber que hacer.
+
+En un instante de valor, me dirijo al libro misterioso, quiero saber de qué trata, el título de la portada no se distingue, lo tomo de la pasta y lo abro, fue de inmediato que las hojas empiezan a abatirse una tras otra rápidamente, el viento generado por este abaniqueo de hojas es comparable con el que se siente al sacar la cabeza por la ventana del auto que va a toda velocidad. Las hojas siguen en este movimiento, estoy perplejo y no sé que hacer para detener esto, me armo de fuerza y acerco mi mano derecha al torrente de hojas, justo cuando las toco, algo tira de mi mano como queriendo jalarme hacia él, de un explosivo salto me alejo del libro, sus hojas no dejan de hacer ese aleteo; nuevamente, me acerco asustado, con un poco de seguridad reunida, meto mi mano al tormento de hojas, con más fuerza ahora, sin que pueda detenerme con algo, soy jalado hacia dentro del libro. Como si se tratase de un pozo, estoy cayendo, no dejo de gritar y de pedir ayuda, estoy en una especie de fondo inmenso, estoy muy asustado y dando vueltas aunque aún no me mareo, a mi alrededor flotan letras, símbolos que jamás he visto, números, escucho música, hay imágenes y fotos muy raras. Me siento asustado y no sé que hacer, menos sé que pasará cuando termine de caer, aunque miro hacia abajo, no veo el fondo, al parecer esto no tiene fin, algo golpea mi cabeza.
+
+
+\chapter{Capítulo dos}
+
+Abro mis ojos lentamente, no reconozco el lugar en donde me encuentro, este lugar es muy extraño, el suelo es muy suave, parece un colchón, hay árboles que tienen una especie de hojas muy extrañas, unas hojas que dan la impresión de que, de cada hoja nace otra igual y así muchas veces; todos estos árboles son de muchos colores, el clima que siento es templado, aunque por extraño que parezca, el olor a libro viejo no ha desaparecido. El sol, si supongo que eso es el sol, tiene forma de durazno y cambia de color, rojo-amarillo-anaranjado-blanco, una y otra vez en estos colores; cerca de mí hay una cascada de agua morada que cae, bueno, que sube hasta mezclarse con el cielo, que es de un color tornasol, pero cambia dependiendo de qué color tenga el gran durazno en ese momento.
+
+Apenas y comienzo a ubicarme en este lugar, cuando una especie de serpiente se acerca rápidamente hacia mí, esto me asusta y comienzo a correr, pero esta especie de animal es más rápida que yo, así que en poco tiempo este animal está junto a mis pies arrastrándose a mi velocidad, es cuando escucho el ruido:
+
+-¡Fiviñvi!, Ñu vi wuz e jedis ñefe
+
+No sé de dónde proviene este ruido, pero se repite una y otra vez, siento que ya no puedo correr más, la extraña cosa no me deja en paz, me sigue persiguiendo y mis piernas ya no pueden más, me detengo y comienzo a gritar:
+
+-¡Ya déjame!, ¡Lárgate!, ¡Vete, no tengo nada!, ¡Sácate!
+
+Tengo un poco de miedo y la cosa rara (porque la verdad aún no sé que es, tiene forma de serpiente, pero con plumas y cabeza de pescado, pero no es ninguno de estos animales), me mira fijamente y de su boca extraña con una voz chillona me dice:
+
+-Ñu vi wuz e jedis fepu, ¿Rai voiñit?
+
+No sé que decir. Esta cosa habla y no entiendo que dice, estoy asustado, sorprendido y cansado:
+
+-¡Déjame!, ¡No te entiendo!, ¡Vete!
+
+Aún me sigue viendo y me vuelve a decir:
+
+-Ñu vi wuz e jedis fepu, ¿Rai voiñit?
+
+-¡Qué te largues, por una chingada!, ¡Vete!, ¡No te entiendo!
+
+Por increíble que parezca, esta cosa me dice:
+
+-¡Ah!, No me entiendes, haberlo dicho antes pequeño
+
+Ahora estoy más sorprendido que antes, no tengo palabras que decir, esto es asombroso e increíble:
+
+-¿En dónde demonios estoy y qué hago aquí? Pregunto
+
+-Te perdiste
+
+-No sé ni qué hago en este lugar
+
+-¿Eres nuevo aquí verdad?
+
+-Acabo de despertar en este lugar, luego apareces tú persiguiéndome, me hablas y me asustas, no sé qué hago aquí, no sé qué quieres, tengo miedo, estoy confundido...
+
+-Tranquilo, -me interrumpe- no pasa nada, soy inofensivo, y ya veo que eres nuevo en GAÑNEDOUÑVJINE, perdón, quise decir FUNMACIONTHEMA
+
+-¡¿Qué?!, ¡¿Qué?!, ¿Dónde estoy?
+
+-En FUNMACIONTHEMA
+
+-¿Dónde queda esto?, ¿En qué país?, ¿En qué continente?, ¡¿Dónde?!
+
+-Tranquilo, a su debido tiempo lo sabrás, por el momento sígueme por favor
+
+-¿Adónde quieres que te siga?, Llévame a mi casa por favor, tengo miedo, ¡por favor!...
+
+-No te va a pasar nada, te voy a mostrar algo, ven
+
+Comenzamos a caminar y el suelo comienza a endurecerse poco a poco, en el cielo aparecen nubes titilantes de color rojo y verde, el miedo aún no se me quita del todo, pero estoy siguiendo a esta cosa rara, ¿qué más puedo hacer?, realmente lo único que quiero es llegar a mi casa lo más pronto posible.
+
+-¿Cómo te llamas? ? -me pregunta-
+
+-Ernesto, ¿Y tú?
+
+-Me llamo Hebfi, pero puedes llamarme Heb. Según tu nombre, en éste lugar te van a llamar Ñivu, para que te acuerdes
+
+-¿Por qué Ñivu?
+
+-Ya te darás cuenta de ello a su debido tiempo
+
+-¡¿Qué no me pueden decir Ernesto y ya?!
+
+-Acuérdate Ñivu que estás en otro lugar diferente al que conoces
+
+-¡Cámaras!, ¡Ya estas!, Pero ya dime a dónde vamos
+
+-Vamos a que conozcas a más habitantes del lugar
+
+-Nel, nel. ¿Para qué quiero conocer a más gente?, Lo que yo quiero es ya irme a mi casa, dime cómo y después vete con esos a los que quieres ir a buscar
+
+-Mira Ñivu, iremos con estos habitantes, amigos míos, y ellos nos ayudarán a averiguar cómo puedes regresar a tu hogar, ¿Está bien?
+
+-¡Sobres!, pero... si me estas engañando, mejor...
+
+-¡Mejor te apuras y sabremos cómo salir!
+
+Comenzamos a caminar, a unos pocos metros, Heb se detiene y me indica hacer lo mismo, me dice:
+
+-A la cuenta de tres, brincas, ¡una!... ¡dos!... ¡tres!
+
+Ambos saltamos y el piso comienza a agrietarse poco a poco, empieza a tomar forma de un platón, como en el que me sirven la sopa, llega a crecer mucho, es un platón muy grande. De pronto surge del centro de éste una especie de aspas, algo así como un ventilador gigante, Heb muy calmado me dice:
+
+-¡Sígueme!
+
+Y se deja caer en ese hoyo, desesperado, le grito:
+
+-¡Espera Heb!, ¿Qué te pasa?, ¡Heb!, ¡Espérate!, Hay un ventilador en el centro, ¡Eso te va a matar!
+
+Puesto que Heb ya se ha arrojado muy seguro, eso me da seguridad y lo sigo, me aviento a este ventilador, es como caer de una resbaladilla, claro que bastante grande. En esto estoy cuando veo que Heb se acerca al ventilador, me espero lo peor, de pronto, el viento del ventilador lo dispara como si fuera un balón de fútbol en el saque de salida, cuando llego al ventilador, salgo de igual forma disparado hacia el cielo, cada vez estoy más alejado del suelo y Heb me dice gritando:
+
+-¡No mires hacia abajo!, Cuando atravesemos la ñaci, digo, la nube, agárrate fuerte de la usomme, digo, de la orilla de la nube
+
+Me estoy acercando a ella, es de color amarillo con manchas color violeta, tengo bastante miedo. Me acerco a la nube, ya la tengo más cerca, mis manos me sudan, ya casi la alcanzo. Como si se tratase de algodón, puedo sujetarme fuertemente de la orilla de esta nube, caigo sobre ella, es más suave que el suelo en el que desperté. Heb se acerca a mí y me pregunta
+
+-¿Estás bien Ñivu?
+
+-Sí, pero asustado, pensé que me iba a matar
+
+-Ven, no te preocupes, estás en un lugar seguro
+
+Comenzamos a caminar sobre esta nube distinta, de pronto, detrás de un mostrador aparece un ser chistoso, sube al mostrador y da un brinco para caer al piso de la nube, se acerca a nosotros a brincos cortos, más chistoso aún, pero logro controlar mi risa. Este ser es un hombre regordete y de estatura muy corta, con cara en forma de pera, ojos pequeños color azul, una nariz enorme que parece bola de billar, también color azul, además, que en vez de boca, éste tiene una especie de trompa parecida a la de un elefante, claro que mucho más corta; porta un sombrero de bombin negro con lucecitas como de árbol de navidad, viste un traje rosado, que a decir verdad, parece un calcetín hecho a la medida de su cuerpo.
+
+Heb lo mira acercarse y hace un ademán muy extraño, que este regordete imita, algo parecido a un saludo, al terminar, Heb me dice:
+
+-Él es Maot im dudoñisu, en otras palabras, el cocinero del lugar
+
+-¿Para qué me traes aquí?- le susurro a Heb- ni tengo hambre y después de todo lo que me has hecho pasar...
+
+-¡Cállate Ñivu!, más respeto para Maot -interrumpe mi queja Heb- ¿Quieres regresar a casa, no?
+
+-Pues sí, pero...
+
+-¡Pero nada!, Maot nos puede ayudar para que puedas regresar a tu lugar de origen, así que saluda, dile: ¡Jume!
+
+-Jume Maot- repito, aunque no sé que significa-
+
+Mientras Heb habla con Maot, comienzo a caminar, quiero conocer más sobre el mundo de Heb, apenas llevo unos pasos y siento que puedo volar, bueno, la sensación que tengo es como si estuviese caminando en los mosaicos del baño sin sandalias, no creo que sea volar, es menos especial, lo llamaré flotar. Mientras camino, observo mis pies, quiero saber el porque floto, trato de ver el efecto que ocasiona esto, cuando choco con algo, levanto la vista y es una puerta sin pared, ¡esto no puede pasar!, ¿Para qué quieren una puerta si no hay nada que resguardar?, rodeo la puerta, no hay nada, busco a Heb para preguntarle que hace una puerta en medio de esta nube, Heb no está, estoy solo, encojo los hombros y me dispongo a abrir esta puerta, ya no me pueden engañar, esta puerta es la que me llevará a mi casa. El gusto me llena de valor y abro la puerta rápidamente, ya quiero estar en casa; en cuanto abro esta puerta un impresionante chorro de agua morada me impulsa lejos de la puerta, como las olas del mar, esas que se esperan en la orilla de la costa para poder entrar con tu tabla a jugar con ellas, no me lo esperaba, esto me avienta muy lejos, caigo a los pies de Maot, que con brincos más chicos que antes, se dirige a la puerta y la cierra. Heb me mira fijamente y me grita:
+
+-¿Qué haces?
+
+-Sólo abrí la puerta que me llevará a mi casa, ¡Ya me quiero ir!
+
+-No seas tonto, te pedí que esperaras, esa puerta es de la detdefe
+
+-¿La qué?
+
+-La cascada de Maot
+
+-¿Cuál cascada?
+
+-¿Cómo cuál?, Es la cascada del fomisu de Maot
+
+-¿Cómo que la casca....
+
+-¡Mejor ya cállate! ?grita Heb-, Maot se enfadará y no querrá ayudarte a regresar a casa. Pide disculpas y espera a que Maot te premie
+
+-¿Me premiará por esto?, ¡Qué bien!, pienso que le pediré que me diga cómo regresar a mi casa
+
+-¿Rai si qete? -gritó Maot en un tono molesto-
+
+-¿Qué le digo Heb? -le susurro-
+
+-Dile: Mu toipvu
+
+-Mu toipvu
+
+-!Ñefe fi mu toipvu, voiñit rai temfes va fepu! -grita Maot un poco exaltado-
+
+-Déjame hablar con él, Ñivu, siéntate aquí y no te muevas, es más, no respires si es posible
+
+Heb discute con Maot, yo sólo espero, realmente estoy muy asustado, aunque esta experiencia fue muy buena, de hecho divertida, ahora mi miedo es qué me pedirá Maot, yo espero el momento de pedir mi premio y regresar a casa, le contaré a Pepe todo esto y seré el más popular, espero que sirva de algo y ahora si pueda jugar en el equipo de la escuela, Mónica se enamorará de mi...
+
+-Ñivu, Maot quiere que pidas tu premio
+
+-Quiero regresar a casa
+
+Heb traduce esto a Maot, éste medita mi petición, lo observo pensar, su gran nariz de bola comienza a decrecer de tamaño, hasta que de pronto, su nariz desaparece; ahora una nueva nariz crece, Maot dice algo a Heb, éste traduce ahora para mí:
+
+-Maot pide, para cumplir tu deseo, que alimentes a sus netduvet
+
+-¿A sus qué?
+
+-Él te mostrará lo que debes hacer, ya he hecho mucho por ti. Voy a buscar más ayuda. Por favor no eches esto a perder
+
+Da la vuelta y me deja con Maot, el cocinero camina hacia el mostrador, sube a éste, yo lo sigo, no sé ni a qué voy a alimentar, me empiezo a poner nervioso, espero que no pase de un gatito, un perrito o un canario...
+
+-¡Lo tengo! -grito-
+
+Maot voltea a verme, me revisa como si me hubiese caído y quisiera saber si no me lastime, dejo que continúe con su revisión mientras pienso, Heb mencionó que debo de alimentar algo, yo creo que las netduvet de Maot no han de ser mas que algunos animales, me pregunto qué serán, espero que no sean gatos, los aborrezco.
+
+Subo al mostrador junto con Maot, él me muestra una especie de cubo, éste tiene varios colores brillantes, lo sacude vigorosamente y del cubo brota una especie de hoja, ésta es como una hoja tamaño carta, parece de albanene delgado, tiene una coloración tornasol, es muy vistosa, me pregunto: ¿Para qué será esa hoja?. Maot me mira fijamente y me dice:
+
+-Iñvse
+
+-¿Qué?, ¿Qué? -respondo-
+
+-Eñvse, qese rai duñubdet e not netduvet
+
+-No te entiendo bien, ¡¿Qué quieres que haga?!
+
+-Nose -me dice-
+
+Maot mete su mano al pedazo de hoja, como si metiera la mano en una alberca, pero es una simple hoja de papel; ahora mete su cabeza y ¡La hoja no se rompe!, ni siquiera se arruga, es increíble la parte de su cuerpo que mete a la hoja, ¡Desaparece!. Estoy sorprendido, ¿Cómo es posible esto?, Maot se acerca a mí, coloca la hoja sobre el suelo de la nube y con un pequeño brinco me empuja hacia la hoja, lo piso y de inmediato caigo dentro de ésta, no es exactamente que caiga, más bien como atravesar una puerta, una puerta que en un momento se expandió para que entrara. El lugar a dónde entro es muy oscuro, el suelo que me recibe tiene textura de césped, no logro distinguirlo perfectamente con la poca luz tornasol que entra de alguna parte; a mi lado, veo que Maot se aleja con su extraño caminar, entre más se aleja es más difícil verlo, ahora, como si cerrara mis ojos, no puedo ver nada, la pequeña entrada de dónde se colaba un poco de luz, se cerró. No sé dónde está Maot, escucho a lo lejos que se abre un grifo, el clásico sonido de escuchar el girar de una llave del agua vieja y oxidada, instantáneamente todo comienza a iluminarse, es un lugar enorme, tremendamente amplio, la luz parece acercarse a mí, cómo si se tratara de un tren en movimiento mostrándome su foco frontal. Estoy atónito, no lo puedo creer, lo que estoy viendo es increíble, es... ¡Luz líquida!, es luz que viaja por un canalito surcado en el suelo e ilumina todo el lugar.
+
+Ahora ya distingo todo, es como un jardín muy hermoso, el césped, si esto es césped, es color guinda, hay muchas especies de flores y hongos, veo que Maot aún está recargado junto al grifo donde sale la luz líquida, Maot se acerca a mí, se detiene y toma uno de los hongos lilas de este jardín, lo coloca en su trompa y lo deglute, en pocos segundos uno de sus ojos cae al suelo y toma forma de una bola de pelos color verde olivo, a esta bola de pelos se le ven unos ojos muy bonitos, ojos color azul, además estas bolas hacen un extraño ruido, parecido al de un ratón royendo cartón. ¡En la madre!, ¡¿Dónde estoy metido?!, esto es increíble, su ojo se convierte en una especie de animal, en la cuenca vacía que ocupaba su ojo, aparece otro ojo nuevo y reluciente.
+
+-¿Qué cosa es esa que cayó de tu cara?
+
+-It añ dokiñovu, itvet tuñ not netduvet
+
+Aún no sé qué dice, de pronto, el otro ojo de Maot cae al suelo y se forma otro de estos seres, idéntico al primero, además que nuevamente su ojo se regenera; Maot me dice algo, no entiendo que trata de decirme, el proceso de los ojos se acelera, los ojos de Maot caen uno tras otro al suelo, cada vez más rápido surgen esas bolas verde olivo, Maot lanza una especie de gemido, ¿Qué hago?, el número de bolas va aumentando muy rápido, no me di cuenta, pero al observarlas, les pasa lo mismo que a Maot, es decir, se les caen los ojos y sale otra igual a ellas, ahora son muchísimas, empezó con una, después tres, siete, quince, treinta y uno..., son muchos, y cada vez hay más, no sé que hacer, ¿Dónde está Heb?, las cosas verdes empiezan a llenar el lugar, el gemido de Maot es cada vez más prolongado y angustioso, pero de las cuencas de su rostro no dejan de brotar ojos, el espacio comienza a reducirse con el aumento bestial de estas bolas verdes de pelos, Maot grita en un tono desesperado:
+
+-¡Errukeni mab moraode!, ¡Etó itvo ti fiviñfsé!
+
+Lo repite cada vez más desesperado, trato de hacer algo, al moverme tropiezo con una bola y caigo al césped, muy cerca del surco de la luz líquida, Maot se acerca y se inclina, ¿Qué hago?, estoy desesperado, de un movimiento brusco arrojo luz al rostro de Maot, éste cubre su rostro con sus pequeñas manos y el fenómeno se detiene, el brotar de ojos se ha detenido, ahora me preocupo por las bolas que se autoreproducen, pero a la par de Maot, las criaturas dejan de reproducirse, comienzo a tranquilizarme, las criaturas empiezan a convertirse en flores y hongos, igual de rápido que se reproducían comenzaron a embellecer el jardín, en pocos minutos sólo quedaron dos bolas, éstas no sufrieron la metamorfosis a flores ni hongos, Maot aliviado me dice:
+
+-¡Hsedoet!
+
+No respondí, Maot toma a una de las bolas sobrevivientes y la guarda en su traje rosado, a la otra, de un brinco las aplasta, ésta toma forma de una pastilla color amarillo, Maot la recoge y me la ofrece diciendo:
+
+-Dunime qese rui vi mmiwi duñ Heb
+
+No entiendo nada, pero mencionó a Heb, así que la recibo
+
+-¡Dunime! -me dice Maot haciendo muecas graciosas-
+
+Creo que quiere que la coma, así que la coloco en mi boca.
+
+
+
+
+
+
+\chapter{Capítulo tres}
+
+Estoy acostado, junto a mí esta Heb, es como si acabara de despertar de un sueño, Heb me dice:
+-Ya levántate, ven conmigo, te mostraré el juego más importante de FUNMACIONTHEMA.
+-¿Qué paso?, ¿En dónde estoy?, ¿Ya voy camino a mi casa?, ¿Cuánto falta?, ¿Para qué quiero un juego?, ¡Responde algo, por favor!, ¡Ya me quiero ir!.
+-Tranquilo Ñivu, ten paciencia, ese el un requisito fundamental para que podamos entender en donde estas. Quiero mostrarte el juego que rige una parte de este lugar, estamos en un lugar llamado DUNQSIÑTOÚÑ.
+-Pero lo que yo quiero es ya irme a casa, realmente no quiero conocer más lugares, ¡Por favor, Heb!, ¡Sácame de aquí!.
+-Es por eso que te llevo a conocer el juego, si logras entenderlo, saldrás de inmediato, hablaras con el vá-nevinévodu, por el tiempo, no te preocupes, lo que tú conoces por tiempo aquí no existe, trata de entender el juego, no hay prisa.
+-¡Vas!, pero ¿Dónde esta el juego que dices y qué tengo que hacer?, aparte, ¿Quién chingados es el vá-nevin...?, bueno, ese que mencionaste.
+-Ya lo sabrás, todo a su tiempo, primero sígueme.
+
+Heb me lleva caminando, llegamos a un extraño lugar, algo así como un barranco, como si viajáramos en una lancha y estuviéramos llegando a una cascada, justo en el momento de caer, pero algo nos mantiene en la orilla, allí Heb me dice:
+-Mira Ñivu, el vá-nevinévodu pide que aprendas a jugar y dominar el juego que voy a mostrarte, esto te ayudará a hablar con él.
+-¿Cómo?
+-Sí, él no habla como yo, el sólo habla como todos los seres de FUNMACIONTHEMA.
+-Y si mejor le dices que te diga como resolverlo y después me lo traduces.
+-No, ese es un problema que tienes que solucionar personalmente, no puedo ayudarte.
+-Bueno, ¿Me enseñaras tu idioma?.
+-No puedo enseñártelo, puedo ayudarte a deducirlo.
+-¿Qué tratas de decir?.
+-Mira, primero tienes que dominar el juego. Párate en esta orilla y mira los objetos de allí, ¿Los ves?.
+-¡Claro!, los cuadros que están flotando en el aire, esos como globos cuadrados de distintos colores y que...
+-¡Ya!, no pedí una descripción, sólo pregunte si los veías, pero ya vi que sí. Ahora, tenemos esta caja, ésta es el objeto importante del juego, se llama funoñou. Los objetos flotantes que describiste, a todos ellos se les llama duñvsefunoñou. Hasta aquí, ¿Todo está claro?.
+-Sí, pero, ¿Qué tengo que hacer?.
+-No te preocupes, el juego es muy fácil. El juego se llama GUÑDOÚÑ, tú, mientras juegues, serás una guñdoúñ. El objetivo del juego es tomar un objeto de esta caja (recuerdas, la importante), lanzar dicho objeto a los globos cuadrados. A todos los globos cuadrados que toques con los objetos que lances, se les llama onehiñ de la guñdoúñ, bueno, se les llama onehiñ o también puedes llamarles señho de la guñdoúñ. ¿Te queda claro?.
+-Sí, ¿Cómo debo lanzarlos?.
+-Eso no importa, sólo tienes que pegarles con lo que lances.
+-Bueno, lo intentaré.
+Es así como me dispongo a jugar, al abrir la caja, para mi sorpresa, encuentro algo conocido, de hecho, es lo más conocido que he encontrado en este lugar, la caja está repleta de pelotas, balones de todos los deportes; elijo uno de fútbol, eso es lo mío, no puedo perder. Coloco dicho balón a la orilla del barranco, retrocedo dos pasos, me siento como el jugador en un estadio lleno, es el último penal, el juego depende de este jugador, el gol decisivo, el momento importante de su vida... bueno, en pocas palabras estoy muy nervioso por tirar, aunque sólo este Heb mirándome. Apunto a un cuadro verde, mido mi fuerza, el objeto flotante está muy lejos, pero sé que puedo hacerlo, tomo aire y tiro...
+-Buen tiro Ñivu ?me felicita Heb al ver mi tiro-.
+Pasa algo raro, al llegar el balón al cuadro, lo toca pero se queda pegado, como si el cuadro tuviera imán, el balón no sigue su curso, bueno pero le pregunto a Heb:
+-Oye Heb, ¿Cuándo acaba el juego?.
+-El juego termina cuando lances todos los objetos de la caja importante.
+Así que miro la caja, tomo una pelota de tenis, me dispongo a darle al cuadro negro que esta junto al verde que ya he tocado, la lanzo y mi puntería no fue tan buena como el primer tiro, la pelota se va, sigue su camino y no toca nada, me resigno y trato de tomar otra pelota para seguir jugando; al tratar de meter la mano a la caja, ésta se cierra y no me permite sacar otra, al cerrarse cae del cielo la pelota de tenis que lance, quedando en la tapa de la caja.
+-¿Qué pasa Heb? ?pregunto-.
+-Ñivu, es mi culpa, no explique esto antes, todas las pelotas las debes de utilizar, es decir, con todas las pelotas debes de darle a algún globo, no debes dejar pelotas sin usar, si fallas un tiro, la pelota regresará hasta que con ella logres pegarle a un cuadro.
+-¿Y si no logro hacerlo?.
+-No podrás tomar otra pelota, tienes que usarlas todas, esas son las reglas.
+Puesto que no puedo hacer más, tomo la pelota y vuelvo a realizar mi tiro; vuelvo a fallar, mi obsesión por darle al cuadro negro me ciega, así que pregunto:
+-¿Puedo darle a cualquier cuadro, no?.
+-Si, al que gustes.
+-¿Puedo utilizar el mismo cuadro de mi tiro anterior?.
+-Si, no hay ningún problema.
+Es así como le apunto al cuadro verde, y después de alrededor de diez tiros, logro utilizar la pelota de tenis. La caja vuelve a abrirse y me permite tomar otra pelota, tomo un balón de fútbol, después practicaré con las de tenis. ¡Pero que tonto soy!, ?el botas? me enseñó a pegarle con efecto al balón, es decir, darle un buen ?chanfle?, así puedo darle a varios cuadros con una sola pelota, recuerdo el efecto que hay que darle y lo aplico, pero al tocar el primer cuadro, el balón se pega al cuadro, esto me enfada y reclamo:
+-¿Porqué no puedo tirar dos cuadros con un solo balón?.
+-¡No!, ni se te ocurra, ¡Eso no se puede hacer!, por lo menos no en este juego, en este juego eso esta prohibido, es falta, por eso cuando el balón llega al cuadro se pega, eso evita esta falta, eso es lo que diferencia a gañdoúñ de simedoún, en simedoúñ eso si está permitido, pero en este juego no.
+-Entonces quiero jugar simedoúñ ?contesto-.
+-No te va a servir de nada, si quieres puedes jugarlo, pero no es muy útil, además es menos divertido. Para lo que necesitas aprender, simedoúñ no sirve de mucho.
+-Bueno, jugaré gañdoúñ sólo porque realmente quiero regresar a casa.
+
+Después de un rato, no sé cuánto tiempo ha pasado, Heb tiene razón, en este lugar parece que el tiempo no pasa, por lo menos no me he dado cuenta de ello; termino con todas las pelotas de la caja, creo que ya puedo buscar al tipo que me ayudará a salir de aquí, me dirijo a Heb muy entusiasmado:
+-He terminado, ahora llévame a hablar con el ser que me dirá como salir de aquí.
+-¿Seguro que ya acabaste?.
+-Claro, mira la caja, esta vacía.
+-¿Recuerdas el porque aprendes a jugar esto?.
+-Sí, lo aprendo para hablar con el tan famoso ser que me ayudará a salir de aquí.
+-Y... ¿Ya aprendiste a hablar su idioma?.
+-No, aún no.
+-Entonces no has acabado, ¿Verdad?.
+-Creo que no.
+-Mira, ya que has dominado este juego, ahora te mostraré porque es que el juego de gañdoúñ es tan interesante, recuerdas todas las reglas de este juego, ¿No?.
+-Sí, creo que ya lo he dominado.
+-Bueno, ahora le agregaremos una regla más, el juego ahora cambia de nombre, ahora se llama gañdoún eñzidvowe, la regla que le añadimos es que ahora no puedes repetir los cuadros.
+-Es decir, que ahora sólo puedo pegarle a un cuadro con sólo una pelota.
+-Claro, las demás reglas siguen igual.
+En cuanto Heb termina de darme estas instrucciones, el cielo toma un color azul celeste, aparecen luces perecidas a estrellas blancas, rápidamente éstas cubren gran parte del cielo; segundos más tarde, las luces comienzan a caer, perece una lluvia de estrellas. Trato de preguntar a Heb que es lo que pasa, pero al tratar de hablar, un estruendoso ruido reprime mi pregunta, la tierra empieza a cuartearse, el pedazo de tierra en el que Heb y yo estamos parados no se parte, sólo se eleva, como si estuviéramos en un elevador, dicho bloque sube disparado hasta cruzar esta lluvia; nuevamente a mi lado esta la caja de las pelotas, los globos cuadrados subieron de igual forma, hace un poco de frío. Estamos flotando en un lugar muy oscuro, el bloque de tierra en el que estamos esta iluminado por un brillo de una estrella que está arriba de nosotros, los globos siguen siendo de colores, pero ahora los colores son muy brillantes, eso hace que pueda verlos.
+
+Pienso lo fácil que me será acabar el juego, lo único que debo de hacer es no repetir los cuadros; puesto que la caja llamada funoñou sigue teniendo balones y pelotas. Ahora tomo primero las pelotas de tenis, pues mi puntería no es buena en ese deporte, después me preocuparé por las demás bolas. Heb tiene razón, las reglas no cambian, si fallo un tiro, la caja se cierra y no me permite tomar otra pelota hasta que utilice la que falle; lo que sí cambia, es que al tocar cada cuadro con la pelota que lanzo, la bola se pega al cuadro y cae al vacío, pues aunque he tratado de ver a donde van, sólo observo su caída, de hecho no escucho cuando tocan el suelo, pienso que ha de estar muy profundo, aunque eso sólo es curiosidad, pues me estoy dedicando a terminar este juego, ya quiero irme a mi casa, aunque acepto que me estoy divirtiendo muchísimo. El que las pelotas se peguen y caigan, me ayuda demasiado, ya no tengo que preocuparme por recordar a cuales cuadros flotantes he utilizado, de hecho es más fácil.
+
+Estoy por terminar los objetos de la caja importante, como los globos cuadrados caen, puedo observar que aunque termine los objetos de la caja importante, quedarán globos cuadrados, eso me preocupa, y pregunto a Heb:
+-¿Qué pasa si no utilizo todos los globos cuadrados?.
+-Nada, en este juego nada, en cuanto termines te enseñaré otro, que es otra variante del juego de gañdoúñ, pero primero termina este juego.
+La curiosidad me atrae, cada vez me gusta más este lugar, lo extraño me comienza a parecer interesante, me apresuro a terminar todas las pelotas del funoñou, en cuanto termino, muy entusiasmado le digo a Heb:
+-He terminado con gañdoún eñzidvowe, ahora muéstrame el otro juego.
+-Veo que te están agradando los juegos, ¿No es así?.
+-Sí, son divertidos.
+-Me agrada esa actitud, creo que pronto terminarás con los juegos y podrás hablar con el vá-nevinévodu. Ahora deja que te explique como es el siguiente juego. El siguiente juego, tiene por nombre gañdoúñ taqsezidvowe, tiene las mismas reglas que gañdoúñ, pero ahora le agregamos la regla siguiente, tienes que terminar con todos los elementos del duñvsefunoñou, es decir, tienes que tocar a todos los globos cuadrados.
+-Oye, pero ahora hay menos globos cuadrados que pelotas en la caja, ¡Esto es trampa!.
+-¡No!, ¿Cómo va a ser trampa?, ¿No has puesto atención?. Tienes que pegarle a todos los objetos cuadrados, ahora puedes darle con varias pelotas a un mismo cuadro, esta regla ahora cambia, en el juego pasado te sobraron cuadrados, ahora esto no tiene que pasar, puedes ignorar la regla no repetir, pero que quede claro, puedes hacerlo, aunque no es necesario, lo importante es tocar a todos los cuadros.
+-¿Eso es todo?, pues no sé que tan difícil les resulte a ustedes jugar esto, pero realmente a mi se me hace muy fácil, hasta ahora los tres juegos me han parecido fáciles.
+-Claro Ñivu, los juegos son muy fáciles y divertidos, sólo que a muchas personas no les agrada jugar, les parece muy difícil hacerlo, pero es cuestión de práctica, ¿No crees?.
+-Sí. No sé porque no les agrada el juego, es muy divertido.
+-Yo tampoco lo entiendo.
+
+De pronto, el pedazo de tierra flotante en el que estamos desciende sin previo aviso, caemos velozmente, volteo para mirar a Heb, su rostro muestra tranquilidad e indiferencia, ¿Qué va a pasar?; cruzamos las nubes, pasamos por el barranco donde inició el primer juego y aún bajamos, no sé a donde llegaremos, en pocos segundos, puedo ver que nos acercamos a un gran océano de un líquido gris, ¡Nos vamos a estrellar!, a pocos metros de llegar al océano, el trozo de tierra se detiene instantáneamente, ahora bajamos lentamente, hasta flotar en esta especie de agua gris, este descender aún no para, el agua rara nos empieza a cubrir, es algo extraño, ésta no moja, me empiezo a preocupar pues no sé nadar, en pocos minutos el agua nos ha cubierto por completo, estamos bajo el agua gris, bueno, realmente no estamos bajo el agua, lo que en un principio creí era un océano, se convirtió en una especie de nata gris, ¡No lo puedo creer!, el líquido gris esta arriba de nosotros, como una especie de domo gris. Estamos parados, la nata gris está a unos metros de mi cabeza, puedo ver cómo caen algunas gotas de esta nata (aunque no mojan); a lo lejos se percibe un sonido extraño, uno parecido al que alguien emite al tocar una flauta desafinada, los globos bajan de igual manera y al estar en su posición, el ruido que percibía ha desaparecido. El lugar se ilumina con varios arcoiris a la vez, la luz de arriba de la nata se cuela a donde estamos, al pasar por algunas burbujas de este líquido, la luz se descompone formando esos arcoiris. La caja está otra vez llena de pelotas.
+
+Comienzo a hacer mis tiros, en mi tercer juego he mejorado mi precisión, aunque no quiere decir que la caja no se haya cerrado ninguna vez, tengo que aceptar que con las bolas de tenis la caja se sigue cerrando, pero creo que con más práctica  podré evitarlo.
+
+-Heb, he terminado con el tercer juego, por favor, muéstrame otro, no me digas que ya no hay más.
+-No Ñivu, no tienes idea de cuántos juegos hay, lo mejor de todo es que todos tienen las mismas reglas de gañdoúñ, claro, las mismas reglas y sólo les aumentamos otras, como en los dos juegos anteriores. ¿Ahora vez porque es más divertido gañdoún que simedoún?.
+-Si, muchos juegos con la similitud de tener las mismas reglas, bueno, no todas, comparten reglas y sólo se le cambian algunas. Realmente es muy interesante.
+-¿Quieres que te muestre otro juego?.
+-Sí Heb, por favor.
+-El siguiente juego te resultará mucho muy fácil, ¿Recuerdas las reglas de gañdoúñ, gañdoún eñzidvowe  y gañdoún taqsezidvowe?.
+-Claro, las tres comparten que debo de terminar todas las pelotas de la caja importante y que no puedo utilizar una pelota para darle a varios cuadros, en la segunda no puedo tocar a un globo cuadrado con dos o más bolas, en la tercera no puedo dejar cuadrados sin tocar, ¿No?.
+-Has dominado muy bien los juegos, éste lo dominarás más rápido, el siguiente juego, se llama gañdoún cozidvowe, como recordarás tiene las mismas reglas que el primer juego, además que ahora le agregaremos dos reglas más, las reglas del segundo y tercer juego, ¿Queda claro?.
+-Sí, es muy fácil, sólo termino las pelotas de la caja sin tocar varios cuadros con una misma pelota, tocando un cuadro con una sola pelota y terminándome todos los cuadros, es muy fácil.
+-Bien Ñivu, has entendido a la perfección, me alegra tu desempeño.
+-Lo mejor de todo es que me estoy divirtiendo, lo que no sé es cómo me ayudará esto a aprender a hablar tu idioma.
+-¿Otra vez?, recuerda que todo a su debido tiempo.
+-Pero sólo hemos estado jugando, no he aprendido nada, no sé cuando voy a aprender a hablar su idioma.
+-Ñivu, ya has aprendido mucho.
+
+Ya sé que antes de empezar el juego cambiaremos de escenario, dejo de preocuparme y espero mi nuevo lugar de juego, miro cómo mi alrededor empieza a girar, los globos cuadrados de mi último juego me lo indican, los giros que hacen comienzan a ser cada vez más rápidos, comienzo a marearme cuando la plataforma en la que estamos parados empieza a girar, ¡Pero en sentido contrario!, cierro los ojos para evitar el mareo, pero la sensación de estar girando no puedo evitarla, espero a que el movimiento disminuya de intensidad. Cuándo ya no siento los giros ni los mareos, abro los ojos, estoy en un lugar vacío, una especie de mosaico gigante nos sostiene a Heb y a mí, la caja de las pelotas está a mi lado, los globos están flotando en el vacío, el ambiente tiene un color lila muy tenue, pero el lugar está sólo, un silencio profundo nos abraza, puedo escuchar el latido de mi corazón y mi respirar, escucho el eco de Heb que me dice:
+-Voy a buscar el camino que nos lleve a ver a vá-nevinévodu. Estás por terminar el juego y ya es tiempo de ir a buscarlo.
+-Está bien ?contesto y comienzo el juego-.
+
+
+\chapter{Capítulo cuatro}
+
+Estoy fascinado, este lugar es maravilloso e increíble, no sé cuanto tiempo llevo aquí, no me ha dado sueño, no tengo hambre, pero tengo la sensación de llevar varios días aquí. He aprendido mucho en este lugar, me he divertido demasiado, Heb me ha mostrado muchos lugares muy interesantes, me ha presentado a sus amigos, también me ha platicado de más juegos en los que se comparten las reglas de gañdoún, claro que cómo en los juegos anteriores, a éstas se les agregan más reglas, mencionó varios juegos como gañdoún duñvoñae, gañdoúñ eñwiste, gañdoúñ dsidoiñvi, entre otras; ahora comprendo la importancia de gañdoún, pues es la base de los demás juegos.
+
+Voy camino a NEVINÉVODE, según Heb en ese lugar vive el tal vá-nevinévodu, la persona que me ayudará a irme a mi casa; aunque siendo sincero, me ha encantado tanto este lugar y los amigos que he hecho, que no quiero irme a casa.
+
+Para llegar a NEVINÉVODE, Heb me guía por una caminata que nos lleva a un volcán. Estamos llegando a faldas de éste, desde aquí puedo observar que hay una especie de esfera de cristal en el cráter, Heb se detiene y me indica:
+-Allí es a dónde tienes que ir.
+-¿Y que debo hacer?, aún no he aprendido a hablar su idioma.
+-Descuida, el vá-nevinévodu lo sabe, él lo comprenderá.
+-¿Porqué si sabe que aún no hablo su idioma, no me acepto antes para hablar con él?.
+-Recuerda Ñivu, todo a su debido tiempo. Sube al cráter, yo te esperaré aquí.
+-Acompáñeme Heb, estoy nervioso.
+-No puedo, este asunto es personal. Lo siento.
+-Está bien.
+
+Doy media vuelta y me dirijo al cráter, puedo observar que entre más me acerco al cráter, la esfera de cristal aumenta de tamaño, sólo llevo unos pasos y ésta ya es el doble de grande; sigo caminando y ahora estoy muy cerca de la esfera, basta con estirar mi mano y estaré tocándola, doy mi siguiente paso y de una forma muy extraña entro a la esfera, cómo cuando uno mete el dedo a una burbuja de jabón y no la rompe, de esa manera entré a la gran esfera, el ambiente dentro de la esfera es más cálido, se escucha una especie de música muy relajante, el cráter que esperaba ver, se ha convertido en una playa hermosa, la arena es blanca y muy fina, el mar tiene una gama de tonalidades azules muy impactantes, el cielo se tiñe de colores rojo, lila, amarillo y naranja, cómo un atardecer, a lo lejos veo a alguien meciéndose en un columpio colocado en un árbol, está de espaldas, ese debe ser, no hay nadie más. Comienzo a caminar hacia él, al llegar éste esta columpiándose y me da la espalda:
+-Hola, mi nombre es Ernesto. ¿Eres vá-nevinévodu?.
+-Sí, yo soy, también sé que eres Ernesto, ¿Cómo estas?.
+En cuanto termina de preguntar, éste baja del columpio, se para frente a mí, y es exactamente ¡Igual a mí!, no puede ser:
+-¡Oye!, eres igual a mí, ¿Cómo es posible que seas idéntico a mí?.
+-Pues muy fácil, en realidad yo soy tú y tú eres yo, somos la misma persona, la única diferencia es que yo vivo aquí.
+-No lo puedo creer, hasta hablas igualito a mí, no sé que decir... ¡Ya sé!, ¡Eres un holograma!.
+-No soy holograma, ¡Soy tú!, somos el mismo.
+-¡¿Cómo es esto posible?!, ¿Qué me pasa?, primero un libro, luego lugares y personas extrañas, y ahora, ¡Tú!, ¿Me estoy volviendo loco?...
+-Tranquilo Ñivu, llagaste conmigo (o sea, contigo, pero en este lugar), con ayuda de varios amigos, para que yo (tú) te diga cómo regresar a casa.
+-¡Bien!, por fin, ¿Qué debo hacer?.
+-Pues ya lo sabes, debes aprender a hablar el idioma de FUNMACIONTHEMA, y pedirme tu deseo.
+-Pero, ¿Qué pasa si ya no quiero irme?.
+-Pues puedes aprender el idioma, será tu decisión si te quedas o te vas.
+-¿Cómo puedo aprender el idioma?, ¿Quién me lo enseñará?.
+-Yo, es decir, tú. ¿Recuerdas los juegos?.
+-Sí.
+-Úsalos, te daré más ayuda, ten presente que piedra de dice qoifse y que tierra se dice voisse, ¿Está bien?.
+-Claro.
+-Pues a divertirse, recuerda que esto es sólo un juego, ya sabes dónde encontrarme, por si quieres regresar.
+-Está bien.
+-Pues ve a jugar.
+
+La atmósfera de la playa se rompe, al parecer la esfera de cristal se ha roto, y vá-nevinévodu, ha desaparecido. Desciendo del cráter y busco a Heb, no sé que voy a hacer, quiero regresar a mi casa, pero también quiero seguir jugando, quiero jugar a los penales con mi amigo, pero también quiero aprender más sobre FUNMACIONTHEMA.
+
+Mi descenso del volcán ha sido muy pesado, he pensado mucho y aún no sé que hacer. Llego al lugar donde mi amigo me espera y lo veo a los ojos...
+
+
+
+
+
+\chapter{Preguntas de los autores al lector}
+
+Creemos que al lector interesado en el problema de Ernesto, le gustaría conocer algunas curiosidades que pueden llegar a ser muy interesantes, planteamos algunas preguntas que esperamos los diviertan, así como Ernesto se divirtió.
+
+1.-¿Puedes descifrar el idioma de FUNMACIONTHEMA?
+(Sería divertido, después de hacerlo, leer de nuevo el cuento, ¿No crees?).
+2.-¿Puedes explicar cuál es la proporción de la reproducción de los ojos de Maot y porque se comporta así?.
+3.-En el juego de gañdoúñ cozidvowe, ¿Qué elementos se acaban primero, las pelotas de la caja o los globos cuadrados?, ¿Porqué?.
+4.-¿Qué juego debemos tener, para que de lo mismo tomar cómo caja importante a las pelotas que a los globos cuadrados?.
+5.-¿Dónde se llevan acabo las experiencias de Ernesto?, es decir, ¿Dónde esta ubicada FUNMACIONTHEMA, DUNQSIÑTOÚN y NEVINÉVODE?.
+
+PISTAS PARA LAS CINCO PREGUNTAS: Pregúntenle a vá-nevinévodu.
+
+
+\end{document}

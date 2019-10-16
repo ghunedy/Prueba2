@@ -1,0 +1,278 @@
+
+\chapter{Semejanza de polígonos}
+
+\section{Polígonos semejantes}
+
+\begin{df} Sean $A_{1},A_{2},...,A_{n}$ ($3\leq n$) puntos en el plano. El \textcolor{red}{\bf polígono}\index{polígono} $A_{1}A_{2}A_{3}...A_{n}$ es la figura que tiene como vértices a dichos puntos y como lados a los segmentos $A_{i}A_{i+1}$ ($i\in \{1,2,...,n\}$) y a $A_{n}A_{1}$.
+\end{df}
+\begin{df}
+Sean $P_{0}$, $P_{1}$ dos polígonos con el mismo número de lados, si sus lados correspondientes son proporcionales y sus ángulos correspondientes son iguales de tal forma que la correspondencia es biunívoca, entonces decimos que $P_{0}$ y $P_{1}$ son \textcolor{red}{\bf polígonos semejantes}\index{polígonos ! semejantes}.
+\end{df}
+
+Entre los polígonos con los que hemos trabajado, se encuentran los triángulos y las condiciones para que dos triángulos sean semejantes pueden consultarse en la Definición~\ref{Semejanza df}, ahora veamos que se pueden definir dos tipos de semejanza considerando los segmentos dirigidos, las semejanzas son las siguientes:
+\begin{itemize}
+\item $\triangle ABC$ es \textcolor{red}{\bf directamente semejante}\index{directamente semejante} al $\triangle DEF$ si y solamente si $\triangle ABC\cong\triangle DEF$ y $\frac{AB}{DE}=\frac{BC}{EF}=\frac{CA}{FD}$.
+\item $\triangle ABC$ es \textcolor{red}{\bf inversamente semejante}\index{inversamente semejante} al $\triangle DEF$ si y solamente si $\triangle ABC\cong\triangle DEF$ y $\frac{AB}{ED}=\frac{BC}{FE}=\frac{CA}{DF}$.
+\end{itemize}
+
+\section{Figuras homotéticas}
+\begin{df}\label{PHdf}
+Sean $P=A_{1}A_{2}A_{3}...A_{n}$ y $Q=B_{1}B_{2}B_{3}...B_{n}$ ($3\leq n$). 
+Decimos que $P$ y $Q$ son \textcolor{red}{\bf polígonos homotéticos}\index{polígonos ! homotéticos} si y solamente si
+\begin{itemize}
+\item Las rectas determinadada por vértices correspondientes concurren, es decir, si $l_{i}=\overline{A_{i}B_{i}}$ para toda $i\in\{1,2,3,...,n\}$, entonces 
+$$\bigcap_{i=1}^{n}l_{i}=\{O\}$$
+donde $O$ es un punto en el plano llamado \textcolor{red}{\bf centro de homotecia}\index{centro ! de homotecia}.
+\item Para toda $i\in\{1,2,3,...,n\}$ existe $k\in\mathbb{R}\backslash\{0\}$ tal que
+$$\frac{0A_{i}}{OB_{i}}=k$$
+A $k$ se le conoce como \textcolor{red}{\bf razón de homotecia}\index{razón de homotecia}.
+\end{itemize}
+\end{df}
+
+Notemos que para toda $i\in\{1,2,3,...,n\}$, $A_{i}A_{i+1}$ es paralela a $B_{i}B_{i+1}$
+esto debido a que $\frac{OA_{i}}{OB_{i}}=\frac{OA_{i+1}}{OB_{i+1}}$, entonces por el Teorema~\ref{Thales1} $A_{i}A_{i+1}$ es paralela a $B_{i}B_{i+1}$.
+
+\section{Simetría con respecto a un punto}
+
+Ahora haremos una observación importante, consideremos $P$ y $Q$ dos polígonos homotéticos con centro de homotecia $O$, como el lector podrá notar, la razón de homotecia $k$ es un número en $\mathbb{R}\backslash \{0\}$, es decir, $k$ puede positiva o negativa. 
+Una caso particular es aquel en el que $k=-1$, cuando esto sucede decimos que $P$ y $Q$ son dos \textcolor{red}{\bf figuras simétricas}\index{figuras simétricas} con respecto al punto $O$ que funge el papel de \textcolor{red}{\bf centro de simetría}\index{centro ! de simetría}.
+
+\section{Líneas antiparalelas}
+\begin{df}
+Sean $a,b,c,d$ cuatro rectas en el plano. Decimos que $a$ y $b$ son \textcolor{red}{\bf antiparalelas}\index{antiparalelas} de $c$ y $d$ si y solamente si la bisectriz  $l$ del $|\angle(a\longrightarrow b)|$ interseca a $c$ y $d$ tal que $|\angle(l\longrightarrow c)|=|\angle(d\longrightarrow l)|$.
+\end{df}
+Observemos que si $l\cap c=\{P\}$, $l\cap d=\{Q\}$ y $c\cap d=\{R\}$, entonces al considerar $\triangle PQR$ tenemos que $|\angle RPQ|=|\angle PQR|$, es decir $\triangle PQR$ es isósceles, por tanto $|RQ|=|PR|$. 
+
+\begin{prop}
+Si $a$ y $b$ son antiparalelas a $c$ y $d$, entonces $c$ y $d$ son antiparalelas a $a$ y $b$. Es decir, la relación de antiparalalelismo es simétrica.
+\end{prop}
+\begin{pba}
+Construir la bisectriz del $|\angle(c\longrightarrow d)|$ que llamaremos $m$ y sea $l$ la biectriz de $|\angle(a\longrightarrow b)|$.
+Debemos probar que $|\angle(m\longrightarrow a)|=|\angle(b\longrightarrow m)|$.
+
+Sea $c\cap l=\{P\}$, $d\cap l=\{Q\}$, $c\cap d=\{R\}$, $m\cap b=\{Y\}$, $m\cap a=\{X\}$, $b\cap a=\{Z\}$ y $l\cap m=\{J\}$. Ahora, consideremos $\triangle PJR$ y $\triangle QJR$ como $|\angle JRP|=|\angle JRQ|$ y $|\angle JPR|=|\angle JQR|$ con lo que concluimos que $\triangle PJR\cong\triangle QJR$ \textbf{cs(AA)} por tanto $\frac{|PJ|}{|QJ|}=\frac{|PR|}{|QR|}=\frac{|JR|}{|JR|}=1$ por   ello $\triangle PJR\equiv\triangle QJR$, entonces $|\angle PJR|=|\angle QJR|$ y como $|\angle PJR|+|\angle RJQ|=2\perp$ así $|\angle PJR|=\perp$.
+
+Además $\triangle ZYJ\equiv\triangle ZXJ$ \textbf{cs(ALA)} ya que por lo anterior $|\angle YJZ|=|\angle XJZ|$, $|ZJ|=|ZJ|$ y $|\angle YZJ|=|\angle XZJ|$ pues $\overline{ZJ}=l$ es bisectriz de $|\angle XZY|$ por lo tanto $|\angle ZYJ|=|\angle ZXJ|$ y así $|\angle(m\longrightarrow a)|=|\angle(b\longrightarrow m)|$.
+\end{pba}
+
+\begin{prop}
+Si $a$ y $b$ son antiparalelas respecto a $c$ y $d$, entonces sus bisectrices son ortogonales. 
+\end{prop}
+
+\begin{pba}
+Sean $l$ la bisectriz de $|\angle(a\longrightarrow b)|$, $m$ la bisectriz de $|\angle(c\longrightarrow d)|$, $a\cap b=\{O\}$, $c\cap d=\{P\}$, $c\cap l=\{Q\}$ y $d\cap l=\{R\}$.
+Consideremos $\triangle PQR$ como $|\angle RQP|=|\angle PRQ|$ por lo tanto como $m$ es bisectriz de $|\angle(c\longrightarrow d)|$, es bisectriz de $|\angle QPR|$ y por tanto altura del $\triangle PQR$ (véase ejercicio $\clubsuit$), así que $m$ es ortogonal a $\overline{QR}=l$.
+\end{pba}
+
+\section{Cuadriláteros cíclicos}
+\begin{df}
+Sea $\{A_{1},A_{2},A_{3},...,A_{n}\}$ un conjunto puntos en el plano. Decimos que $A_{1},A_{2},A_{3},...,A_{n}$ son \textcolor{red}{\bf concíclicos}\index{concíclicos} si y solamente si existe $\mathcal{C}(O,r)$ tal que $\{A_{1},A_{2},A_{3},...,A_{n}\}\subset\mathcal{C}(O,r)$.
+\end{df}
+
+\begin{df}
+Sean $A_{1},A_{2},A_{3},...,A_{n}$ puntos en el plano. Un polígono $A_{1}A_{2}A_{3}...A_{n}$
+es un \textcolor{red}{\bf polígono convexo}\index{polígono ! convexo} si y solamente si para cualesquiera dos puntos en el interior del polígono el segmento que los une está contenido en el interior del polígono. 
+\end{df}
+\begin{prop}
+$\square ABCD$ es un polígono convexo y $A,B,C,D$ son concíclicos si y solamente si $|\angle ABC|+|\angle CDA|=2\perp$ y $|\angle BCD|+|\angle DAB|=2\perp$.
+\end{prop}
+\begin{pba}
+\begin{enumerate}
+\item [($\Rightarrow$)] Supongamos que $\square ABCD$ es un polígono convexo y $A,B,C,D$ son concíclicos, entonces existe $\mathcal{C}$ una circunferencia tal que $\{A,B,C,D\}\subset\mathcal{C}$. 
+Fijemos a $A$ y $C$, así por el Proposición~\ref{P1AIC} $|\angle ABC|=\frac{|\angle AOC|}{2}$ y $|\angle CDA|=\frac{|COA|}{2}$ por tanto $|\angle ABC|+|\angle CDA|=\frac{|\angle AOC|+|\angle COA|}{2}=\frac{4\perp}{2}=2\perp$. 
+Análogamente se prueba que $|\angle BCD|+|\angle DAB|=2\perp$.
+\item [($\Leftarrow$)] Ahora supongamos que $|\angle ABC|+|\angle CDA|=2\perp$ y $|\angle BCD|+|\angle DAB|=2\perp$. Consideremos $|\angle ABC|$ y fijemos $A$ y $C$, ahora consideremos $X=\{P\in\mathbb{E}^{2}|\angle APC=\angle ABC\}$ y $Y=\{Q\in\mathbb{E}^{2}|\angle AQC=2\perp\backslash\angle ABC\}$, entonces por la Proposición~\ref{PLGA} $\{A,B,C,D\}\subset\mathcal{C}$.
+\end{enumerate}
+\end{pba}
+\begin{prop}
+Sea $\mathcal{C}(O,r)$ y $\{A,B,C,D\}\subset\mathcal{C}(O,r)$ ordenados dextrógiramente, entonces $\overline{AB}$ y $\overline{CD}$ son antiparalelas respecto a $\overline{BC}$ y $\overline{DA}$.
+\end{prop}
+\begin{pba}
+Sea $\overline{AB}\cap\overline{CD}=\{P\}$ y sea $l$ la bisectriz interna del $\angle APD$. 
+Si $l\cap\overline{BC}=\{Q\}$, $l\cap\overline{AD}=\{R\}$ y $\overline{AD}\cap\overline{BC}=\{S\}$, debemos probar que $\angle SQR=\angle RQS$.
+
+Por hipótesis $\{A,B,C,D\}\subset\mathcal{C}(O,r)$, entonces $|\angle ABC|+|\angle CDA|=2\perp$. También $|\angle ABC|+|\angle CBP|=2\perp$, entonces $|\angle CDA|=|\angle CBP|$. Por tanto, $\triangle PBQ\cong\triangle PDR$ \textbf{cs(AA)}. Así que $\frac{|PB|}{|PD|}=\frac{|BQ|}{|DR|}=\frac{|PQ|}{|PR|}$, $|\angle PQB|=|\angle PRD|$ y como $|\angle PQB|=|\angle CQR|$  (por ser opuestos por el vértice), entonces $|\angle PRD|=|\angle CQR|$, así $\angle DRP=\angle RQC$. 
+
+Como $S$, $R$ y $D$ son colineales dado que $\{S,R,D\}\subset\overline{AD}$, $\{R,P,Q\}\subset l$, entonces $\angle DRP=\angle SRQ$. Y como $\{Q,C,S\}\subset\overline{BC}$, entonces $\angle RQC=\angle RQS$. Por tanto, $\angle RQS=\angle SRQ$.
+Por lo que $\overline{AB}$ y $\overline{CD}$ son antiparalelas respecto a $\overline{BC}$ y $\overline{DA}$.
+\end{pba}
+
+\section{Teorema de Ptolomeo}
+
+Primero generalizado y después corolario
+
+\begin{teo}
+Sea $\square ABCD$ un cuadrilátero convexo ordenado (levógiramente o dextrógiramente), entonces $|AC||BD|\leq |AB||CD|+|BC||DA|.$
+\end{teo}
+\begin{dem}
+Consideremos a $\alpha=\angle CAB$ y $\beta=\angle ACB$ ángulos internos de $\triangle ABC$.
+Sean $l$ una recta en el plano tal que $A\in l$ y $\angle (\overline{DA}\longrightarrow l)=\alpha$, $m$ una recta en el plano tal que $D\in m$ y $\angle(m\longrightarrow\overline{DA})=\beta$ y $l\cap m=\{E\}$.
+
+Así tenemos que $\triangle ADE\cong\triangle ACB$ \textbf{cs(AA)} pues $|\angle CAB|=|\angle DAE|$ y $|\angle BCA|=|\angle EDA|$, entonces $\frac{|AD|}{|AC|}=\frac{|DE|}{|CB|}=\frac{|AE|}{|AB|}$.
+
+También $\triangle ADC\cong\triangle AEB$ \textbf{cs(LAL)} ya que $\angle DAC=\angle DAE+\angle EAC=\angle EAC+\angle CAB=\angle EAB$ y como $\frac{|AD|}{|AC|}=\frac{|AE|}{|AB|}$, entonces $\frac{|AD|}{|AE|}=\frac{|AC|}{|AB|}$ por lo que $\frac{|AD|}{|AE|}=\frac{|DC|}{|EB|}=\frac{|AC|}{|AB|}$.
+
+Como $\frac{|AD|}{|AC|}=\frac{|DE|}{|CB|}$, entonces
+$$|DE|=\frac{|AD||CB|}{|AC|}$$
+Además por ser $\frac{|DC|}{|EB|}=\frac{|AC|}{|AB|}$, entonces
+$$|EB|=\frac{|AB||DC|}{|AC|}$$
+
+Por tanto como $|DB|\leq |DE|+|EB|$, tenemos que 
+$$|DB|\leq \frac{|AD||CB|}{|AC|}+\frac{|AB||DC|}{|AC|}$$
+Y así,
+$$|AC||DB|\leq |AD||CB|+|AB||DC|$$.
+\end{dem}
+
+\begin{teo}[Teorema de Ptolomeo]\index{Teorema ! de Ptolomeo}
+Un cuadrilátero convexo es cíclico si y solamente si el producto de sus diagonales es igual a la suma del producto de sus lados opuestos. 
+\end{teo}
+\begin{dem}
+Sea $\square ABCD$ convexo ordenado (levógiramente o dextrógiramente). Y consideremos a $\alpha=\angle CAB$ y $\beta=\angle ACB$ ángulos internos de $\triangle ABC$.
+Sean $l$ una recta en el plano tal que $A\in l$ y $\angle (\overline{DA}\longrightarrow l)=\alpha$, $m$ una recta en el plano tal que $D\in m$ y $\angle(m\longrightarrow\overline{DA})=\beta$ y $l\cap m=\{E\}$.
+
+Tenemos que $|AC||DB|=|AB||CD|+|BC||DA|$.
+$\leftrightarrow$ $\{O,E,D\}$ son colineales.
+$\leftrightarrow$ $\angle EDB=0$.
+$\leftrightarrow$ $\angle ADB=\angle ACB=\beta$.
+$\leftrightarrow$ $\{D,C\}\subset X=\{P\in\mathbb{E}^{2}|\angle APB=\beta\}$
+($X$ son dos arcos de circunferencia del mismo radio puesto que $\square ABCD$ es convexo y ordenado, se tiene que $D$ y $C$ pertenecen al mismo arco).
+$\leftrightarrow$ $\square ABCD$ es cíclico. 
+\end{dem}
+
+
+\section{Circunferencias homotéticas}
+En la Definición~\ref{PHdf} hablamos sobre el concepto de polígonos homotéticos, ahora veremos un caso particular de estos polígonos, las circunferencia homotética. 
+
+Dadas dos circunferencias $\mathcal{C}(O,r)$ y $\mathcal{C}(O',r')$ ($O\neq O'$ y $r\neq r'$) es posible demostrar que son figuras homotéticas. 
+
+En efecto, sean $A\in\mathcal{C}(O,r)\backslash l$, $a$ la recta determinada por $\{A,O\}$
+y $a'$ la recta paralela a $a$ por $O'$.
+Ahora, consideremos $\mathcal{C}(O',r')\cap a'=\{A',A''\}$. Sean $m$ la recta determinada por $A$ y $A'$, $n$ la recta determinada por $A$ y $A''$, $\{H\}=l\cap m$ y $\{K\}=l\cap n$.
+
+Afirmación: $H$ y $K$ son centros de homotecia.
+
+Notemos que $\triangle HAO\cong\triangle HA'O'$ \textbf{cs(AA)} pues $|\angle AHO|=|\angle A'HO'|$ y $|\angle OAH|=|\angle O'A'H|$, entonces $\frac{|HA|}{|HA'|}=\frac{|KO|}{|KO'|}=\frac{|OA|}{|O'A'|}=\frac{|r|}{|r'|}$.
+
+También $\triangle OAK\cong\triangle O'A''K$ \textbf{cs(AA)} pues $|\angle AKO|=|\angle A''KO'|$ y $|\angle OAH|=|\angle O'A''K|$, entonces $\frac{|AK|}{|A''K|}=\frac{|OK|}{|O'K|}=\frac{|OA|}{|O'A''|}=\frac{|r|}{|r'|}$.
+
+\begin{teo}
+Si $\mathcal{C}(O,r)$ y $\mathcal{C}(O',r')$ tienen tangentes comunes, entonces las tangentes contienen a alguno de los centros de homotecia. 
+\end{teo}
+\begin{dem}
+Sea $l$ tangente común a $\mathcal{C}(O,r)$ y $\mathcal{C}(O',r')$ en $T$ y $T'$ respectivamente, $m$ la recta determinada por $\{O,O'\}$, $l\cap m=\{K'\}$.
+
+Observemos que $OT$ es paralela a $O'T'$. Entonces $\triangle OTK'\cong\triangle O'T'K'$ \textbf{cs(AA)} por tanto $\frac{|OT|}{|O'T'|}=\frac{|OK'|}{|O'K'|}=\frac{|TK'|}{|T'K'|}$
+
+Por ello, $K'\in\{H,K\}$, es decir, $K'$ es alguno de los centros de homotecia y se encuentra en las tangentes comunes de $\mathcal{C}(O,r)$ y $\mathcal{C}(O',r')$.
+\end{dem}
+
+Sea $\mathcal{C}(O,r)$ y $P$ un punto cualquiera en el plano. 
+Sean $A\in\mathcal{C}$, $\{B\}=\mathcal{C}\cap\overline{PA}\backslash\{A\}$, $C\in\mathcal{C}$, $\{D\}=\mathcal{C}\cap\overline{PC}\backslash\{C\}$, asì tenemos que $\{A,B,C,D\}\subset\mathcal{C}$. 
+
+Notemos que dadas estàs condiciones tenemos los siguientes tres casos:
+
+\begin{itemize}
+\item $r<|PO|$
+
+En este caso tenemos que $\triangle PAD\cong\triangle PCB$ \textbf{cs(AA)} pues $|\angle DPA|=|\angle BPC|$ y como $|\angle PAD|+|\angle DCB|=2\perp$ y $|\angle DCB|+|\angle BCP|=2\perp$, entonces $|\angle BCP|=|\angle PAD$. Por tanto, $\frac{|PA|}{|PC|}=\frac{|AD|}{|CB|}=\frac{|PD|}{|PB|}$, consideremos $0<AB$ y $0<CD$, entonces $\frac{AP}{PC}=\frac{PD}{BP}$. Así $AP\cdot BP=PD\cdot PC$, entonces $PA\cdot PB=PC\cdot PD$. 
+
+Ahora consideremos $E\in\mathcal{C}\backslash\{A,B,C,D\}$ y $\{F\}=\mathcal{C}\cap\overline{PE}\backslash\{E\}$. 
+Entonces tenemos que $\triangle PAF\cong\triangle PEB$ \textbf{cs(AA)} pues $|\angle FPA|=|\angle BPE|$ y como $|\angle PAF|+|\angle FEB|=2\perp$ y $|\angle FEB|+|\angle BEP|=2\perp$. Por tanto, $|\angle PAF|=|\angle BEP|$. Así tenemos que $\frac{|PA|}{|PE|}=\frac{|PF|}{|PB|}\frac{|AF|}{|EB|}$, considerando $0<AB$ y $0<EF$, tenemos que $\frac{AP}{EP}=\frac{FP}{BP}$, entonces $AP\cdot BP=FP\cdot EP$.
+Así $PA\cdot PB=PE\cdot PF=PC\cdot PD$. 
+Esto es para cualquier $X\in\mathcal{C}$ tal que $\{Y\}=\mathcal{C}\cap\overline{PX}\backslash\{X\}$ se tiene que $PA\cdot PB=PY\cdot PX$, también notemos que si $X=Y$, entonces $PA\cdot PB=PX\cdot PX$ y en esta situación $\overline{PX}$ es tangente a $\mathcal{C}$ en $X$.
+\item $|PO|<r$. \label{POC2} La prueba es análoga (ver sección de ejercicios, Ejercicio~\ref{PO<r}).
+\item $|PO|=r$. 
+Para que $|PO|=r$, debería pasar que $P\in\mathcal{C}$, entonces $P=B=D$, entonces $PA\cdot PB=PA\cdot PP=0$. 
+\end{itemize}
+\begin{df}
+Sean $P$ un punto en el plano, $\mathcal{C}(O,r)$ una circunferencia y $l$ una recta tal que $P\in l$ y $\mathcal{C}\cap l=\{A,B\}$, entonces a la constante $PA\cdot PB$ se le conoce como la \textcolor{red}{\bf potencia del punto $P$ respecto a $\mathcal{C}$}\index{potencia del punto $P$ respecto a $\mathcal{C}$} que denotaremos como $Pot_{\mathcal{C}(O,r)}(P)$.
+\end{df}
+\section{Puntos homólogos y antihomólogos}
+\begin{df}
+Sean $\mathcal{C}(O,r)$ y $\mathcal{C}(O',r')$ ($O\neq O'$). Sea $A\in\mathcal{C}(O,r)$ y $\overline{HA}\cap\mathcal{C'}(O',r')=\{A',B'\}$, notemos que solamente $A'$ tiene la propiedad $\frac{|HA|}{|HA'|}=\frac{r}{r'}$ ($H$ es uno de los centros de homotecia de $\mathcal{C}, \mathcal{C'}$). Decimos que $A$ y $A'$ son \textcolor{red}{\bf puntos homólogos}\index{puntos ! homólogos} respecto a $H$ y $A$, $B'$ con \textcolor{red}{\bf puntos antihomólogos} respecto a $H$.
+\end{df}
+
+Ahora veamos algunas propiedades de los puntos homólogos y antihomólogos. Para esto consideremos dos circunferencias $\mathcal{C}(O,r)$ y $\mathcal{C}(O',r')$.
+\begin{itemize}
+\item Si $A,B\in\mathcal{C}(O,r)$, entonces la recta $\overline{AB}$ es paralela a la recta determinada por sus homólogos. 
+
+\begin{pba}
+Sean $A$ y $A'$ homólogos respecto a $X\in\{H,K\}$, entonces $\frac{|XA|}{|XA'|}=\frac{r}{r'}=\frac{|XB|}{|XB'|}$ donde $B$ es homólogo a $B'$ respecto a $X$. Así tenemos que $\frac{|XA|}{|XA'|}=\frac{|XB|}{|XB'|}$, entonces por el Teorema~\ref{Thales1} $\overline{AB}$ es paralela a $\overline{A'B'}$.
+\end{pba}
+\item Sean $l$ una recta que contenga a $X\in\{H,K\}$ tal que $|l\cap\mathcal{C}(O,r)|=2$ y $m\neq l$ tal que $X\in m$ y $|m\cap\mathcal{C}(O,r)|=2$.
+
+Sean $l\cap\mathcal{C}(O,r)=\{A,B\}$, $\{A',B'\}\subset\mathcal{C'}(O,r)$, $m\cap\mathcal{C}(O,r)$ y $\{C',D'\}\subset\mathcal{C'}(O',r')$ tal que $A$ es homólogo a $A'$, $B$ es homólogo a $B'$, $C$ es homólogo a $C'$ y $D$ es homólogo $D'$. Entonces $\{A,D,B',C'\}$ y $\{A',D',B,C\}$ son concíclicos ($l$ y $m$ son antiparalelas respecto a $\overline{AD}$ y $\overline{B'C'}$ y respecto a $\overline{A'D'}$ y $\overline{BC}$).
+
+\begin{pba}
+Sea $\{A,B,C,D\}$ ordenados (levògiramente o dextrògiramente), entonces $\square ABCD$ es un cuadrilátero cíclico convexo, así $\angle ABC+\angle CDA=2\perp$ pero $\angle ABC=\angle AB'C'$ pues $BC$ es paralelo a $B'C'$, entonces $\angle AB'C'+\angle CDA=2\perp$. Por lo tanto, $\{A,D,B',C'\}$.
+
+De manera análoga se puede probar que $\{A',B',C,D\}$ es cíclico. 
+\end{pba}
+\item Sea $A\in\mathcal{C}(O,r)$, si respecto a $X\in\{H,K\}$ ($H,K$ centro de Homotecia de $\mathcal{C}(O,r))$ y $\mathcal{C'}(O',r')$) $A$ y $B'$ son antihomólogos, entonces $XA\cdot XB'$ es constante.
+
+\begin{pba}
+$XA\cdot XB'$ es constante pues el producto es la potencia de $X$ respecto a la circunferencia que inscribe a $A,B'$ y cualquier otro par de puntos antihomólogos en $\mathcal{C}(O,r)$ (no colineales con $A$ y $X$).
+\end{pba}
+\item Si $A$ y $B'$ son puntos antihomólogos, $A\in\mathcal{C}(O,r)$ y $l$ es la tangente a $\mathcal{C}(O,r)$ en $A$, 
+$B'\in\mathcal{C'}(O',r')$ y $l'$ es la tangente a $\mathcal{C'}(O',r')$ en $B'$, y  $l\cap l'=\{P\}$, entonces $\triangle APB'$ es isósceles. 
+
+\begin{pba}
+Supongamos que $A$ y $B'$ son antihomólogos. Sean K uno de los centro de homotecia de $\mathcal{C}$ y $\mathcal{C'}$, $\overline{KA}\cap\mathcal{C}(O,r)\backslash\{A\}=\{B\}$ y $\overline{KB'}\cap\mathcal{C'}(O',r')\backslash\{B'\}=\{A'\}$.
+
+Observemos que $\frac{|KO|}{|KO'|}=\frac{|KB|}{|KB'|}=\frac{|OB|}{|OB'|}=\frac{r}{r'}$, entonces por el Teorema~\ref{Thales1} $OB\parallel O'B'$. Vamos a probar que  $\triangle APB'$ es isósceles. 
+
+Tenemos que $\triangle AOB$ es isósceles pues $|OA|=|OB|=r$, entonces $|\angle OAB|=|\angle ABO|$. Además $\triangle A'O'B'$ es isósceles pues $|O'B'|=|O'A'|=r'$, asì $|\angle O'A'B'|=|\angle A'B'O'|$.
+
+Ahora, notemos que por ser $l$ y $l'$ tangentes a $\mathcal{C}$ y $\mathcal{C'}$ respectivamente, tenemos que $|\angle O'B'P|=\perp=|\angle OAP|$. Y como $|\angle O'B'P|=|\angle O'B'A'|+|\angle A'B'P|$ y $|\angle OAP|=|\angle OAB|+|\angle BAP|$, por tanto $|\angle O'B'A'|+|\angle A'B'P|=|\angle OAB|+|\angle BAP|$. También por ser $OB\parallel O'B'$, se tiene que $|\angle O'B'A'|= |\angle OBA|=|\angle OAB|$, por lo que $|\angle OAB|+|\angle A'B'P|=|\angle OAB|+|\angle BAP|$, por lo tanto $|\angle A'B'P|=|\angle BAP|$ y con esto se concluye que $\triangle APB'$ es isósceles. 
+\end{pba}
+\end{itemize}
+
+\section{Circunferencia de similitud}
+\begin{df}
+Sean $\mathcal{C}(O,r)$ y $\mathcal{C'}(O',r')$ dos circunferencias ($O\neq O'$) y $H,K$ los centros de homotecia. La \textcolor{red}{\bf circunferencia de similitud}\index{circunferencia ! de similitud} de $\mathcal{C}$ y $\mathcal{C'}$ es la circunferencia que tiene como diámetro al segmento $HK$.
+\end{df}
+
+\begin{teo}\label{CDS}
+La circunferencia de similitud de $\mathcal{C}(O,r)$ y $\mathcal{C'}(O',r')$ ($O\neq O'$) es el lugar geométrico de los puntos $P$ en el plano tales que $\frac{PO}{O'P}=\frac{r}{r'}$ y que además cumple que el ángulo formado por las tangentes de $P$ a $\mathcal{C}$ es igual al formado por las tangentes de $P$ a $\mathcal{C'}$.
+\end{teo}
+
+\begin{dem}
+Sean $H$, $K$ los centros de homotecia de $\mathcal{C}(O,r)$ y $\mathcal{C'}(O',r')$.
+Sea $P$ en el plano tal que $\frac{PO}{O'P}=\frac{r}{r'}$. Como $H$ y $K$ tienen la propiedad $\frac{PO}{O'P}=\frac{HO}{HO'}$ y $\frac{PO}{O'P}=\frac{OK}{KO'}$.
+Del $\triangle POO'$ tenemos que como $K\in\overline{OO'}$, entonces 
+$$\frac{OK}{KO'}=\frac{PO \sen(\angle OPK)}{O'P \sen(\angle KPO')}=\frac{PO}{O'P}$$.
+
+Por tanto, $\sen(\angle OPK)=\sen(\angle KPO')$ y así $\angle OPK=\angle KPO'$. Con lo que concluimos que $\overline{PK}$ es bisectriz interna del $\angle OPO'$.
+
+Del $\triangle POO'$, como $H\in\overline{OO'}$, entonces $\frac{PO}{O'P}=\frac{HO}{HO'}=\frac{-OH}{HO'}$. Como $\frac{OH}{HO'}=\frac{PO \sen(\angle OPH)}{O'P \sen(\angle HPO')}$. Entonces
+$$\frac{-OH}{HO'}=\frac{-PO \sen(\angle OPH)}{O'P \sen(\angle HPO')}=\frac{PO}{O'P}$$
+
+De esto $-\sen(\angle OPH)=\sen(\angle HPO')$, entonces $\sen(\angle OPH)=-\sen(\angle HPO')=sen(-\angle HPO')=\sen(\angle O'PH)$.
+
+Por tanto, $\overline{PH}$ es bisectriz del $\angle O'PO$. Y así tenemos que $\overline{PH}$ es bisectriz externa del $\angle OPO'$
+
+Entonces $\overline{PK}$ es ortogonal a $\overline{PH}$, por lo tanto $P\in\mathcal{C^{*}}(O^{*},r^{*})$, donde $\mathcal{C^{*}}$ es la circunferencia de diámetro $KH$.
+
+Ahora supongamos que $P$ está en la circunferencia de  similitud. Sea $Q\in\overline{OO'}$ tal que $\angle OPK=\angle KPO'$. Entonces como $\overline{PK}$ es ortogonal a $\overline{PH}$, $\overline{PK}$ es bisectriz interna del $\angle OPO'$ y $\overline{PH}$ es bisectriz externa del $\angle OPO'$, tenemos que $\frac{QH}{HO'}=-\frac{QK}{KO'}$ por otra parte también tenemos que $\frac{OK}{KO'}=\frac{OH}{HO'}$. Por tanto, $\frac{QK}{QH}=\frac{OK}{OH}$ así que $Q=O$.
+
+Considerando $\triangle OPO'$ como $\overline{PK}$ es tal que $\angle OPK=\angle KPO'$, entonces al tener que $$\frac{OK}{KO'}=\frac{PO \sen(\angle OPK)}{O'P \sen(\angle KPO')}=\frac{PO}{O'P}$$. Concluimos que $\frac{PO}{O'P}=\frac{OK}{KO'}=\frac{r}{r'}$.
+
+Por lo tanto $P$ cumple la propiedad. 
+\end{dem}
+
+\section{Circunferencia de Apolonio}
+\begin{teo}
+E lugar geométrico de los puntos $P$ en el plano, tales que su distancia a dos puntos fijos $A$, $B$ tiene una razón constante es una circunferencia. A dicha circunferencia se le llama \textcolor{red}{\bf circunferencia de Apolonio}\index{circunferencia ! de Apolonio}.
+\end{teo}
+
+\begin{dem}
+Sean dos puntos fijo $A,B$ tal que  la razón de sus distancias a $P\in\mathbb{E}^{2}$ sea $k\in\mathbb{R}^{+}$. Construyamos $\mathcal{C}(A,r_{1})$ y $\mathcal{C}(B,r_{2})$, tal que $\frac{r_{1}}{r_{2}}=k$. Así por el  Teorema~\ref{CDS} tenemos que el lugar geomètrico de los puntos $P$  que cumplen que $\frac{|PA|}{|PB|}=k$ es una circunferencia, la circunferencia de similitud de $\mathcal{C}(A,r_{1})$ y $\mathcal{C}(B,r_{2})$. 
+\end{dem}
+
+\subsection*{Ejercicios}
+\begin{enumerate}
+
+\item En la pàgina~\pageref{POC2} probar el  caso en el que $|PO|<r$.\label{PO<r}
+\end{enumerate}
+
+
